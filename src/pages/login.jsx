@@ -15,7 +15,7 @@ function Login() {
 
         {/* Logo */}
         <div className="login-logo">
-          <img src="/logo.png" alt="Movie Express" />
+          <img src="src/assets/logo.png" alt="Movie Express" />
         </div>
 
         {/* Form */}
