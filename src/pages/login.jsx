@@ -1,11 +1,19 @@
 import { useState } from "react";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import logoImage from "../assets/logo.png";
 import "../css/login.css";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // you can add validation here later
+    navigate("/home"); // go to home page after login
+  };
 
   return (
     <div className="login-page">
@@ -26,14 +34,14 @@ function Login() {
           </div>
 
           {/* Form */}
-          <form className="login-form">
+          <form className="login-form" onSubmit={handleLogin}>
             {/* Email Field */}
             <div className="form-group">
               <label className="form-label">Email</label>
-              <input 
-                type="email" 
-                className="form-input" 
-                placeholder="jone@gmail.com" 
+              <input
+                type="email"
+                className="form-input"
+                placeholder="jone@gmail.com"
                 defaultValue="jone@gmail.com"
               />
             </div>
@@ -46,7 +54,6 @@ function Login() {
                   type={showPassword ? "text" : "password"}
                   className="form-input password-input"
                   placeholder="******"
-                  // defaultValue="******"
                 />
                 <button
                   type="button"
@@ -93,7 +100,17 @@ function Login() {
           {/* Sign Up Link */}
           <div className="signup-section">
             <p className="signup-text">
-              Don't have an account? <a href="#" className="signup-link">Sign Up</a>
+              Don't have an account?{" "}
+              <a
+                href="#"
+                className="signup-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/signup");
+                }}
+              >
+                Sign Up
+              </a>
             </p>
           </div>
         </div>
