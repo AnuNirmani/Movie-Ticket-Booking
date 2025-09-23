@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import logoImage from "../assets/logo.png";
-import MessageBox from "../components/MessageBox";
 import "../css/newpassword.css";
 
 function NewPassword() {
@@ -10,54 +9,31 @@ function NewPassword() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [messageBox, setMessageBox] = useState({
-    isOpen: false,
-    title: "",
-    message: "",
-    type: "success"
-  });
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const navigate = useNavigate();
-
-  const showMessage = (title, message, type = "success") => {
-    setMessageBox({
-      isOpen: true,
-      title,
-      message,
-      type
-    });
-  };
-
-  const closeMessage = () => {
-    setMessageBox(prev => ({ ...prev, isOpen: false }));
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     
     // Basic validation
     if (!newPassword || !confirmPassword) {
-      showMessage("Validation Error", "Please fill in all fields", "error");
+      alert("Please fill in all fields");
       return;
     }
     
     if (newPassword !== confirmPassword) {
-      showMessage("Password Mismatch", "Passwords do not match. Please try again.", "error");
+      alert("Passwords do not match");
       return;
     }
     
     if (newPassword.length < 6) {
-      showMessage("Password Too Short", "Password must be at least 6 characters long", "error");
+      alert("Password must be at least 6 characters long");
       return;
     }
     
     // Add your password update logic here
     console.log("New password:", newPassword);
-    showMessage("Success!", "Your password has been updated successfully!", "success");
-  };
-
-  const handleSuccessConfirm = () => {
-    closeMessage();
-    navigate("/login");
+    setShowSuccessModal(true);
   };
 
   const handleBackToLogin = (e) => {
@@ -65,8 +41,39 @@ function NewPassword() {
     navigate("/login");
   };
 
+  const handleSuccessOK = () => {
+    setShowSuccessModal(false);
+    navigate("/login");
+  };
+
   return (
     <div className="new-password-page">
+
+
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <div className="success-modal-overlay">
+          <div className="success-modal">
+            <div className="success-icon">
+              <div className="checkmark-circle">
+                <span className="checkmark">✓</span>
+              </div>
+            </div>
+            <div className="success-message">
+              <p>Account Created Successfully</p>
+            </div>
+            <button 
+              className="success-ok-button"
+              onClick={handleSuccessOK}
+            >
+              OK
+            </button>
+
+
+          </div>
+        </div>
+      )}
+
       <div className="new-password-modal">
         <h1 className="modal-title">New Password</h1>
 
@@ -144,17 +151,6 @@ function NewPassword() {
           </div>
         </div>
       </div>
-
-      {/* MessageBox Component */}
-      <MessageBox
-        isOpen={messageBox.isOpen}
-        onClose={closeMessage}
-        title={messageBox.title}
-        message={messageBox.message}
-        type={messageBox.type}
-        onConfirm={messageBox.type === "success" ? handleSuccessConfirm : undefined}
-        confirmText={messageBox.type === "success" ? "Continue" : "OK"}
-      />
     </div>
   );
 }
