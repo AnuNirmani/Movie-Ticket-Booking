@@ -13,7 +13,7 @@
   align-items: center;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('public/movie-posters-bg.svg') no-repeat center center/cover;
+    url('/src/assets/background.png') no-repeat center center/cover;
   position: relative;
   backdrop-filter: blur(3px);
   filter: grayscale(0.3) brightness(0.7);
@@ -21,10 +21,10 @@
 
 /* Modal container */
 .send-otp-modal {
-  background: linear-gradient(145deg, #1a0f2e, #2d1b4e);
-  border-radius: 12px;
+  background: linear-gradient(145deg, #2a1a3a, #1a0f2e);
+  border-radius: 20px;
   box-shadow: 
-    0 25px 50px rgba(0, 0, 0, 0.8),
+    0 20px 40px rgba(0, 0, 0, 0.6),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   width: 420px;
   max-width: 90vw;
@@ -38,7 +38,7 @@
 .modal-title {
   font-size: 28px;
   font-weight: 600;
-  color: #8e24aa;
+  color: #e91e63;
   text-align: center;
   margin: 0 0 25px 0;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -47,12 +47,6 @@
 /* Modal content */
 .modal-content {
   text-align: center;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  padding: 25px;
-  margin-top: 10px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
 }
 
 /* Logo section */
@@ -78,9 +72,9 @@
 .logo-text {
   font-size: 18px;
   font-weight: 700;
-  color: #333333;
+  color: #ffffff;
   letter-spacing: 2px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,13 +86,13 @@
 }
 
 .logo-express {
-  color: #333333;
+  color: #ffffff;
 }
 
 /* Instruction text */
 .instruction-text {
   font-size: 16px;
-  color: #333333;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 30px;
   line-height: 1.5;
@@ -152,7 +146,7 @@
 }
 
 .resend-text {
-  color: #333333;
+  color: #ffffff;
   font-size: 14px;
   opacity: 0.9;
 }
@@ -222,10 +216,6 @@
     width: 95%;
     margin: 20px;
     padding: 25px;
-  }
-  
-  .modal-content {
-    padding: 20px;
   }
   
   .modal-title {
