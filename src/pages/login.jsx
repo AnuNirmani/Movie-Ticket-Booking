@@ -71,7 +71,19 @@ function Login() {
                 <input type="checkbox" className="checkbox" />
                 <span className="checkbox-label">Remember Me</span>
               </label>
-              <a href="#" className="forgot-password">Forget Password?</a>
+
+              <a
+                href="#"
+                className="forgot-password"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/forgot-password");
+                }}
+              >
+                Forget Password?
+              </a>
+
+
             </div>
 
             {/* Login Button */}
