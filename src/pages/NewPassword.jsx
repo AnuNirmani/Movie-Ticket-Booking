@@ -60,10 +60,10 @@ function NewPassword() {
               </div>
             </div>
             <div className="success-message">
-              <p>Account Created Successfully</p>
+              <p>Your Password Reset Successfully</p>
             </div>
             <button 
-              className="success-ok-button"
+              className="success-ok-btn"
               onClick={handleSuccessOK}
             >
               OK
