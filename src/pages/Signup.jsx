@@ -7,12 +7,22 @@ import "../css/signup.css";
 function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [showConfirmModal, setShowConfirmModal] = useState(false); // to show message box
   const navigate = useNavigate();
 
   const handleSignup = (e) => {
     e.preventDefault();
-    // Add validation logic here later
-    navigate("/home"); // Navigate to home page after signup
+    setShowConfirmModal(true);
+  };
+
+  const handleConfirmAccount = () => {
+    setShowConfirmModal(false);
+    navigate("/login");
+  };
+
+  const handleCancelAccount = () => {
+    setShowConfirmModal(false);
+    // navigate("/login");
   };
 
   return (
@@ -147,6 +157,42 @@ function Signup() {
           </div>
         </div>
       </div>
+
+
+      {/* Confirmation Modal (the message box that pops up after signing up)*/}
+      {showConfirmModal && (
+        <div className="modal-overlay">
+          <div className="confirmation-modal">
+            <div className="modal-header">
+              <h3 className="modal-title">Confirm Account Creation</h3>
+              <button 
+                className="modal-close"
+                onClick={handleCancelAccount}
+              >
+                ×
+              </button>
+            </div>
+            <div className="modal-content">
+              <div className="modal-buttons">
+                <button 
+                  className="confirm-btn"
+                  onClick={handleConfirmAccount}
+                >
+                  Confirm
+                </button>
+                <button 
+                  className="cancel-btn"
+                  onClick={handleCancelAccount}
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+
     </div>
   );
 }
