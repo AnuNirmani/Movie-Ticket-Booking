@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logoImage from "../assets/logo.png";
-import "../css/forgotpassword.css";
+// import "../css/forgotpassword.css";
 
-function ForgotPassword() {
+function SendOTP() {
   const [email, setEmail] = useState("jone@gmail.com");
   const navigate = useNavigate();
 
@@ -20,10 +20,10 @@ function ForgotPassword() {
   };
 
   return (
-    <div className="forgot-password-page">
-      <div className="forgot-password-modal">
-        <h1 className="modal-title">Forgot your password?</h1>
-        
+    <div className="send-otp-page">
+      <div className="send-otp-modal">
+        <h1 className="modal-title">Send OTP</h1>
+
         <div className="modal-content">
           <div className="logo-section">
             <div className="logo-image">
@@ -36,7 +36,7 @@ function ForgotPassword() {
             Please enter the email address you'd like your password reset information sent to:
           </p>
 
-          <form className="forgot-password-form" onSubmit={handleSubmit}>
+          <form className="send-otp-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label className="form-label">Email</label>
               <input
@@ -65,4 +65,4 @@ function ForgotPassword() {
   );
 }
 
-export default ForgotPassword;
+export default SendOTP;
