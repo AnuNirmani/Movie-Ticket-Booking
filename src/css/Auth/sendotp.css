@@ -1,0 +1,300 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full background with movie posters */
+.send-otp-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/src/assets/background.png') no-repeat center center/cover;
+  position: relative;
+}
+
+/* Modal container */
+.send-otp-modal {
+  background: linear-gradient(145deg, #2a1a3a, #1a0f2e);
+  border-radius: 20px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  width: 420px;
+  max-width: 90vw;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px;
+}
+
+/* Modal title */
+.modal-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #e91e63;
+  text-align: center;
+  margin: 0 0 25px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal content */
+.modal-content {
+  text-align: center;
+}
+
+/* Logo section */
+.logo-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-image {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-movie {
+  color: #ffc107;
+  margin-bottom: 2px;
+}
+
+.logo-express {
+  color: #ffc107;
+}
+
+/* Instruction text */
+.instruction-text {
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+/* Form styles */
+.send-otp-form {
+  margin-bottom: 25px;
+}
+
+/* OTP Input styles */
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  background: #ffffff;
+  border: 2px solid #333;
+  border-radius: 8px;
+  outline: none;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.otp-input:focus {
+  border-color: #8e24aa;
+  box-shadow: 0 0 0 3px rgba(142, 36, 170, 0.2);
+  transform: scale(1.05);
+}
+
+.otp-input::placeholder {
+  color: #999;
+  font-weight: normal;
+}
+
+/* Resend section */
+.resend-section {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.resend-text {
+  color: #ffffff;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.resend-link {
+  color: #2196f3;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.resend-link:hover {
+  color: #64b5f6;
+  text-decoration: underline;
+}
+
+/* Send button */
+.send-button {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(142, 36, 170, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.send-button:hover {
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6);
+}
+
+.send-button:active {
+  transform: translateY(0);
+}
+
+/* Login section */
+.login-section {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.login-text {
+  font-size: 14px;
+  color: #b0b0b0;
+}
+
+.login-link {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #64b5f6;
+  text-decoration: underline;
+}
+
+.back-link {
+  color: #2196f3;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #64b5f6;
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .send-otp-modal {
+    width: 95%;
+    margin: 20px;
+    padding: 25px;
+  }
+  
+  .modal-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .logo-image img {
+    height: 50px;
+  }
+  
+  .logo-text {
+    font-size: 16px;
+  }
+  
+  .instruction-text {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  
+  .otp-input {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  
+  .otp-inputs {
+    gap: 10px;
+  }
+}
+
+/* Animation for modal appearance */
+.send-otp-modal {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Focus states for accessibility */
+.otp-input:focus,
+.send-button:focus,
+.back-link:focus,
+.resend-link:focus {
+  outline: 2px solid #8e24aa;
+  outline-offset: 2px;
+}
+
+/* Loading state for button */
+.send-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.send-button:disabled:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(142, 36, 170, 0.4);
+}
