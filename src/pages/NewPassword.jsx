@@ -52,8 +52,8 @@ function NewPassword() {
               <img src={logoImage} alt="Movie Express Logo" />
             </div>
             <div className="logo-text">
-              <span className="logo-movie">MOVIE</span>
-              <span className="logo-express">EXPRESS</span>
+              {/* <span className="logo-movie">MOVIE</span> */}
+              <span className="logo-express">MOVIE EXPRESS</span>
             </div>
           </div>
 

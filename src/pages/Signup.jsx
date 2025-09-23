@@ -46,7 +46,10 @@ function Signup() {
             <div className="logo-image">
               <img src={logoImage} alt="Movie Express Logo" />
             </div>
-            <div className="logo-text">MOVIE EXPRESS</div>
+            <div className="logo-text">
+              {/* <span className="logo-movie">MOVIE</span> */}
+              <span className="logo-express">MOVIE EXPRESS</span>
+            </div>
           </div>
 
           {/* Form */}
