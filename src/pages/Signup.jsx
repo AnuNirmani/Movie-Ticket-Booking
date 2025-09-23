@@ -134,11 +134,11 @@ function Signup() {
             <p className="signin-text">
               Have an account?{" "}
               <a 
-                href="/" 
+                href="#" 
                 className="signin-link"
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate("/");
+                  navigate("/login");
                 }}
               >
                 Sign In
