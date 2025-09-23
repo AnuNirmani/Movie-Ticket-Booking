@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import logoImage from "../assets/logo.png";
+import MessageBox from "../components/MessageBox";
 import "../css/newpassword.css";
 
 function NewPassword() {
@@ -9,30 +10,53 @@ function NewPassword() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [messageBox, setMessageBox] = useState({
+    isOpen: false,
+    title: "",
+    message: "",
+    type: "success"
+  });
   const navigate = useNavigate();
+
+  const showMessage = (title, message, type = "success") => {
+    setMessageBox({
+      isOpen: true,
+      title,
+      message,
+      type
+    });
+  };
+
+  const closeMessage = () => {
+    setMessageBox(prev => ({ ...prev, isOpen: false }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     
     // Basic validation
     if (!newPassword || !confirmPassword) {
-      alert("Please fill in all fields");
+      showMessage("Validation Error", "Please fill in all fields", "error");
       return;
     }
     
     if (newPassword !== confirmPassword) {
-      alert("Passwords do not match");
+      showMessage("Password Mismatch", "Passwords do not match. Please try again.", "error");
       return;
     }
     
     if (newPassword.length < 6) {
-      alert("Password must be at least 6 characters long");
+      showMessage("Password Too Short", "Password must be at least 6 characters long", "error");
       return;
     }
     
     // Add your password update logic here
     console.log("New password:", newPassword);
-    alert("Password updated successfully!");
+    showMessage("Success!", "Your password has been updated successfully!", "success");
+  };
+
+  const handleSuccessConfirm = () => {
+    closeMessage();
     navigate("/login");
   };
 
@@ -120,6 +144,17 @@ function NewPassword() {
           </div>
         </div>
       </div>
+
+      {/* MessageBox Component */}
+      <MessageBox
+        isOpen={messageBox.isOpen}
+        onClose={closeMessage}
+        title={messageBox.title}
+        message={messageBox.message}
+        type={messageBox.type}
+        onConfirm={messageBox.type === "success" ? handleSuccessConfirm : undefined}
+        confirmText={messageBox.type === "success" ? "Continue" : "OK"}
+      />
     </div>
   );
 }

@@ -174,12 +174,11 @@ function Signup() {
           <div className="confirmation-modal">
             <div className="modal-header">
               <h3 className="modal-title">Confirm Account Creation</h3>
-              <button 
+              {/* <button 
                 className="modal-close"
                 onClick={handleCancelAccount}
               >
-                ×
-              </button>
+              </button> */}
             </div>
             <div className="modal-content">
               <div className="modal-buttons">
@@ -212,8 +211,7 @@ function Signup() {
               </div>
             </div>
             <div className="success-message">
-              <p>Account Created</p>
-              <p>Successfully</p>
+              <p>Account Created Successfully</p>
             </div>
             <button 
               className="success-ok-btn"
