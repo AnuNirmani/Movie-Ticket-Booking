@@ -8,6 +8,7 @@ function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false); // to show message box
+  const [showSuccessModal, setShowSuccessModal] = useState(false); // to show success message box
   const navigate = useNavigate();
 
   const handleSignup = (e) => {
@@ -17,12 +18,17 @@ function Signup() {
 
   const handleConfirmAccount = () => {
     setShowConfirmModal(false);
-    navigate("/login");
+    setShowSuccessModal(true);
   };
 
   const handleCancelAccount = () => {
     setShowConfirmModal(false);
     // navigate("/login");
+  };
+
+  const handleSuccessOK = () => {
+    setShowSuccessModal(false);
+    navigate("/login");
   };
 
   return (
@@ -192,6 +198,29 @@ function Signup() {
         </div>
       )}
 
+
+      {/* Success Modal (the message box that pops up after click confirm) */}
+      {showSuccessModal && (
+        <div className="modal-overlay">
+          <div className="success-modal">
+            <div className="success-icon">
+              <div className="checkmark-circle">
+                <span className="checkmark">✓</span>
+              </div>
+            </div>
+            <div className="success-message">
+              <p>Account Created</p>
+              <p>Successfully</p>
+            </div>
+            <button 
+              className="success-ok-btn"
+              onClick={handleSuccessOK}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
 
     </div>
   );
