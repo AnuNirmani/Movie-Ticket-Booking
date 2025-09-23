@@ -1,0 +1,114 @@
+/* Full page background */
+.signup-page {
+  min-height: 100vh;
+  width: 100%;
+  background: url("https://wallpapercave.com/wp/wp1810668.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card container */
+.signup-container {
+  background: #0b0b28;
+  color: #fff;
+  padding: 40px 35px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+/* Logo */
+.signup-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.signup-logo img {
+  width: 80px;
+  height: auto;
+}
+
+/* Title */
+.signup-container h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.signup-container p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #bdbdbd;
+}
+
+/* Form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.signup-form input {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: #fff;
+  color: #333;
+}
+
+.signup-form input:focus {
+  border: 2px solid #6a0dad;
+}
+
+/* Password eye icon */
+.password-field {
+  position: relative;
+}
+.password-field input {
+  width: 100%;
+  padding-right: 40px;
+}
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  cursor: pointer;
+}
+
+/* Button */
+.signup-form button {
+  background: linear-gradient(90deg, #6a0dad, #a020f0);
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.signup-form button:hover {
+  background: linear-gradient(90deg, #5a0099, #8a2be2);
+}
+
+/* Bottom link */
+.signup-footer {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.signup-footer a {
+  color: #a020f0;
+  text-decoration: none;
+  font-weight: 500;
+}
+.signup-footer a:hover {
+  text-decoration: underline;
+}
