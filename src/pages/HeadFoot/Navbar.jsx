@@ -1,18 +1,56 @@
-// src/components/Navbar.jsx
 import React from "react";
 import "../../css/HeadFoot/navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="logo">🎬 Movie Express</div>
-      <ul className="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/movies">Movies</a></li>
-        <li><a href="/theatres">Theatres</a></li>
-        <li><a href="/deals">Deals</a></li>
-        <li><a href="/login">Login</a></li>
-      </ul>
+      <div className="navbar-container">
+        {/* Logo Section */}
+        <div className="navbar-logo">
+          <div className="logo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="5" width="18" height="14" rx="2" stroke="#D4AF37" strokeWidth="2" fill="none"/>
+              <path d="M3 9h18M3 13h18" stroke="#D4AF37" strokeWidth="1"/>
+              <circle cx="19" cy="12" r="1.5" fill="#D4AF37"/>
+            </svg>
+            <div className="logo-text">
+              <div className="logo-main">MOVIE</div>
+              <div className="logo-sub">EXPRESS</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="navbar-links">
+          <a href="/" className="nav-link">Home</a>
+          <a href="/movies" className="nav-link">Movies</a>
+          <a href="/theaters" className="nav-link">Theaters</a>
+          <a href="/deals" className="nav-link">Deals</a>
+        </div>
+
+        {/* Right Section */}
+        <div className="navbar-right">
+          {/* Search Bar */}
+          <div className="search-container">
+            <svg className="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="11" cy="11" r="8" stroke="#999" strokeWidth="2"/>
+              <path d="m21 21-4.35-4.35" stroke="#999" strokeWidth="2"/>
+            </svg>
+            <input type="text" placeholder="Search" className="search-input" />
+          </div>
+
+          {/* Buy Ticket Button */}
+          <button className="buy-ticket-btn">Buy Ticket</button>
+
+          {/* Profile Icon */}
+          <div className="profile-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="8" r="4" stroke="#E91E63" strokeWidth="2"/>
+              <path d="M12 14c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z" stroke="#E91E63" strokeWidth="2"/>
+            </svg>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };

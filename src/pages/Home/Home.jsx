@@ -1,8 +1,8 @@
 // src/pages/Home.jsx
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import "./Home.css";
+import Navbar from "../HeadFoot/Navbar";
+import Footer from "../HeadFoot/Footer";
+import "../../css/Home/home.css";
 
 const Home = () => {
   return (
