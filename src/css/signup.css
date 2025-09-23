@@ -5,15 +5,15 @@
   box-sizing: border-box;
 }
 
-/* Full background with movie posters */
+/* Full background with custom background image */
 .signup-page {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: 
-    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-    url('/movie-posters-bg.svg') no-repeat center center/cover;
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/src/assets/background.png') no-repeat center center/cover;
   position: relative;
 }
 
