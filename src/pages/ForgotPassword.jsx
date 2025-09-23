@@ -54,11 +54,24 @@ function ForgotPassword() {
             </button>
           </form>
 
-          <div className="back-to-login">
-            <a href="#" onClick={handleBackToLogin} className="back-link">
-              Back To Login
-            </a>
+          {/* Login Link */}
+          <div className="login-section">
+            <p className="login-text">
+              Back to{" "}
+              <a
+                href="#"
+                className="login-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/login");
+                }}
+              >
+                Log In
+              </a>
+            </p>
           </div>
+
+
         </div>
       </div>
     </div>
