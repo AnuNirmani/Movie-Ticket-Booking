@@ -10,6 +10,7 @@ function NewPassword() {
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -17,17 +18,17 @@ function NewPassword() {
     
     // Basic validation
     if (!newPassword || !confirmPassword) {
-      alert("Please fill in all fields");
+      setShowErrorModal(true);
       return;
     }
     
     if (newPassword !== confirmPassword) {
-      alert("Passwords do not match");
+      setShowErrorModal(true);
       return;
     }
     
     if (newPassword.length < 6) {
-      alert("Password must be at least 6 characters long");
+      setShowErrorModal(true);
       return;
     }
     
@@ -44,6 +45,10 @@ function NewPassword() {
   const handleSuccessOK = () => {
     setShowSuccessModal(false);
     navigate("/login");
+  };
+
+  const handleErrorOK = () => {
+    setShowErrorModal(false);
   };
 
   return (
@@ -74,6 +79,29 @@ function NewPassword() {
         </div>
       )}
 
+      {/* Error Modal */}
+      {showErrorModal && (
+        <div className="error-modal-overlay">
+          <div className="error-modal">
+            <div className="error-icon">
+              <div className="exclamation-circle">
+                <span className="exclamation">!</span>
+              </div>
+            </div>
+            <div className="error-message">
+              <p>Password is not Valid</p>
+              <p>Try Again</p>
+            </div>
+            <button 
+              className="error-ok-btn"
+              onClick={handleErrorOK}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="new-password-modal">
         <h1 className="modal-title">New Password</h1>
 
@@ -98,7 +126,7 @@ function NewPassword() {
                   className="form-input password-input"
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
-                  placeholder="******"
+                  placeholder="Include 6 characters"
                 />
                 <button
                   type="button"
@@ -119,7 +147,7 @@ function NewPassword() {
                   className="form-input password-input"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  placeholder="******"
+                  placeholder="Include 6 characters"
                 />
                 <button
                   type="button"
