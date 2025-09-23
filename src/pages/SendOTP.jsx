@@ -33,7 +33,8 @@ function SendOTP() {
     if (otpValue.length === 4) {
       // Add your OTP verification logic here
       console.log("OTP entered:", otpValue);
-      // Navigate to next page or show success message
+      // Navigate to New Password page
+      navigate("/new-password");
     }
   };
 
