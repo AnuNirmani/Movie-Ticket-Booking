@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/login";
-import Signup from "./pages/Signup";
+import Login from "./pages/Auth/login";
+import Signup from "./pages/Auth/Signup";
 import Home from "./pages/Home";
-import ForgotPassword from "./pages/ForgotPassword";
-import SendOTP from "./pages/SendOTP";
-import NewPassword from "./pages/NewPassword";
+import ForgotPassword from "./pages/Auth/ForgotPassword";
+import SendOTP from "./pages/Auth/SendOTP";
+import NewPassword from "./pages/Auth/NewPassword";
 
 function App() {
   return (

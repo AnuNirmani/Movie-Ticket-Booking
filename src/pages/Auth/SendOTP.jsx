@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import logoImage from "../assets/logo.png";
-import "../css/sendotp.css";
+import logoImage from "../../assets/logo.png";
+import "../../css/Auth/sendotp.css";
 
 function SendOTP() {
   const [otp, setOtp] = useState(["", "", "", ""]);

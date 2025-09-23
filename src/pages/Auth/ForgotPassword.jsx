@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logoImage from "../assets/logo.png";
-import "../css/forgotpassword.css";
+import logoImage from "../../assets/logo.png";
+import "../../css/Auth/forgotpassword.css";
 
 function ForgotPassword() {
   const [email, setEmail] = useState("jone@gmail.com");
