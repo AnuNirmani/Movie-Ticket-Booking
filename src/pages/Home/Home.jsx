@@ -34,6 +34,110 @@ const Home = () => {
           <h2 className="section-title">NOW PLAYING</h2>
           <div className="movie-scroll-container">
             <div className="movie-scroll">
+              {/* First set of movies */}
+              <div className="movie-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/avengers-poster.jpg" alt="New Avengers" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn buy-ticket">
+                      <span className="btn-icon">🎫</span>
+                      Buy Ticket
+                    </button>
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">NEW AVENGERS</h3>
+              </div>
+
+              <div className="movie-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/final-destination-poster.jpg" alt="Final Destination Bloodlines" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn buy-ticket">
+                      <span className="btn-icon">🎫</span>
+                      Buy Ticket
+                    </button>
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">FINAL DESTINATION BLOODLINES</h3>
+              </div>
+
+              <div className="movie-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/walampura-poster.jpg" alt="වාලම්පුර" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn buy-ticket">
+                      <span className="btn-icon">🎫</span>
+                      Buy Ticket
+                    </button>
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">වාලම්පුර</h3>
+              </div>
+
+              <div className="movie-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/disney-poster.jpg" alt="Disney Movie" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn buy-ticket">
+                      <span className="btn-icon">🎫</span>
+                      Buy Ticket
+                    </button>
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">DISNEY ADVENTURE</h3>
+              </div>
+
+              <div className="movie-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/action-movie-poster.jpg" alt="Action Movie" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn buy-ticket">
+                      <span className="btn-icon">🎫</span>
+                      Buy Ticket
+                    </button>
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">ACTION THRILLER</h3>
+              </div>
+
+              <div className="movie-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/romance-movie-poster.jpg" alt="Romance Movie" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn buy-ticket">
+                      <span className="btn-icon">🎫</span>
+                      Buy Ticket
+                    </button>
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">ROMANCE DRAMA</h3>
+              </div>
+
+              {/* Duplicate set for infinite scroll */}
               <div className="movie-card">
                 <div className="movie-poster-container">
                   <img src="/src/assets/avengers-poster.jpg" alt="New Avengers" className="movie-poster-img" />

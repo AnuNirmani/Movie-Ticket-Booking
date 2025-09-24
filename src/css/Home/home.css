@@ -129,9 +129,8 @@
 }
 
 .now-playing-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
+  padding: 0;
 }
 
 .section-title {
@@ -160,7 +159,7 @@
 .movie-scroll {
   display: flex;
   gap: 30px;
-  padding: 0 20px;
+  padding: 0 40px;
   animation: scroll 30s linear infinite;
   width: fit-content;
 }
@@ -385,7 +384,7 @@
   }
   
   .now-playing-container {
-    padding: 0 10px;
+    padding: 0;
   }
   
   .section-title {
