@@ -36,7 +36,9 @@ const Navbar = () => {
           </div>
 
           {/* Buy Ticket Button */}
-          <button className="buy-ticket-btn">Buy Ticket</button>
+          <button className="buy-ticket-btn">
+            <span className="btn-icon">🎫</span>
+            Buy Ticket</button>
 
           {/* Profile Icon */}
           <div className="profile-icon">

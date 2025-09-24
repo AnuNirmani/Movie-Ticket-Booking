@@ -44,7 +44,7 @@ const Home = () => {
                       Buy Ticket
                     </button>
                     <button className="action-btn watch-trailer">
-                      <span className="btn-icon">▶</span>
+                      <span className="btn-icon">▶ </span>
                       Watch Trailer
                     </button>
                   </div>
