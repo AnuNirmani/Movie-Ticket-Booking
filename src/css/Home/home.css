@@ -10,6 +10,121 @@
   object-fit: cover;
 }
 
+/* Featured Movie Section */
+.featured-movie-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  color: #fff;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.featured-movie-container {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.featured-movie-poster {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 500px;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.movie-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featured-movie-poster:hover .movie-overlay {
+  opacity: 1;
+}
+
+.featured-movie-poster:hover .movie-poster {
+  transform: scale(1.05);
+}
+
+.movie-info {
+  text-align: center;
+  padding: 40px;
+  max-width: 500px;
+}
+
+.movie-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #00bfff;
+  text-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.movie-subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.movie-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+.watch-trailer-btn {
+  background: linear-gradient(45deg, #ff6b6b, #feca57);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.watch-trailer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(45deg, #ff5252, #ffeb3b);
+}
+
+.play-icon {
+  font-size: 1.2rem;
+}
+
 .section {
   padding: 40px;
   background: #111;
@@ -70,5 +185,35 @@
   }
   .section h2 {
     font-size: 18px;
+  }
+  
+  .featured-movie-section {
+    padding: 40px 0;
+  }
+  
+  .featured-movie-container {
+    padding: 0 10px;
+  }
+  
+  .featured-movie-poster {
+    height: 50vh;
+    min-height: 300px;
+  }
+  
+  .movie-title {
+    font-size: 2.5rem;
+  }
+  
+  .movie-info {
+    padding: 20px;
+  }
+  
+  .movie-description {
+    font-size: 1rem;
+  }
+  
+  .watch-trailer-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
   }
 }
