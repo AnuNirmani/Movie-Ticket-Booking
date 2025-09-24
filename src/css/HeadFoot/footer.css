@@ -188,37 +188,40 @@
 
 /* App Download Section */
 .app-download {
-  text-align: center;
-  margin: 30px 0;
+  margin-top: 25px;
 }
 
 .app-download h4 {
   color: white;
   font-size: 16px;
   font-weight: bold;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .app-buttons {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .app-btn {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 20px;
+  gap: 8px;
+  padding: 8px 12px;
   background: #000;
   color: white;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 6px;
   transition: all 0.3s ease;
-  min-width: 180px;
+  min-width: 140px;
+  max-width: 150px;
+  border: 1px solid #333;
+  flex: 1;
 }
 
 .app-btn:hover {
@@ -294,12 +297,15 @@
   }
   
   .app-buttons {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
   }
   
   .app-btn {
-    min-width: 200px;
+    min-width: 130px;
+    max-width: 140px;
+    flex: 1;
   }
 }
 
@@ -317,7 +323,9 @@
   }
   
   .app-btn {
-    min-width: 160px;
-    padding: 10px 15px;
+    min-width: 110px;
+    max-width: 120px;
+    padding: 6px 8px;
+    flex: 1;
   }
 }
