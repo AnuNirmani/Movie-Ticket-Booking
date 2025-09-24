@@ -38,7 +38,7 @@ const Home = () => {
               {/* First set of movies */}
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/avengers-poster.jpg" alt="New Avengers" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="New Avengers" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
@@ -55,7 +55,7 @@ const Home = () => {
 
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/final-destination-poster.jpg" alt="Final Destination Bloodlines" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Final Destination Bloodlines" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
@@ -72,7 +72,7 @@ const Home = () => {
 
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/walampura-poster.jpg" alt="වාලම්පුර" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="වාලම්පුර" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
@@ -89,7 +89,7 @@ const Home = () => {
 
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/disney-poster.jpg" alt="Disney Movie" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Disney Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
@@ -106,7 +106,7 @@ const Home = () => {
 
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/action-movie-poster.jpg" alt="Action Movie" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Action Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
@@ -123,7 +123,7 @@ const Home = () => {
 
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/romance-movie-poster.jpg" alt="Romance Movie" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Romance Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
@@ -141,7 +141,7 @@ const Home = () => {
               {/* Duplicate set for infinite scroll */}
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/avengers-poster.jpg" alt="New Avengers" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="New Avengers" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
@@ -158,7 +158,7 @@ const Home = () => {
 
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/final-destination-poster.jpg" alt="Final Destination Bloodlines" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Final Destination Bloodlines" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
@@ -175,7 +175,7 @@ const Home = () => {
 
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/walampura-poster.jpg" alt="වාලම්පුර" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="වාලම්පුර" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
@@ -192,7 +192,7 @@ const Home = () => {
 
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/disney-poster.jpg" alt="Disney Movie" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Disney Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
@@ -209,7 +209,7 @@ const Home = () => {
 
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/action-movie-poster.jpg" alt="Action Movie" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Action Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
@@ -226,7 +226,7 @@ const Home = () => {
 
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/romance-movie-poster.jpg" alt="Romance Movie" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Romance Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
@@ -254,7 +254,7 @@ const Home = () => {
               {/* Coming Soon Movies */}
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/inside-out-2-poster.jpg" alt="Inside Out 2" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Inside Out 2" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn watch-trailer">
                       <span className="btn-icon">▶</span>
@@ -272,7 +272,7 @@ const Home = () => {
 
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/m3gan-2-poster.jpg" alt="M3GAN 2.0" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="M3GAN 2.0" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn watch-trailer">
                       <span className="btn-icon">▶</span>
@@ -290,7 +290,7 @@ const Home = () => {
 
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/httyd-poster.jpg" alt="How to Train Your Dragon" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="How to Train Your Dragon" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn watch-trailer">
                       <span className="btn-icon">▶</span>
@@ -308,7 +308,7 @@ const Home = () => {
 
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/thug-life-poster.jpg" alt="Thug Life (Tamil)" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Thug Life (Tamil)" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn watch-trailer">
                       <span className="btn-icon">▶</span>
@@ -326,7 +326,7 @@ const Home = () => {
 
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/28-years-later-poster.jpg" alt="28 Years Later" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="28 Years Later" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn watch-trailer">
                       <span className="btn-icon">▶</span>
@@ -344,7 +344,7 @@ const Home = () => {
 
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/ballerina-poster.jpg" alt="Ballerina" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Ballerina" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn watch-trailer">
                       <span className="btn-icon">▶</span>
@@ -363,7 +363,7 @@ const Home = () => {
               {/* Duplicate set for infinite scroll */}
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/inside-out-2-poster.jpg" alt="Inside Out 2" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Inside Out 2" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn watch-trailer">
                       <span className="btn-icon">▶</span>
@@ -381,7 +381,7 @@ const Home = () => {
 
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/m3gan-2-poster.jpg" alt="M3GAN 2.0" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="M3GAN 2.0" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn watch-trailer">
                       <span className="btn-icon">▶</span>
@@ -399,7 +399,7 @@ const Home = () => {
 
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/httyd-poster.jpg" alt="How to Train Your Dragon" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="How to Train Your Dragon" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn watch-trailer">
                       <span className="btn-icon">▶</span>
@@ -417,7 +417,7 @@ const Home = () => {
 
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/thug-life-poster.jpg" alt="Thug Life (Tamil)" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Thug Life (Tamil)" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn watch-trailer">
                       <span className="btn-icon">▶</span>
@@ -435,7 +435,7 @@ const Home = () => {
 
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/28-years-later-poster.jpg" alt="28 Years Later" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="28 Years Later" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn watch-trailer">
                       <span className="btn-icon">▶</span>
@@ -453,7 +453,7 @@ const Home = () => {
 
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/ballerina-poster.jpg" alt="Ballerina" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png" alt="Ballerina" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn watch-trailer">
                       <span className="btn-icon">▶</span>
@@ -478,6 +478,7 @@ const Home = () => {
         <div className="deals-container">
           <h2 className="deals-title">DEALS</h2>
           <div className="deals-grid">
+
             {/* Deal Card 1: 50% Cash Back Offer */}
             <div className="deal-card">
               <div className="deal-banner" style={{
@@ -502,19 +503,12 @@ const Home = () => {
 
             {/* Deal Card 2: Student Offer */}
             <div className="deal-card">
-              <div className="deal-banner student-banner">
-                <div className="deal-banner-content">
-                  <div className="deal-text-overlay">
-                    <h3 className="deal-main-text">Hangout With Friends = Bonus Time!</h3>
-                    <p className="deal-sub-text">Buy 3 student tickets, get the 4th free.</p>
-                  </div>
-                  <div className="student-images">
-                    <div className="student-group-main">
-                      <div className="student-circle"></div>
-                    </div>
-                    <div className="student-group-bg"></div>
-                  </div>
-                </div>
+              <div className="deal-banner student-banner" style={{
+                backgroundImage: "url('/src/assets/LandingPageAnimation.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat"
+              }}>              
               </div>
               <div className="deal-footer">
                 <h3 className="deal-title">Student Offer</h3>
@@ -527,28 +521,13 @@ const Home = () => {
 
             {/* Deal Card 3: Buy One & Get Free PopCorn */}
             <div className="deal-card">
-              <div className="deal-banner popcorn-banner">
-                <div className="deal-banner-content">
-                  <div className="najm-logo">najm</div>
-                  <div className="deal-text-overlay">
-                    <p className="deal-main-text">BUY ONE GET ONE FREE ON MOVIE TICKETS & POPCOR</p>
-                  </div>
-                  <div className="credit-cards najm-cards">
-                    <div className="credit-card najm-grey-card">
-                      <div className="visa-logo">VISA</div>
-                    </div>
-                    <div className="credit-card najm-blue-card">
-                      <div className="visa-logo">VISA</div>
-                    </div>
-                    <div className="credit-card najm-silver-card">
-                      <div className="visa-logo">VISA</div>
-                    </div>
-                    <div className="credit-card najm-black-card">
-                      <div className="visa-logo">VISA</div>
-                    </div>
-                  </div>
-                  <div className="popcorn-icon">🍿</div>
-                </div>
+              <div className="deal-banner popcorn-banner" style={{
+                backgroundImage: "url('/src/assets/LandingPageAnimation.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat"
+              }}>  
+
               </div>
               <div className="deal-footer">
                 <h3 className="deal-title">Buy One & Get Free PopCorn</h3>
