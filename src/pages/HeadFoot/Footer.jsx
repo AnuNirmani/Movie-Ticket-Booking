@@ -8,13 +8,11 @@ const Footer = () => {
         {/* Logo Section */}
         <div className="footer-logo">
           <div className="logo-container">
-            <div className="movie-ticket">
-              <div className="ticket-perforations"></div>
-              <div className="ticket-content">
-                <div className="film-strip"></div>
-                <div className="motion-lines"></div>
-              </div>
-            </div>
+            <img 
+              src="/src/assets/logo.png" 
+              alt="Movie Express Logo" 
+              className="footer-logo-img"
+            />
             <div className="logo-text">
               <h2 className="movie-text">MOVIE EXPRESS</h2>
             </div>
