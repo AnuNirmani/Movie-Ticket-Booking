@@ -83,6 +83,14 @@
   letter-spacing: 2px;
 }
 
+.movie-subtitle {
+  font-size: 2rem;
+  color: hwb(0 100% 0%);
+  text-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
 .watch-trailer-btn {
   background: linear-gradient(135deg, #8e24aa, #6a1b9a);
   border: none;
