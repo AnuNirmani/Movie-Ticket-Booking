@@ -1,0 +1,281 @@
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(145deg, #2a1a3a, #1a0f2e);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0;
+  height: 70px;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-main {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffc107;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-left: 3rem;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: #e91e63;
+  transform: translateY(-1px);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e91e63;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Search Container */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  z-index: 1;
+}
+
+.search-input {
+  background: #ffffff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  width: 250px;
+  font-size: 0.9rem;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.search-input:focus {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Buy Ticket Button */
+.buy-ticket-btn {
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.buy-ticket-btn:hover {
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6);
+}
+
+/* Profile Icon */
+.profile-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #ffc107;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 193, 7, 0.1);
+}
+
+.profile-icon:hover {
+  color: #ffc107;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+}
+
+.profile-icon:hover svg {
+  stroke: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .navbar-container {
+    padding: 0 1.5rem;
+  }
+  
+  .navbar-links {
+    gap: 2rem;
+    margin-left: 2rem;
+  }
+  
+  .search-input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-links {
+    display: none;
+  }
+  
+  .search-input {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+  
+  .search-container {
+    display: none;
+  }
+  
+  .logo-image {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .logo-main {
+    font-size: 1.3rem;
+  }
+  
+  .logo-sub {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    height: 60px;
+  }
+  
+  .logo-icon {
+    gap: 8px;
+  }
+  
+  .logo-image {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .logo-main {
+    font-size: 1.1rem;
+  }
+  
+  .logo-sub {
+    font-size: 0.7rem;
+  }
+  
+  .buy-ticket-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .profile-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  animation: fadeInDown 0.6s ease-out;
+}

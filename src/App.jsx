@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Auth/login";
 import Signup from "./pages/Auth/Signup";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
 import SendOTP from "./pages/Auth/SendOTP";
 import NewPassword from "./pages/Auth/NewPassword";
