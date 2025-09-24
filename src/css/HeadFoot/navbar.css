@@ -52,7 +52,7 @@
 .logo-main {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #D4AF37;
+  color: #ffc107;
   letter-spacing: 1px;
   margin: 0;
 }
@@ -60,7 +60,7 @@
 .logo-sub {
   font-size: 0.9rem;
   font-weight: 400;
-  color: #D4AF37;
+  color: #ffc107;
   letter-spacing: 2px;
   margin: 0;
 }
@@ -84,7 +84,7 @@
 }
 
 .nav-link:hover {
-  color: #D4AF37;
+  color: #ffc107;
   transform: translateY(-1px);
 }
 
@@ -95,7 +95,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #D4AF37;
+  background: #ffc107;
   transition: width 0.3s ease;
 }
 
