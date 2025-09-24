@@ -5,64 +5,6 @@ import Footer from "../HeadFoot/Footer";
 import "../../css/Home/home.css";
 
 const Home = () => {
-  const scrollComingSoon = (direction) => {
-    const container = document.getElementById('coming-soon-scroll');
-    if (!container) {
-      console.error('Container not found!');
-      return;
-    }
-    
-    const cardWidth = 500; // Width of each card
-    const gap = 30; // Gap between cards
-    const scrollAmount = cardWidth + gap; // 530px per card
-    
-    // Try using scrollLeft instead of transform
-    const parentContainer = container.parentElement;
-    if (parentContainer) {
-      const currentScroll = parentContainer.scrollLeft || 0;
-      let newScroll;
-      
-      if (direction === 'left') {
-        newScroll = Math.max(currentScroll - scrollAmount, 0);
-      } else {
-        const maxScroll = parentContainer.scrollWidth - parentContainer.clientWidth;
-        newScroll = Math.min(currentScroll + scrollAmount, maxScroll);
-      }
-      
-      console.log(`Scrolling ${direction}: ${currentScroll}px -> ${newScroll}px`);
-      parentContainer.scrollTo({
-        left: newScroll,
-        behavior: 'smooth'
-      });
-    } else {
-      // Fallback to transform method
-      let currentX = 0;
-      const transform = container.style.transform;
-      if (transform && transform.includes('translateX')) {
-        const match = transform.match(/translateX\((-?\d+)px\)/);
-        if (match) {
-          currentX = parseInt(match[1]);
-        }
-      }
-      
-      let newX;
-      if (direction === 'left') {
-        newX = Math.min(currentX + scrollAmount, 0);
-      } else {
-        const maxScroll = -(scrollAmount * 5);
-        newX = Math.max(currentX - scrollAmount, maxScroll);
-      }
-      
-      console.log(`Transform scrolling ${direction}: ${currentX}px -> ${newX}px`);
-      container.style.transform = `translateX(${newX}px)`;
-    }
-    
-    // Add a visual indicator that the function is working
-    container.style.border = '2px solid red';
-    setTimeout(() => {
-      container.style.border = 'none';
-    }, 500);
-  };
 
   return (
     <>
@@ -308,12 +250,6 @@ const Home = () => {
         <div className="coming-soon-container">
           <h2 className="section-title">COMING SOON</h2>
           <div className="movie-scroll-container">
-            <button className="nav-arrow nav-arrow-left" onClick={() => scrollComingSoon('left')}>
-              &#8249;
-            </button>
-            <button className="nav-arrow nav-arrow-right" onClick={() => scrollComingSoon('right')}>
-              &#8250;
-            </button>
             <div className="coming-soon-scroll" id="coming-soon-scroll">
               {/* Coming Soon Movies */}
               <div className="coming-soon-card">
