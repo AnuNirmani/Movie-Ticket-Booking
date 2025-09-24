@@ -16,15 +16,14 @@ const Footer = () => {
               </div>
             </div>
             <div className="logo-text">
-              <h2 className="movie-text">MOVIE</h2>
-              <h3 className="express-text">EXPRESS</h3>
+              <h2 className="movie-text">MOVIE EXPRESS</h2>
             </div>
           </div>
         </div>
 
         {/* Navigation Links */}
         <div className="footer-nav">
-          <h4>Navigation</h4>
+          {/* <h4>Navigation</h4> */}
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/movies">Movies</a></li>
@@ -35,7 +34,7 @@ const Footer = () => {
 
         {/* Company Information */}
         <div className="footer-company">
-          <h4>Company</h4>
+          {/* <h4>Company</h4> */}
           <ul>
             <li><a href="/advertisements">Advertisements</a></li>
             <li><a href="/about">About Us</a></li>

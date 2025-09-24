@@ -168,7 +168,7 @@
 
 .footer-nav a:hover,
 .footer-company a:hover {
-  color: #f5c518;
+  color: #e91e63;
 }
 
 /* Newsletter Section */
@@ -209,14 +209,14 @@
 
 .email-input:focus {
   outline: none;
-  border-color: #f5c518;
-  box-shadow: 0 0 0 2px rgba(245, 197, 24, 0.2);
+  border-color: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .subscribe-btn {
   padding: 12px 20px;
-  background: linear-gradient(45deg, #2d1b4e, #1a0f2e);
-  color: white;
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  color: #ffffff;
   border: none;
   border-radius: 6px;
   font-size: 14px;
@@ -226,9 +226,9 @@
 }
 
 .subscribe-btn:hover {
-  background: linear-gradient(45deg, #f5c518, #ffd700);
-  color: #2d1b4e;
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6);
 }
 
 /* Social Media */
@@ -252,7 +252,7 @@
 }
 
 .social-icon:hover {
-  background: #f5c518;
+  background: #e91e63;
   color: #2d1b4e;
   transform: translateY(-2px);
 }
