@@ -118,6 +118,175 @@
   font-size: 1.2rem;
 }
 
+/* Now Playing Scrolling Section */
+.now-playing-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  padding: 60px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.now-playing-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.movie-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.movie-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.movie-scroll {
+  display: flex;
+  gap: 30px;
+  padding: 0 20px;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.movie-scroll:hover {
+  animation-play-state: paused;
+}
+
+.movie-card {
+  flex-shrink: 0;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.movie-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.movie-poster-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.movie-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover .movie-poster-img {
+  transform: scale(1.1);
+}
+
+.movie-overlay-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-overlay-card {
+  opacity: 1;
+}
+
+.action-btn {
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(142, 36, 170, 0.3);
+  min-width: 140px;
+  justify-content: center;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.4);
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+}
+
+.watch-trailer {
+  background: linear-gradient(135deg, #ff6b35, #e74c3c);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.watch-trailer:hover {
+  background: linear-gradient(135deg, #ff5722, #d32f2f);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.btn-icon {
+  font-size: 1rem;
+}
+
+.movie-card-title {
+  padding: 20px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  line-height: 1.3;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-280px * 6 - 30px * 5));
+  }
+}
+
 .section {
   padding: 40px;
   background: #111;
@@ -208,5 +377,53 @@
   .watch-trailer-btn {
     padding: 12px 24px;
     font-size: 1rem;
+  }
+
+  /* Now Playing Section Mobile */
+  .now-playing-section {
+    padding: 40px 0;
+  }
+  
+  .now-playing-container {
+    padding: 0 10px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+  
+  .movie-card {
+    width: 220px;
+  }
+  
+  .movie-poster-container {
+    height: 320px;
+  }
+  
+  .movie-card-title {
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  .action-btn {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+    min-width: 120px;
+  }
+  
+  .movie-scroll {
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-220px * 6 - 20px * 5));
+    }
   }
 }
