@@ -57,14 +57,6 @@
   margin: 0;
 }
 
-.logo-sub {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #ffc107;
-  letter-spacing: 2px;
-  margin: 0;
-}
-
 /* Navigation Links */
 .navbar-links {
   display: flex;
@@ -84,7 +76,7 @@
 }
 
 .nav-link:hover {
-  color: #ffc107;
+  color: #e91e63;
   transform: translateY(-1px);
 }
 
@@ -95,7 +87,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #ffc107;
+  background: #e91e63;
   transition: width 0.3s ease;
 }
 
