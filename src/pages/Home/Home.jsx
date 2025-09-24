@@ -244,13 +244,231 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="section">
-        <h2>Coming Soon</h2>
-        <div className="movie-grid">
-          <img src="/images/movie4.jpg" alt="Movie 4" />
-          <img src="/images/movie5.jpg" alt="Movie 5" />
-          <img src="/images/movie6.jpg" alt="Movie 6" />
-          <img src="/images/movie7.jpg" alt="Movie 7" />
+      {/* Coming Soon Scrolling Section */}
+      <div className="coming-soon-section">
+        <div className="coming-soon-container">
+          <h2 className="section-title">COMING SOON</h2>
+          <div className="movie-scroll-container">
+            <div className="movie-scroll coming-soon-scroll">
+              {/* Coming Soon Movies */}
+              <div className="coming-soon-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/inside-out-2-poster.jpg" alt="Inside Out 2" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                    <button className="action-btn more-info">
+                      <span className="btn-icon">ℹ</span>
+                      More Information
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">INSIDE OUT 2</h3>
+                <p className="release-date">13TH JUNE</p>
+              </div>
+
+              <div className="coming-soon-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/m3gan-2-poster.jpg" alt="M3GAN 2.0" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                    <button className="action-btn more-info">
+                      <span className="btn-icon">ℹ</span>
+                      More Information
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">M3GAN 2.0</h3>
+                <p className="release-date">IN CINEMAS 27TH JUNE</p>
+              </div>
+
+              <div className="coming-soon-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/httyd-poster.jpg" alt="How to Train Your Dragon" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                    <button className="action-btn more-info">
+                      <span className="btn-icon">ℹ</span>
+                      More Information
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">HOW TO TRAIN YOUR DRAGON</h3>
+                <p className="release-date">IN CINEMAS 4TH JULY</p>
+              </div>
+
+              <div className="coming-soon-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/thug-life-poster.jpg" alt="Thug Life (Tamil)" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                    <button className="action-btn more-info">
+                      <span className="btn-icon">ℹ</span>
+                      More Information
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">THUG LIFE (TAMIL)</h3>
+                <p className="release-date">IN CINEMAS 5TH JUNE</p>
+              </div>
+
+              <div className="coming-soon-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/28-years-later-poster.jpg" alt="28 Years Later" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                    <button className="action-btn more-info">
+                      <span className="btn-icon">ℹ</span>
+                      More Information
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">28 YEARS LATER</h3>
+                <p className="release-date">IN CINEMAS 28TH JUNE</p>
+              </div>
+
+              <div className="coming-soon-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/ballerina-poster.jpg" alt="Ballerina" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                    <button className="action-btn more-info">
+                      <span className="btn-icon">ℹ</span>
+                      More Information
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">BALLERINA</h3>
+                <p className="release-date">IN CINEMAS SOON</p>
+              </div>
+
+              {/* Duplicate set for infinite scroll */}
+              <div className="coming-soon-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/inside-out-2-poster.jpg" alt="Inside Out 2" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                    <button className="action-btn more-info">
+                      <span className="btn-icon">ℹ</span>
+                      More Information
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">INSIDE OUT 2</h3>
+                <p className="release-date">13TH JUNE</p>
+              </div>
+
+              <div className="coming-soon-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/m3gan-2-poster.jpg" alt="M3GAN 2.0" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                    <button className="action-btn more-info">
+                      <span className="btn-icon">ℹ</span>
+                      More Information
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">M3GAN 2.0</h3>
+                <p className="release-date">IN CINEMAS 27TH JUNE</p>
+              </div>
+
+              <div className="coming-soon-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/httyd-poster.jpg" alt="How to Train Your Dragon" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                    <button className="action-btn more-info">
+                      <span className="btn-icon">ℹ</span>
+                      More Information
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">HOW TO TRAIN YOUR DRAGON</h3>
+                <p className="release-date">IN CINEMAS 4TH JULY</p>
+              </div>
+
+              <div className="coming-soon-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/thug-life-poster.jpg" alt="Thug Life (Tamil)" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                    <button className="action-btn more-info">
+                      <span className="btn-icon">ℹ</span>
+                      More Information
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">THUG LIFE (TAMIL)</h3>
+                <p className="release-date">IN CINEMAS 5TH JUNE</p>
+              </div>
+
+              <div className="coming-soon-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/28-years-later-poster.jpg" alt="28 Years Later" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                    <button className="action-btn more-info">
+                      <span className="btn-icon">ℹ</span>
+                      More Information
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">28 YEARS LATER</h3>
+                <p className="release-date">IN CINEMAS 28TH JUNE</p>
+              </div>
+
+              <div className="coming-soon-card">
+                <div className="movie-poster-container">
+                  <img src="/src/assets/ballerina-poster.jpg" alt="Ballerina" className="movie-poster-img" />
+                  <div className="movie-overlay-card">
+                    <button className="action-btn watch-trailer">
+                      <span className="btn-icon">▶</span>
+                      Watch Trailer
+                    </button>
+                    <button className="action-btn more-info">
+                      <span className="btn-icon">ℹ</span>
+                      More Information
+                    </button>
+                  </div>
+                </div>
+                <h3 className="movie-card-title">BALLERINA</h3>
+                <p className="release-date">IN CINEMAS SOON</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

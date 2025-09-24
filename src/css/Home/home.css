@@ -170,7 +170,7 @@
 
 .movie-card {
   flex-shrink: 0;
-  width: 280px;
+  width: 500px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   overflow: hidden;
@@ -282,6 +282,85 @@
 }
 
 @keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-280px * 6 - 30px * 5));
+  }
+}
+
+/* Coming Soon Scrolling Section */
+.coming-soon-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  padding: 60px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.coming-soon-container {
+  width: 100%;
+  padding: 0;
+}
+
+.coming-soon-scroll {
+  animation: coming-soon-scroll 35s linear infinite;
+}
+
+.coming-soon-scroll:hover {
+  animation-play-state: paused;
+}
+
+.coming-soon-card {
+  flex-shrink: 0;
+  width: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.coming-soon-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.more-info {
+  background: linear-gradient(135deg, #4a148c, #7b1fa2);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.more-info:hover {
+  background: linear-gradient(135deg, #6a1b9a, #9c27b0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(156, 39, 176, 0.6);
+}
+
+.release-date {
+  padding: 0 20px 20px 20px;
+  color: #00bfff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+  letter-spacing: 1px;
+}
+
+@keyframes coming-soon-scroll {
   0% {
     transform: translateX(0);
   }
@@ -422,6 +501,39 @@
   }
   
   @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-220px * 6 - 20px * 5));
+    }
+  }
+
+  /* Coming Soon Section Mobile */
+  .coming-soon-section {
+    padding: 40px 0;
+  }
+  
+  .coming-soon-container {
+    padding: 0;
+  }
+  
+  .coming-soon-card {
+    width: 220px;
+  }
+  
+  .release-date {
+    padding: 0 15px 15px 15px;
+    font-size: 0.8rem;
+  }
+  
+  .more-info {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+    min-width: 120px;
+  }
+  
+  @keyframes coming-soon-scroll {
     0% {
       transform: translateX(0);
     }
