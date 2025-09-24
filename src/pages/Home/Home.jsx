@@ -480,34 +480,14 @@ const Home = () => {
           <div className="deals-grid">
             {/* Deal Card 1: 50% Cash Back Offer */}
             <div className="deal-card">
-              <div className="deal-banner">
+              <div className="deal-banner" style={{
+                backgroundImage: "url('/src/assets/LandingPageAnimation.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat"
+              }}>
                 <div className="deal-banner-content">
                   <div className="deal-text-overlay">
-                    <p className="deal-main-text">
-                      Get <span className="highlight-text">50% discount</span> on movie tickets all week long with CBD Credit Cards
-                    </p>
-                  </div>
-                  <div className="credit-cards">
-                    <div className="credit-card red-card">
-                      <div className="card-info">
-                        <div className="card-type">SUPER SAVER</div>
-                        <div className="card-number">1234 5678 0123 4567</div>
-                        <div className="card-holder">RASHID AHMAD</div>
-                      </div>
-                      <div className="visa-logo">VISA</div>
-                    </div>
-                    <div className="credit-card pink-card">
-                      <div className="visa-logo">VISA</div>
-                    </div>
-                    <div className="credit-card blue-card">
-                      <div className="visa-logo">VISA</div>
-                    </div>
-                    <div className="credit-card grey-card">
-                      <div className="visa-logo">VISA</div>
-                    </div>
-                    <div className="credit-card purple-card">
-                      <div className="visa-logo">VISA</div>
-                    </div>
                   </div>
                 </div>
               </div>
