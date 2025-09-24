@@ -145,7 +145,8 @@
 }
 
 .movie-scroll-container {
-  overflow-x: auto;
+  position: relative;
+  overflow-x: hidden;
   overflow-y: hidden;
   padding: 20px 0;
   scrollbar-width: none; /* Firefox */
@@ -306,11 +307,11 @@
 }
 
 .coming-soon-scroll {
-  animation: coming-soon-scroll 35s linear infinite;
-}
-
-.coming-soon-scroll:hover {
-  animation-play-state: paused;
+  display: flex;
+  gap: 30px;
+  padding: 0 40px;
+  width: fit-content;
+  transition: transform 0.3s ease;
 }
 
 .coming-soon-card {
@@ -360,14 +361,40 @@
   letter-spacing: 1px;
 }
 
-@keyframes coming-soon-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-280px * 6 - 30px * 5));
-  }
+/* Navigation Arrows */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.nav-arrow:hover {
+  background: rgba(142, 36, 170, 0.9);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 5px 15px rgba(142, 36, 170, 0.5);
+}
+
+.nav-arrow-left {
+  left: 10px;
+}
+
+.nav-arrow-right {
+  right: 10px;
+}
+
 
 .section {
   padding: 40px;
@@ -533,12 +560,19 @@
     min-width: 120px;
   }
   
-  @keyframes coming-soon-scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-220px * 6 - 20px * 5));
-    }
+  /* Mobile navigation arrows */
+  .nav-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
   }
+  
+  .nav-arrow-left {
+    left: 5px;
+  }
+  
+  .nav-arrow-right {
+    right: 5px;
+  }
+  
 }

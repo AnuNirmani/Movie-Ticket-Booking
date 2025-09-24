@@ -5,6 +5,27 @@ import Footer from "../HeadFoot/Footer";
 import "../../css/Home/home.css";
 
 const Home = () => {
+  const scrollComingSoon = (direction) => {
+    const container = document.getElementById('coming-soon-scroll');
+    const cardWidth = 500; // Width of each card
+    const gap = 30; // Gap between cards
+    const scrollAmount = cardWidth + gap;
+    
+    // Get current transform value
+    const currentTransform = container.style.transform || 'translateX(0px)';
+    const currentX = parseInt(currentTransform.match(/-?\d+/) || [0])[0];
+    
+    let newX;
+    if (direction === 'left') {
+      newX = Math.min(currentX + scrollAmount, 0); // Don't scroll past the beginning
+    } else {
+      const maxScroll = -(scrollAmount * 6); // 6 unique cards
+      newX = Math.max(currentX - scrollAmount, maxScroll); // Don't scroll past the end
+    }
+    
+    container.style.transform = `translateX(${newX}px)`;
+  };
+
   return (
     <>
       <Navbar />
@@ -249,7 +270,13 @@ const Home = () => {
         <div className="coming-soon-container">
           <h2 className="section-title">COMING SOON</h2>
           <div className="movie-scroll-container">
-            <div className="movie-scroll coming-soon-scroll">
+            <button className="nav-arrow nav-arrow-left" onClick={() => scrollComingSoon('left')}>
+              &#8249;
+            </button>
+            <button className="nav-arrow nav-arrow-right" onClick={() => scrollComingSoon('right')}>
+              &#8250;
+            </button>
+            <div className="coming-soon-scroll" id="coming-soon-scroll">
               {/* Coming Soon Movies */}
               <div className="coming-soon-card">
                 <div className="movie-poster-container">
