@@ -473,12 +473,112 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="section">
-        <h2>Deals</h2>
-        <div className="deals-grid">
-          <div className="deal-card">50% Cashback on Tickets</div>
-          <div className="deal-card">Student Offer</div>
-          <div className="deal-card">Buy One Get One Free</div>
+      {/* Deals Section */}
+      <div className="deals-section">
+        <div className="deals-container">
+          <h2 className="deals-title">DEALS</h2>
+          <div className="deals-grid">
+            {/* Deal Card 1: 50% Cash Back Offer */}
+            <div className="deal-card">
+              <div className="deal-banner">
+                <div className="deal-banner-content">
+                  <div className="deal-text-overlay">
+                    <p className="deal-main-text">
+                      Get <span className="highlight-text">50% discount</span> on movie tickets all week long with CBD Credit Cards
+                    </p>
+                  </div>
+                  <div className="credit-cards">
+                    <div className="credit-card red-card">
+                      <div className="card-info">
+                        <div className="card-type">SUPER SAVER</div>
+                        <div className="card-number">1234 5678 0123 4567</div>
+                        <div className="card-holder">RASHID AHMAD</div>
+                      </div>
+                      <div className="visa-logo">VISA</div>
+                    </div>
+                    <div className="credit-card pink-card">
+                      <div className="visa-logo">VISA</div>
+                    </div>
+                    <div className="credit-card blue-card">
+                      <div className="visa-logo">VISA</div>
+                    </div>
+                    <div className="credit-card grey-card">
+                      <div className="visa-logo">VISA</div>
+                    </div>
+                    <div className="credit-card purple-card">
+                      <div className="visa-logo">VISA</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="deal-footer">
+                <h3 className="deal-title">50% Cash Back Offer</h3>
+                <div className="deal-info-link">
+                  <span className="info-icon">ℹ</span>
+                  <span className="info-text">More Information</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Deal Card 2: Student Offer */}
+            <div className="deal-card">
+              <div className="deal-banner student-banner">
+                <div className="deal-banner-content">
+                  <div className="deal-text-overlay">
+                    <h3 className="deal-main-text">Hangout With Friends = Bonus Time!</h3>
+                    <p className="deal-sub-text">Buy 3 student tickets, get the 4th free.</p>
+                  </div>
+                  <div className="student-images">
+                    <div className="student-group-main">
+                      <div className="student-circle"></div>
+                    </div>
+                    <div className="student-group-bg"></div>
+                  </div>
+                </div>
+              </div>
+              <div className="deal-footer">
+                <h3 className="deal-title">Student Offer</h3>
+                <div className="deal-info-link">
+                  <span className="info-icon">ℹ</span>
+                  <span className="info-text">More Information</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Deal Card 3: Buy One & Get Free PopCorn */}
+            <div className="deal-card">
+              <div className="deal-banner popcorn-banner">
+                <div className="deal-banner-content">
+                  <div className="najm-logo">najm</div>
+                  <div className="deal-text-overlay">
+                    <p className="deal-main-text">BUY ONE GET ONE FREE ON MOVIE TICKETS & POPCOR</p>
+                  </div>
+                  <div className="credit-cards najm-cards">
+                    <div className="credit-card najm-grey-card">
+                      <div className="visa-logo">VISA</div>
+                    </div>
+                    <div className="credit-card najm-blue-card">
+                      <div className="visa-logo">VISA</div>
+                    </div>
+                    <div className="credit-card najm-silver-card">
+                      <div className="visa-logo">VISA</div>
+                    </div>
+                    <div className="credit-card najm-black-card">
+                      <div className="visa-logo">VISA</div>
+                    </div>
+                  </div>
+                  <div className="popcorn-icon">🍿</div>
+                </div>
+              </div>
+              <div className="deal-footer">
+                <h3 className="deal-title">Buy One & Get Free PopCorn</h3>
+                <div className="deal-info-link">
+                  <span className="info-icon">ℹ</span>
+                  <span className="info-text">More Information</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
