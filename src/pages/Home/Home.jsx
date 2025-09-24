@@ -7,23 +7,61 @@ import "../../css/Home/home.css";
 const Home = () => {
   const scrollComingSoon = (direction) => {
     const container = document.getElementById('coming-soon-scroll');
-    const cardWidth = 500; // Width of each card
-    const gap = 30; // Gap between cards
-    const scrollAmount = cardWidth + gap;
-    
-    // Get current transform value
-    const currentTransform = container.style.transform || 'translateX(0px)';
-    const currentX = parseInt(currentTransform.match(/-?\d+/) || [0])[0];
-    
-    let newX;
-    if (direction === 'left') {
-      newX = Math.min(currentX + scrollAmount, 0); // Don't scroll past the beginning
-    } else {
-      const maxScroll = -(scrollAmount * 6); // 6 unique cards
-      newX = Math.max(currentX - scrollAmount, maxScroll); // Don't scroll past the end
+    if (!container) {
+      console.error('Container not found!');
+      return;
     }
     
-    container.style.transform = `translateX(${newX}px)`;
+    const cardWidth = 500; // Width of each card
+    const gap = 30; // Gap between cards
+    const scrollAmount = cardWidth + gap; // 530px per card
+    
+    // Try using scrollLeft instead of transform
+    const parentContainer = container.parentElement;
+    if (parentContainer) {
+      const currentScroll = parentContainer.scrollLeft || 0;
+      let newScroll;
+      
+      if (direction === 'left') {
+        newScroll = Math.max(currentScroll - scrollAmount, 0);
+      } else {
+        const maxScroll = parentContainer.scrollWidth - parentContainer.clientWidth;
+        newScroll = Math.min(currentScroll + scrollAmount, maxScroll);
+      }
+      
+      console.log(`Scrolling ${direction}: ${currentScroll}px -> ${newScroll}px`);
+      parentContainer.scrollTo({
+        left: newScroll,
+        behavior: 'smooth'
+      });
+    } else {
+      // Fallback to transform method
+      let currentX = 0;
+      const transform = container.style.transform;
+      if (transform && transform.includes('translateX')) {
+        const match = transform.match(/translateX\((-?\d+)px\)/);
+        if (match) {
+          currentX = parseInt(match[1]);
+        }
+      }
+      
+      let newX;
+      if (direction === 'left') {
+        newX = Math.min(currentX + scrollAmount, 0);
+      } else {
+        const maxScroll = -(scrollAmount * 5);
+        newX = Math.max(currentX - scrollAmount, maxScroll);
+      }
+      
+      console.log(`Transform scrolling ${direction}: ${currentX}px -> ${newX}px`);
+      container.style.transform = `translateX(${newX}px)`;
+    }
+    
+    // Add a visual indicator that the function is working
+    container.style.border = '2px solid red';
+    setTimeout(() => {
+      container.style.border = 'none';
+    }, 500);
   };
 
   return (

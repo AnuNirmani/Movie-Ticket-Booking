@@ -146,9 +146,10 @@
 
 .movie-scroll-container {
   position: relative;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   padding: 20px 0;
+  width: 100%;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
 }
@@ -310,13 +311,16 @@
   display: flex;
   gap: 30px;
   padding: 0 40px;
-  width: fit-content;
+  width: max-content;
+  min-width: 100%;
   transition: transform 0.3s ease;
+  transform: translateX(0);
+  will-change: transform;
 }
 
 .coming-soon-card {
   flex-shrink: 0;
-  width: 500px;
+  width: 300px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   overflow: hidden;
