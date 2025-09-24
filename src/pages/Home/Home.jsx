@@ -9,8 +9,24 @@ const Home = () => {
     <>
       <Navbar />
 
-      <div className="hero-section">
-        <img src="/images/hero-banner.jpg" alt="Hero Banner" className="hero-image" />
+      {/* Featured Movie Section */}
+      <div className="featured-movie-section">
+        <div className="featured-movie-container">
+          <div className="featured-movie-poster">
+            <img src="/src/assets/LandingPageAnimation.png" alt="Elio Movie Poster" className="movie-poster" />
+            <div className="movie-overlay">
+              <div className="movie-info">
+                <h3 className="movie-title">ELIO</h3>
+                <p className="movie-subtitle">Disney • PIXAR</p>
+                <p className="movie-description">An intergalactic adventure awaits as Elio embarks on an extraordinary journey through space.</p>
+                <button className="watch-trailer-btn">
+                  <span className="play-icon">▶</span>
+                  Watch Trailer
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="section">
