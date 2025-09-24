@@ -17,8 +17,6 @@ const Home = () => {
             <div className="movie-overlay">
               <div className="movie-info">
                 <h3 className="movie-title">ELIO</h3>
-                <p className="movie-subtitle">Disney • PIXAR</p>
-                <p className="movie-description">An intergalactic adventure awaits as Elio embarks on an extraordinary journey through space.</p>
                 <button className="watch-trailer-btn">
                   <span className="play-icon">▶</span>
                   Watch Trailer
