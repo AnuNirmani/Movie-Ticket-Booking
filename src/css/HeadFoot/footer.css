@@ -211,22 +211,32 @@
 .app-btn {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  background: #000;
-  color: white;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
   text-decoration: none;
   border-radius: 6px;
   transition: all 0.3s ease;
   min-width: 140px;
   max-width: 150px;
-  border: 1px solid #333;
   flex: 1;
 }
 
 .app-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.app-store-image {
+  width: 100%;
+  height: auto;
+  max-height: 50px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.app-store-image:hover {
+  opacity: 0.9;
 }
 
 .app-icon {
@@ -307,6 +317,10 @@
     max-width: 140px;
     flex: 1;
   }
+  
+  .app-store-image {
+    max-height: 45px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -325,7 +339,10 @@
   .app-btn {
     min-width: 110px;
     max-width: 120px;
-    padding: 6px 8px;
     flex: 1;
+  }
+  
+  .app-store-image {
+    max-height: 40px;
   }
 }
