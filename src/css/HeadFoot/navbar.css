@@ -1,6 +1,6 @@
 /* Navbar Styles */
 .navbar {
-  background: linear-gradient(135deg, #6B46C1 0%, #7C3AED 100%);
+  background: linear-gradient(145deg, #2a1a3a, #1a0f2e);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
@@ -29,6 +29,18 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
 }
 
 .logo-text {
@@ -136,9 +148,9 @@
 
 /* Buy Ticket Button */
 .buy-ticket-btn {
-  background: linear-gradient(135deg, #6B46C1 0%, #7C3AED 100%);
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
   color: #ffffff;
-  border: 2px solid #ffffff;
+    border: none;
   border-radius: 25px;
   padding: 0.75rem 1.5rem;
   font-size: 0.9rem;
@@ -149,10 +161,9 @@
 }
 
 .buy-ticket-btn:hover {
-  background: #ffffff;
-  color: #6B46C1;
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6);
 }
 
 /* Profile Icon */
@@ -163,14 +174,14 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid #E91E63;
+  color: #ffc107;
   cursor: pointer;
   transition: all 0.3s ease;
   background: rgba(255, 255, 255, 0.1);
 }
 
 .profile-icon:hover {
-  background: #E91E63;
+  color: #ffc107;
   transform: scale(1.1);
   box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
 }
@@ -214,6 +225,11 @@
     display: none;
   }
   
+  .logo-image {
+    width: 35px;
+    height: 35px;
+  }
+  
   .logo-main {
     font-size: 1.3rem;
   }
@@ -230,6 +246,11 @@
   
   .logo-icon {
     gap: 8px;
+  }
+  
+  .logo-image {
+    width: 30px;
+    height: 30px;
   }
   
   .logo-main {

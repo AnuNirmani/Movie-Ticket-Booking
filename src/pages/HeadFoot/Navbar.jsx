@@ -1,5 +1,6 @@
 import React from "react";
 import "../../css/HeadFoot/navbar.css";
+import backgroundImage from "../../assets/logo.png";
 
 const Navbar = () => {
   return (
@@ -8,14 +9,9 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="navbar-logo">
           <div className="logo-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="5" width="18" height="14" rx="2" stroke="#D4AF37" strokeWidth="2" fill="none"/>
-              <path d="M3 9h18M3 13h18" stroke="#D4AF37" strokeWidth="1"/>
-              <circle cx="19" cy="12" r="1.5" fill="#D4AF37"/>
-            </svg>
+            <img src={backgroundImage} alt="Movie Express Logo" className="logo-image" />
             <div className="logo-text">
-              <div className="logo-main">MOVIE</div>
-              <div className="logo-sub">EXPRESS</div>
+              <div className="logo-main">MOVIE EXPRESS</div>
             </div>
           </div>
         </div>
