@@ -8,20 +8,32 @@ import "../../../css/Home/Booking/seatbooking.css";
 const SeatBooking = () => {
   const navigate = useNavigate();
   const [selectedSeats, setSelectedSeats] = useState([]);
+  const [activeShowtime, setActiveShowtime] = useState("04:00 pm");
+  const [activeFormat, setActiveFormat] = useState("2D");
 
-  const rows = ["J", "H", "G", "F", "E", "D", "C", "B", "A"];
-  const cols = 19;
-
-  const reservedSeats = ["E6", "E7", "E8", "E9", "F12"];
+  const dirLoungeSeats = ["DL12", "DL11", "DL10", "DL9", "DL8", "DL7", "DL6", "DL5", "DL4", "DL3", "DL2", "DL1"];
+  const standardRows = ["J", "I", "H", "G", "F", "E", "D", "C", "B", "A"];
+  const reservedSeats = ["DL8", "J15", "I12", "H9", "G6", "F3", "E10", "D7", "C4", "B1"];
 
   const toggleSeat = (seatId) => {
     if (reservedSeats.includes(seatId)) return;
-
     if (selectedSeats.includes(seatId)) {
       setSelectedSeats(selectedSeats.filter((s) => s !== seatId));
     } else {
       setSelectedSeats([...selectedSeats, seatId]);
     }
+  };
+
+  const getSeatClass = (seatId) => {
+    let seatClass = "seat";
+    if (reservedSeats.includes(seatId)) {
+      seatClass += " reserved";
+    } else if (selectedSeats.includes(seatId)) {
+      seatClass += " selected";
+    } else {
+      seatClass += " available";
+    }
+    return seatClass;
   };
 
   return (
@@ -31,57 +43,140 @@ const SeatBooking = () => {
       <div className="booking-container">
         {/* Header */}
         <div className="booking-header">
-          <h2>LILO & STITCH | Monday, 29 May | CCC Cinemas - 2D</h2>
+          <h2>LILO & STITCH | Monday, 29 May | CCC Cinemas</h2>
+
+          {/* Format Buttons */}
+          <div className="format-buttons">
+            <button
+              className={activeFormat === "2D" ? "format-btn active" : "format-btn"}
+              onClick={() => setActiveFormat("2D")}
+            >
+              2D
+            </button>
+            <button
+              className={activeFormat === "3D" ? "format-btn active" : "format-btn"}
+              onClick={() => setActiveFormat("3D")}
+            >
+              3D
+            </button>
+          </div>
+
+          {/* Legend */}
           <div className="legend">
-            <span className="box reserved"></span> Reserved
-            <span className="box available"></span> Available
-            <span className="box selected"></span> Selected
+            <div className="legend-item">
+              <span className="box reserved"></span> Reserved
+            </div>
+            <div className="legend-item">
+              <span className="box available"></span> Available
+            </div>
+            <div className="legend-item">
+              <span className="box selected"></span> Selected
+            </div>
           </div>
         </div>
 
         {/* Showtimes */}
         <div className="showtimes">
-          <button>09:00 am</button>
-          <button>12:30 pm</button>
-          <button className="active">04:00 pm</button>
+          {["09:00 am", "12:30 pm", "04:00 pm"].map((time) => (
+            <button
+              key={time}
+              className={activeShowtime === time ? "active" : ""}
+              onClick={() => setActiveShowtime(time)}
+            >
+              {time}
+            </button>
+          ))}
         </div>
 
         {/* Seat Grid */}
         <div className="seat-grid">
-          {rows.map((row) => (
-            <div key={row} className="seat-row">
-              <span className="row-label">{row}</span>
-              {[...Array(cols)].map((_, i) => {
-                const seatId = `${row}${i + 1}`;
-                let seatClass = "seat";
-
-                if (reservedSeats.includes(seatId)) {
-                  seatClass += " reserved";
-                } else if (selectedSeats.includes(seatId)) {
-                  seatClass += " selected";
-                } else {
-                  seatClass += " available";
-                }
-
-                return (
-                  <React.Fragment key={seatId}>
-                    {i === 5 && <div className="seat-gap"></div>} {/* gap between 5 & 6 */}
-                    <div
-                      className={seatClass}
-                      onClick={() => toggleSeat(seatId)}
-                    >
-                      {i + 1}
-                    </div>
-                  </React.Fragment>
-                );
-              })}
+          {/* DIR'S LOUNGE Section */}
+          <div className="section">
+            <h3 className="section-title">DIR'S LOUNGE</h3>
+            <div className="dir-lounge-row">
+              <div className="seat-block">
+                {dirLoungeSeats.slice(0, 8).map((seatId) => (
+                  <div
+                    key={seatId}
+                    className={getSeatClass(seatId)}
+                    onClick={() => toggleSeat(seatId)}
+                  >
+                    {seatId}
+                  </div>
+                ))}
+              </div>
+              <div className="aisle-gap"></div>
+              <div className="seat-block">
+                {dirLoungeSeats.slice(8, 12).map((seatId) => (
+                  <div
+                    key={seatId}
+                    className={getSeatClass(seatId)}
+                    onClick={() => toggleSeat(seatId)}
+                  >
+                    {seatId}
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+          </div>
 
-        <div className="screen">SCREEN THIS WAY</div>
+          {/* STANDARD Section */}
+          <div className="section">
+            <h3 className="section-title">STANDARD</h3>
+            {standardRows.map((row) => (
+              <div key={row} className="seat-row">
+                <span className="row-label">{row}</span>
+                <div className="seat-block">
+                  {[...Array(12)].map((_, i) => {
+                    const seatNum = row === "J" || row === "I" || row === "H" ? 18 - i : 16 - i;
+                    const seatId = `${row}${seatNum}`;
+                    return (
+                      <div
+                        key={seatId}
+                        className={getSeatClass(seatId)}
+                        onClick={() => toggleSeat(seatId)}
+                      >
+                        {seatNum}
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="central-aisle"></div>
+                <div className="seat-block">
+                  {row === "J" || row === "I" || row === "H"
+                    ? [...Array(6)].map((_, i) => {
+                        const seatNum = 6 - i;
+                        const seatId = `${row}${seatNum}`;
+                        return (
+                          <div
+                            key={seatId}
+                            className={getSeatClass(seatId)}
+                            onClick={() => toggleSeat(seatId)}
+                          >
+                            {seatNum}
+                          </div>
+                        );
+                      })
+                    : [...Array(4)].map((_, i) => {
+                        const seatNum = 4 - i;
+                        const seatId = `${row}${seatNum}`;
+                        return (
+                          <div
+                            key={seatId}
+                            className={getSeatClass(seatId)}
+                            onClick={() => toggleSeat(seatId)}
+                          >
+                            {seatNum}
+                          </div>
+                        );
+                      })}
+                </div>
+              </div>
+            ))}
+          </div>
 
+          <div className="screen">SCREEN</div>
         </div>
-
 
         {/* Ticket selection */}
         <div className="ticket-selection">
