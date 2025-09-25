@@ -1,5 +1,6 @@
 /* Movie Selecting Page Styles */
 .movie-selecting-container {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
   min-height: 100vh;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   padding: 0;
@@ -8,7 +9,7 @@
 
 /* Navigation Bar */
 .movie-nav-bar {
-  background: #4a2c5a;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -93,6 +94,7 @@
 }
 
 .movie-showtime-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
   background: white;
   border-radius: 15px;
   padding: 30px;

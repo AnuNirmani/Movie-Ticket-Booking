@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../HeadFoot/Navbar";
+import Deals from "../../../components/Deals";
 import Footer from "../../HeadFoot/Footer";
 import "../../../css/Home/Booking/movieselecting.css";
 
@@ -143,6 +144,9 @@ const MovieSelecting = () => {
           ))}
         </div>
       </div>
+
+      {/* Deals Section */}
+      <Deals />
 
       <Footer />
     </>
