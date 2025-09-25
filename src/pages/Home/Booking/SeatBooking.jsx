@@ -31,10 +31,7 @@ const SeatBooking = () => {
       <div className="booking-container">
         {/* Header */}
         <div className="booking-header">
-          <button className="back-btn" onClick={() => navigate("/home")}>
-            ← Back to Movies
-          </button>
-          <h3>LILO & STITCH | Monday, 29 May | CCC Cinemas - 2D</h3>
+          <h2>LILO & STITCH | Monday, 29 May | CCC Cinemas - 2D</h2>
           <div className="legend">
             <span className="box reserved"></span> Reserved
             <span className="box available"></span> Available

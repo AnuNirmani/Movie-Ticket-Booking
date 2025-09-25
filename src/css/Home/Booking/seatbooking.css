@@ -21,13 +21,13 @@
   justify-content: center;
   gap: 20px;
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .legend .box {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   margin-right: 5px;
   border-radius: 3px;
 }
