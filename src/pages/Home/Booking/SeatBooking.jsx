@@ -9,16 +9,10 @@ const SeatBooking = () => {
   const navigate = useNavigate();
   const [selectedSeats, setSelectedSeats] = useState([]);
 
-  // Seat configuration
   const rows = ["H", "G", "F", "E", "D", "C", "B", "A"];
   const cols = 12;
-  
-  // Sample reserved seats
-  const reservedSeats = ["E6", "E7", "E8", "E9", "F12"];
 
-  const handleBackToHome = () => {
-    navigate("/home");
-  };
+  const reservedSeats = ["E6", "E7", "E8", "E9", "F12"];
 
   const toggleSeat = (seatId) => {
     if (reservedSeats.includes(seatId)) return;
@@ -30,24 +24,14 @@ const SeatBooking = () => {
     }
   };
 
-  const handleCancel = () => {
-    navigate("/home");
-  };
-
-  const handleNext = () => {
-    // Navigate to next step (payment or confirmation)
-    console.log("Selected seats:", selectedSeats);
-    // You can add navigation to payment page here
-  };
-
   return (
     <>
       <Navbar />
-      
+
       <div className="booking-container">
         {/* Header */}
         <div className="booking-header">
-          <button className="back-btn" onClick={handleBackToHome}>
+          <button className="back-btn" onClick={() => navigate("/home")}>
             ← Back to Movies
           </button>
           <h3>LILO & STITCH | Monday, 29 May | CCC Cinemas - 2D</h3>
@@ -83,13 +67,15 @@ const SeatBooking = () => {
                 }
 
                 return (
-                  <div
-                    key={seatId}
-                    className={seatClass}
-                    onClick={() => toggleSeat(seatId)}
-                  >
-                    {i + 1}
-                  </div>
+                  <React.Fragment key={seatId}>
+                    {i === 5 && <div className="seat-gap"></div>} {/* gap between 5 & 6 */}
+                    <div
+                      className={seatClass}
+                      onClick={() => toggleSeat(seatId)}
+                    >
+                      {i + 1}
+                    </div>
+                  </React.Fragment>
                 );
               })}
             </div>
@@ -117,14 +103,16 @@ const SeatBooking = () => {
         </div>
 
         <div className="actions">
-          <button className="cancel" onClick={handleCancel}>Cancel</button>
-          <button className="next" onClick={handleNext}>Next</button>
+          <button className="cancel" onClick={() => navigate("/home")}>
+            Cancel
+          </button>
+          <button className="next" onClick={() => console.log(selectedSeats)}>
+            Next
+          </button>
         </div>
       </div>
 
-      {/* Deals Section */}
       <Deals />
-      
       <Footer />
     </>
   );
