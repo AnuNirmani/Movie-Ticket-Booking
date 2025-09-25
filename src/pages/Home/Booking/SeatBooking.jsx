@@ -9,7 +9,7 @@ const SeatBooking = () => {
   const navigate = useNavigate();
   const [selectedSeats, setSelectedSeats] = useState([]);
 
-  const rows = ["H", "G", "F", "E", "D", "C", "B", "A"];
+  const rows = ["J", "H", "G", "F", "E", "D", "C", "B", "A"];
   const cols = 19;
 
   const reservedSeats = ["E6", "E7", "E8", "E9", "F12"];
