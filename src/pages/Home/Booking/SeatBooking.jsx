@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../HeadFoot/Navbar";
 import Footer from "../../HeadFoot/Footer";
+import Deals from "../../../components/Deals";
 import "../../../css/Home/Booking/seatbooking.css";
 
 const SeatBooking = () => {
@@ -120,6 +121,9 @@ const SeatBooking = () => {
           <button className="next" onClick={handleNext}>Next</button>
         </div>
       </div>
+
+      {/* Deals Section */}
+      <Deals />
       
       <Footer />
     </>
