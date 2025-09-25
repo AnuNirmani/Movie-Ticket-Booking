@@ -5,7 +5,7 @@ const Deals = () => {
   return (
     <div className="deals-section">
       <div className="deals-container">
-        <h2 className="deals-title">DEALS</h2>
+        <h3 className="deals-title">DEALS</h3>
         <div className="deals-grid">
           {/* Deal Card 1: 50% Cash Back Offer */}
           <div className="deal-card">
