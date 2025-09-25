@@ -226,7 +226,8 @@ const Home = () => {
 
               <div className="movie-card">
                 <div className="movie-poster-container">
-                  <img src="/src/assets/LandingPageAnimation.png" alt="Romance Movie" className="movie-poster-img" />
+                  <img src="/src/assets/LandingPageAnimation.png
+                  " alt="Romance Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
                     <button className="action-btn buy-ticket">
                       <span className="btn-icon">🎫</span>
