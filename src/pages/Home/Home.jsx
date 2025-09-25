@@ -1,10 +1,16 @@
 // src/pages/Home.jsx
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../HeadFoot/Navbar";
 import Footer from "../HeadFoot/Footer";
 import "../../css/Home/home.css";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleBuyTicket = () => {
+    navigate("/seat-booking");
+  };
 
   return (
     <>
@@ -40,7 +46,7 @@ const Home = () => {
                 <div className="movie-poster-container">
                   <img src="/src/assets/LandingPageAnimation.png" alt="New Avengers" className="movie-poster-img" />
                   <div className="movie-overlay-card">
-                    <button className="action-btn buy-ticket">
+                    <button className="action-btn buy-ticket" onClick={handleBuyTicket}>
                       <span className="btn-icon">🎫</span>
                       Buy Ticket
                     </button>
@@ -57,7 +63,7 @@ const Home = () => {
                 <div className="movie-poster-container">
                   <img src="/src/assets/LandingPageAnimation.png" alt="Final Destination Bloodlines" className="movie-poster-img" />
                   <div className="movie-overlay-card">
-                    <button className="action-btn buy-ticket">
+                    <button className="action-btn buy-ticket" onClick={handleBuyTicket}>
                       <span className="btn-icon">🎫</span>
                       Buy Ticket
                     </button>
@@ -74,7 +80,7 @@ const Home = () => {
                 <div className="movie-poster-container">
                   <img src="/src/assets/LandingPageAnimation.png" alt="වාලම්පුර" className="movie-poster-img" />
                   <div className="movie-overlay-card">
-                    <button className="action-btn buy-ticket">
+                    <button className="action-btn buy-ticket" onClick={handleBuyTicket}>
                       <span className="btn-icon">🎫</span>
                       Buy Ticket
                     </button>
@@ -91,7 +97,7 @@ const Home = () => {
                 <div className="movie-poster-container">
                   <img src="/src/assets/LandingPageAnimation.png" alt="Disney Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
-                    <button className="action-btn buy-ticket">
+                    <button className="action-btn buy-ticket" onClick={handleBuyTicket}>
                       <span className="btn-icon">🎫</span>
                       Buy Ticket
                     </button>
@@ -108,7 +114,7 @@ const Home = () => {
                 <div className="movie-poster-container">
                   <img src="/src/assets/LandingPageAnimation.png" alt="Action Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
-                    <button className="action-btn buy-ticket">
+                    <button className="action-btn buy-ticket" onClick={handleBuyTicket}>
                       <span className="btn-icon">🎫</span>
                       Buy Ticket
                     </button>
@@ -125,7 +131,7 @@ const Home = () => {
                 <div className="movie-poster-container">
                   <img src="/src/assets/LandingPageAnimation.png" alt="Romance Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
-                    <button className="action-btn buy-ticket">
+                    <button className="action-btn buy-ticket" onClick={handleBuyTicket}>
                       <span className="btn-icon">🎫</span>
                       Buy Ticket
                     </button>
@@ -143,7 +149,7 @@ const Home = () => {
                 <div className="movie-poster-container">
                   <img src="/src/assets/LandingPageAnimation.png" alt="New Avengers" className="movie-poster-img" />
                   <div className="movie-overlay-card">
-                    <button className="action-btn buy-ticket">
+                    <button className="action-btn buy-ticket" onClick={handleBuyTicket}>
                       <span className="btn-icon">🎫</span>
                       Buy Ticket
                     </button>
@@ -160,7 +166,7 @@ const Home = () => {
                 <div className="movie-poster-container">
                   <img src="/src/assets/LandingPageAnimation.png" alt="Final Destination Bloodlines" className="movie-poster-img" />
                   <div className="movie-overlay-card">
-                    <button className="action-btn buy-ticket">
+                    <button className="action-btn buy-ticket" onClick={handleBuyTicket}>
                       <span className="btn-icon">🎫</span>
                       Buy Ticket
                     </button>
@@ -177,7 +183,7 @@ const Home = () => {
                 <div className="movie-poster-container">
                   <img src="/src/assets/LandingPageAnimation.png" alt="වාලම්පුර" className="movie-poster-img" />
                   <div className="movie-overlay-card">
-                    <button className="action-btn buy-ticket">
+                    <button className="action-btn buy-ticket" onClick={handleBuyTicket}>
                       <span className="btn-icon">🎫</span>
                       Buy Ticket
                     </button>
@@ -194,7 +200,7 @@ const Home = () => {
                 <div className="movie-poster-container">
                   <img src="/src/assets/LandingPageAnimation.png" alt="Disney Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
-                    <button className="action-btn buy-ticket">
+                    <button className="action-btn buy-ticket" onClick={handleBuyTicket}>
                       <span className="btn-icon">🎫</span>
                       Buy Ticket
                     </button>
@@ -211,7 +217,7 @@ const Home = () => {
                 <div className="movie-poster-container">
                   <img src="/src/assets/LandingPageAnimation.png" alt="Action Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
-                    <button className="action-btn buy-ticket">
+                    <button className="action-btn buy-ticket" onClick={handleBuyTicket}>
                       <span className="btn-icon">🎫</span>
                       Buy Ticket
                     </button>
@@ -229,7 +235,7 @@ const Home = () => {
                   <img src="/src/assets/LandingPageAnimation.png
                   " alt="Romance Movie" className="movie-poster-img" />
                   <div className="movie-overlay-card">
-                    <button className="action-btn buy-ticket">
+                    <button className="action-btn buy-ticket" onClick={handleBuyTicket}>
                       <span className="btn-icon">🎫</span>
                       Buy Ticket
                     </button>
