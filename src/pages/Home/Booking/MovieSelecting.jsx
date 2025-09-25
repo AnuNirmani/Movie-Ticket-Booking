@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../HeadFoot/Navbar";
 import Deals from "../../../components/Deals";
@@ -7,10 +7,29 @@ import "../../../css/Home/Booking/movieselecting.css";
 
 const MovieSelecting = () => {
   const navigate = useNavigate();
-  const [selectedDate, setSelectedDate] = useState("Monday 26");
+  
+  // Function to format date as "Day DD"
+  const formatDate = (date) => {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dayName = days[date.getDay()];
+    const dayNumber = date.getDate();
+    return `${dayName} ${dayNumber}`;
+  };
+
+  // Initialize with current date
+  const [selectedDate, setSelectedDate] = useState(() => formatDate(new Date()));
+  const [currentDateObj, setCurrentDateObj] = useState(new Date());
   const [selectedMovie, setSelectedMovie] = useState("All Movies");
   const [selectedTheater, setSelectedTheater] = useState("All Theaters");
   const [selectedShowtime, setSelectedShowtime] = useState("");
+
+  // Function to handle date navigation
+  const handleDateNavigation = (direction) => {
+    const newDate = new Date(currentDateObj);
+    newDate.setDate(newDate.getDate() + direction);
+    setCurrentDateObj(newDate);
+    setSelectedDate(formatDate(newDate));
+  };
 
   const handleShowtimeSelect = (showtime, movie, theater, format) => {
     setSelectedShowtime(showtime);
@@ -72,9 +91,21 @@ const MovieSelecting = () => {
         {/* Navigation Bar */}
         <div className="movie-nav-bar">
           <div className="date-selector">
-            <button className="nav-arrow">‹</button>
+            <button 
+              className="nav-arrow" 
+              onClick={() => handleDateNavigation(-1)}
+              aria-label="Previous day"
+            >
+              ‹
+            </button>
             <span className="current-date">{selectedDate}</span>
-            <button className="nav-arrow">›</button>
+            <button 
+              className="nav-arrow" 
+              onClick={() => handleDateNavigation(1)}
+              aria-label="Next day"
+            >
+              ›
+            </button>
           </div>
           
           <div className="filter-dropdowns">
