@@ -10,7 +10,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleBuyTicket = () => {
-    navigate("/seat-booking");
+    navigate("/movie-selecting");
   };
 
   return (
