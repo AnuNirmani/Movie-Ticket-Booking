@@ -12,10 +12,9 @@
 
 /* Featured Movie Section */
 .featured-movie-section {
-  padding: 60px 0;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
   color: #fff;
-  width: 100vw;
+  width: 100w;
   margin-left: calc(-50vw + 50%);
 }
 
@@ -78,31 +77,25 @@
 .movie-title {
   font-size: 4rem;
   font-weight: bold;
-  color: #00bfff;
+  color: hwb(195 2% 0%);
   text-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
   margin-bottom: 10px;
   letter-spacing: 2px;
 }
 
 .movie-subtitle {
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 20px;
-  font-weight: 300;
-}
-
-.movie-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  color: #e0e0e0;
+  font-size: 2rem;
+  color: hwb(0 100% 0%);
+  text-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 
 .watch-trailer-btn {
-  background: linear-gradient(45deg, #ff6b6b, #feca57);
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
   border: none;
   padding: 15px 30px;
-  border-radius: 50px;
+  border-radius: 6px;
   color: #fff;
   font-size: 1.1rem;
   font-weight: bold;
@@ -118,11 +111,640 @@
 .watch-trailer-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
-  background: linear-gradient(45deg, #ff5252, #ffeb3b);
+  background: linear-gradient(45deg, #e91e63, #7b1fa2);
 }
 
 .play-icon {
   font-size: 1.2rem;
+}
+
+/* Now Playing Scrolling Section */
+.now-playing-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  padding: 60px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.now-playing-container {
+  width: 100%;
+  padding: 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.movie-scroll-container {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 0;
+  width: 100%;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.movie-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.movie-scroll {
+  display: flex;
+  gap: 30px;
+  padding: 0 40px;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.movie-scroll:hover {
+  animation-play-state: paused;
+}
+
+.movie-card {
+  flex-shrink: 0;
+  width: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.movie-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.movie-poster-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.movie-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover .movie-poster-img {
+  transform: scale(1.1);
+}
+
+.movie-overlay-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-overlay-card {
+  opacity: 1;
+}
+
+.action-btn {
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.action-btn:hover {
+  background: linear-gradient(135deg, #7b1fa2, #e91e63);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6);
+}
+
+.watch-trailer {
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.watch-trailer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(45deg, #e91e63, #7b1fa2);
+}
+
+.btn-icon {
+  font-size: 1rem;
+}
+
+.movie-card-title {
+  padding: 20px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  line-height: 1.3;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-280px * 6 - 30px * 5));
+  }
+}
+
+/* Coming Soon Scrolling Section */
+.coming-soon-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  padding: 60px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.coming-soon-container {
+  width: 100%;
+  padding: 0;
+}
+
+.coming-soon-scroll {
+  display: flex;
+  gap: 30px;
+  padding: 0 40px;
+  width: max-content;
+  min-width: 100%;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  will-change: transform;
+}
+
+.coming-soon-card {
+  flex-shrink: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.coming-soon-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.more-info {
+  background: linear-gradient(135deg, #4a148c, #7b1fa2);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.more-info:hover {
+  background: linear-gradient(135deg, #6a1b9a, #9c27b0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(156, 39, 176, 0.6);
+}
+
+.release-date {
+  padding: 0 20px 20px 20px;
+  color: #00bfff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+  letter-spacing: 1px;
+}
+
+/* Navigation Arrows */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-arrow:hover {
+  background: rgba(142, 36, 170, 0.9);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 5px 15px rgba(142, 36, 170, 0.5);
+}
+
+.nav-arrow-left {
+  left: 10px;
+}
+
+.nav-arrow-right {
+  right: 10px;
+}
+
+
+/* Deals Section */
+.deals-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  padding: 80px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.deals-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.deals-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  text-align: left;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  max-width: 100%;
+}
+
+.deal-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.deal-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.deal-banner {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  min-height: 350px;
+}
+
+.deal-banner-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.deal-text-overlay {
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+.deal-main-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.highlight-text {
+  color: #ffff00;
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+.deal-sub-text {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 10px 0 0 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.credit-cards {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.credit-card {
+  width: 60px;
+  height: 38px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.red-card {
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+  width: 80px;
+  padding: 4px;
+}
+
+.pink-card {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+}
+
+.blue-card {
+  background: linear-gradient(135deg, #4169e1, #0000cd);
+}
+
+.grey-card {
+  background: linear-gradient(135deg, #696969, #2f2f2f);
+}
+
+.purple-card {
+  background: linear-gradient(135deg, #8a2be2, #4b0082);
+}
+
+.card-info {
+  font-size: 0.6rem;
+  color: white;
+  text-align: left;
+  flex: 1;
+}
+
+.card-type {
+  font-weight: bold;
+  font-size: 0.5rem;
+}
+
+.card-number {
+  font-size: 0.5rem;
+  margin: 2px 0;
+}
+
+.card-holder {
+  font-size: 0.4rem;
+}
+
+.visa-logo {
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Deal Card 2: Student Offer */
+.student-banner {
+  background: linear-gradient(135deg, #8e24aa 0%, #6a1b9a 100%);
+  position: relative;
+}
+
+.student-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%);
+  pointer-events: none;
+}
+
+.student-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.student-group-main {
+  position: relative;
+  z-index: 2;
+}
+
+.student-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  border: 3px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.student-circle::before {
+  content: '👥';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
+.student-group-bg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+  border: 2px solid white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.student-group-bg::before {
+  content: '👫';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+}
+
+/* Deal Card 3: Popcorn Offer */
+.popcorn-banner {
+  background: linear-gradient(135deg, #20b2aa 0%, #008b8b 100%);
+  position: relative;
+}
+
+.najm-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.najm-cards {
+  margin-top: auto;
+}
+
+.najm-grey-card {
+  background: linear-gradient(135deg, #696969, #2f2f2f);
+}
+
+.najm-blue-card {
+  background: linear-gradient(135deg, #4169e1, #0000cd);
+}
+
+.najm-silver-card {
+  background: linear-gradient(135deg, #c0c0c0, #a9a9a9);
+}
+
+.najm-black-card {
+  background: linear-gradient(135deg, #2f2f2f, #000000);
+  position: relative;
+}
+
+.najm-black-card::before {
+  content: '★';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.8rem;
+}
+
+.popcorn-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  z-index: 3;
+}
+
+/* Deal Footer */
+.deal-footer {
+  background: #1a0f2e;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+}
+
+.deal-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.deal-info-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.deal-info-link:hover {
+  transform: translateX(5px);
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: bold;
+}
+
+.info-text {
+  font-size: 0.9rem;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .section {
@@ -151,28 +773,6 @@
 
 .movie-grid img:hover {
   transform: scale(1.05);
-}
-
-.deals-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.deal-card {
-  flex: 1;
-  min-width: 200px;
-  background: #1a0f2e;
-  padding: 20px;
-  border-radius: 12px;
-  color: #fff;
-  text-align: center;
-  transition: background 0.3s;
-}
-
-.deal-card:hover {
-  background: #f5c518;
-  color: #111;
 }
 
 /* Responsive */
@@ -216,4 +816,212 @@
     padding: 12px 24px;
     font-size: 1rem;
   }
+
+  /* Now Playing Section Mobile */
+  .now-playing-section {
+    padding: 40px 0;
+  }
+  
+  .now-playing-container {
+    padding: 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+  
+  .movie-card {
+    width: 220px;
+  }
+  
+  .movie-poster-container {
+    height: 320px;
+  }
+  
+  .movie-card-title {
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  .action-btn {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+    min-width: 120px;
+  }
+  
+  .movie-scroll {
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-220px * 6 - 20px * 5));
+    }
+  }
+
+  /* Coming Soon Section Mobile */
+  .coming-soon-section {
+    padding: 40px 0;
+  }
+  
+  .coming-soon-container {
+    padding: 0;
+  }
+  
+  .coming-soon-card {
+    width: 220px;
+  }
+  
+  .release-date {
+    padding: 0 15px 15px 15px;
+    font-size: 0.8rem;
+  }
+  
+  .more-info {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+    min-width: 120px;
+  }
+  
+  /* Mobile navigation arrows */
+  .nav-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .nav-arrow-left {
+    left: 5px;
+  }
+  
+  .nav-arrow-right {
+    right: 5px;
+  }
+
+  /* Deals Section Mobile */
+  .deals-section {
+    padding: 40px 0;
+  }
+  
+  .deals-container {
+    padding: 0 20px;
+  }
+  
+  .deals-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+  
+  .deals-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .deal-card {
+    height: 400px;
+  }
+  
+  .deal-banner {
+    min-height: 280px;
+    padding: 20px;
+  }
+  
+  .deal-main-text {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+  
+  .deal-sub-text {
+    font-size: 0.9rem;
+  }
+  
+  .credit-cards {
+    gap: 6px;
+  }
+  
+  .credit-card {
+    width: 50px;
+    height: 32px;
+  }
+  
+  .red-card {
+    width: 65px;
+  }
+  
+  .card-info {
+    font-size: 0.5rem;
+  }
+  
+  .card-type {
+    font-size: 0.4rem;
+  }
+  
+  .card-number {
+    font-size: 0.4rem;
+  }
+  
+  .card-holder {
+    font-size: 0.35rem;
+  }
+  
+  .visa-logo {
+    font-size: 0.5rem;
+  }
+  
+  .student-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .student-circle::before {
+    font-size: 1.5rem;
+  }
+  
+  .student-group-bg {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .student-group-bg::before {
+    font-size: 1.2rem;
+  }
+  
+  .najm-logo {
+    font-size: 1rem;
+    top: 15px;
+    left: 15px;
+  }
+  
+  .popcorn-icon {
+    font-size: 1.5rem;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .deal-footer {
+    padding: 15px;
+    min-height: 70px;
+  }
+  
+  .deal-title {
+    font-size: 1rem;
+  }
+  
+  .info-text {
+    font-size: 0.8rem;
+  }
+  
+  .info-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+  }
+  
 }
