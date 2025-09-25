@@ -10,7 +10,7 @@ const SeatBooking = () => {
   const [selectedSeats, setSelectedSeats] = useState([]);
 
   const rows = ["H", "G", "F", "E", "D", "C", "B", "A"];
-  const cols = 12;
+  const cols = 19;
 
   const reservedSeats = ["E6", "E7", "E8", "E9", "F12"];
 
@@ -77,9 +77,11 @@ const SeatBooking = () => {
               })}
             </div>
           ))}
-        </div>
 
         <div className="screen">SCREEN THIS WAY</div>
+
+        </div>
+
 
         {/* Ticket selection */}
         <div className="ticket-selection">
