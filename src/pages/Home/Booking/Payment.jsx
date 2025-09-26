@@ -3,15 +3,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Navbar from "../../HeadFoot/Navbar";
 import Footer from "../../HeadFoot/Footer";
 import "../../../css/Home/Booking/payment.css";
-// import "./Payment.css";
 
 const Payment = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  
-  console.log("Payment component loaded");
-  console.log("Location state:", location.state);
-  
 
   const bookingData = location.state || {
     movie: "Lilo & Stitch",
@@ -57,7 +52,7 @@ const Payment = () => {
           <label>Card type</label>
           <div className="card-options">
             <label>
-              <input type="radio" name="card" /> <span className="visa">VISA</span> 
+              <input type="radio" name="card" /> <span className="visa">VISA</span>
             </label>
             <label>
               <input type="radio" name="card" /> <span className="master">Mastercard</span>
@@ -72,7 +67,9 @@ const Payment = () => {
           </div>
 
           <div className="form-actions">
-            <button className="back" onClick={() => navigate(-1)}>Back</button>
+            <button className="back" onClick={() => navigate(-1)}>
+              Back
+            </button>
             <button className="next">Next</button>
           </div>
         </div>
@@ -91,7 +88,8 @@ const Payment = () => {
 
           <p className="note">
             <strong>Note;</strong><br />
-            ALL SALES ARE FINAL and there will be NO REFUNDS, Cancellation and Amendment to the confirmed and finalized bookings
+            ALL SALES ARE FINAL and there will be NO REFUNDS, Cancellation and Amendment
+            to the confirmed and finalized bookings
           </p>
 
           <div className="amount">
@@ -100,10 +98,6 @@ const Payment = () => {
           </div>
         </div>
       </div>
-
-
-
-
 
       <Footer />
     </>
