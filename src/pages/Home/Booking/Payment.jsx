@@ -51,15 +51,47 @@ const Payment = () => {
 
           <label>Card type</label>
           <div className="card-options">
-            <label>
-              <input type="radio" name="card" /> <span className="visa">VISA</span>
-            </label>
-            <label>
-              <input type="radio" name="card" /> <span className="master">Mastercard</span>
-            </label>
-            <label>
-              <input type="radio" name="card" /> <span className="amex">AMEX</span>
-            </label>
+            <div className="card-option">
+              <input type="radio" name="card" id="visa" />
+              <label htmlFor="visa" className="card-label">
+                <div className="card-logo visa-logo">VISA</div>
+                <span className="card-name">Visa</span>
+              </label>
+            </div>
+            
+            <div className="card-option">
+              <input type="radio" name="card" id="frimi" />
+              <label htmlFor="frimi" className="card-label">
+                <div className="card-logo frimi-logo">
+                  <div className="frimi-text">FriMi</div>
+                  <div className="frimi-subtitle">By Nations Trust Bank</div>
+                  <div className="frimi-tagline">Live Effortlessly</div>
+                </div>
+                <span className="card-name">Visa</span>
+              </label>
+            </div>
+            
+            <div className="card-option">
+              <input type="radio" name="card" id="mastercard" />
+              <label htmlFor="mastercard" className="card-label">
+                <div className="card-logo mastercard-logo">
+                  <div className="mastercard-circles">
+                    <div className="circle red"></div>
+                    <div className="circle orange"></div>
+                  </div>
+                  <div className="mastercard-text">mastercard</div>
+                </div>
+                <span className="card-name">Mastercard</span>
+              </label>
+            </div>
+            
+            <div className="card-option">
+              <input type="radio" name="card" id="amex" />
+              <label htmlFor="amex" className="card-label">
+                <div className="card-logo amex-logo">AMEX</div>
+                <span className="card-name">Mastercard</span>
+              </label>
+            </div>
           </div>
 
           <div className="terms">
