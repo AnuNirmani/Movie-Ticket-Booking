@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../HeadFoot/Navbar";
 import Deals from "../../../components/Deals";
@@ -22,14 +22,73 @@ const MovieSelecting = () => {
   const [selectedMovie, setSelectedMovie] = useState("All Movies");
   const [selectedTheater, setSelectedTheater] = useState("All Theaters");
   const [selectedShowtime, setSelectedShowtime] = useState("");
+  const [showDatePicker, setShowDatePicker] = useState(false);
+  const datePickerRef = useRef(null);
 
-  // Function to handle date navigation
-  const handleDateNavigation = (direction) => {
-    const newDate = new Date(currentDateObj);
-    newDate.setDate(newDate.getDate() + direction);
-    setCurrentDateObj(newDate);
-    setSelectedDate(formatDate(newDate));
+
+  // Function to handle date picker toggle
+  const toggleDatePicker = () => {
+    setShowDatePicker(!showDatePicker);
   };
+
+  // Function to handle date selection from calendar
+  const handleDateSelect = (date) => {
+    setCurrentDateObj(date);
+    setSelectedDate(formatDate(date));
+    setShowDatePicker(false);
+  };
+
+  // Function to generate calendar days
+  const generateCalendarDays = () => {
+    const today = new Date();
+    const currentMonth = currentDateObj.getMonth();
+    const currentYear = currentDateObj.getFullYear();
+    
+    // Get first day of month and number of days
+    const firstDay = new Date(currentYear, currentMonth, 1);
+    const lastDay = new Date(currentYear, currentMonth + 1, 0);
+    const daysInMonth = lastDay.getDate();
+    const startingDayOfWeek = firstDay.getDay();
+    
+    const days = [];
+    
+    // Add empty cells for days before the first day of the month
+    for (let i = 0; i < startingDayOfWeek; i++) {
+      days.push(null);
+    }
+    
+    // Add days of the month
+    for (let day = 1; day <= daysInMonth; day++) {
+      const date = new Date(currentYear, currentMonth, day);
+      days.push(date);
+    }
+    
+    return days;
+  };
+
+  // Function to handle month navigation
+  const handleMonthNavigation = (direction) => {
+    const newDate = new Date(currentDateObj);
+    newDate.setMonth(newDate.getMonth() + direction);
+    setCurrentDateObj(newDate);
+  };
+
+  // Close date picker when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (datePickerRef.current && !datePickerRef.current.contains(event.target)) {
+        setShowDatePicker(false);
+      }
+    };
+
+    if (showDatePicker) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showDatePicker]);
 
   const handleShowtimeSelect = (showtime, movie, theater, format) => {
     setSelectedShowtime(showtime);
@@ -90,22 +149,86 @@ const MovieSelecting = () => {
       <div className="movie-selecting-container">
         {/* Navigation Bar */}
         <div className="movie-nav-bar">
-          <div className="date-selector">
-            <button 
-              className="nav-arrow" 
-              onClick={() => handleDateNavigation(-1)}
-              aria-label="Previous day"
+          <div className="date-selector" ref={datePickerRef}>
+            <span 
+              className="current-date clickable-date" 
+              onClick={toggleDatePicker}
+              title="Click to select date"
             >
-              ‹
-            </button>
-            <span className="current-date">{selectedDate}</span>
-            <button 
-              className="nav-arrow" 
-              onClick={() => handleDateNavigation(1)}
-              aria-label="Next day"
-            >
-              ›
-            </button>
+              {selectedDate}
+            </span>
+            
+            {/* Date Picker Modal */}
+            {showDatePicker && (
+              <div className="date-picker-modal">
+                <div className="date-picker-header">
+                  <button 
+                    className="month-nav-arrow"
+                    onClick={() => handleMonthNavigation(-1)}
+                    aria-label="Previous month"
+                  >
+                    ‹
+                  </button>
+                  <span className="month-year">
+                    {currentDateObj.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+                  </span>
+                  <button 
+                    className="month-nav-arrow"
+                    onClick={() => handleMonthNavigation(1)}
+                    aria-label="Next month"
+                  >
+                    ›
+                  </button>
+                </div>
+                
+                <div className="date-picker-grid">
+                  <div className="day-headers">
+                    {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+                      <div key={day} className="day-header">{day}</div>
+                    ))}
+                  </div>
+                  
+                  <div className="calendar-days">
+                    {generateCalendarDays().map((date, index) => {
+                      if (!date) {
+                        return <div key={index} className="empty-day"></div>;
+                      }
+                      
+                      const today = new Date();
+                      const isToday = date.toDateString() === today.toDateString();
+                      const isSelected = date.toDateString() === currentDateObj.toDateString();
+                      const isPast = date < today && !isToday;
+                      
+                      return (
+                        <button
+                          key={index}
+                          className={`calendar-day ${isToday ? 'today' : ''} ${isSelected ? 'selected' : ''} ${isPast ? 'past' : ''}`}
+                          onClick={() => handleDateSelect(date)}
+                          disabled={isPast}
+                        >
+                          {date.getDate()}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+                
+                <div className="date-picker-footer">
+                  <button 
+                    className="today-btn"
+                    onClick={() => handleDateSelect(new Date())}
+                  >
+                    Today
+                  </button>
+                  <button 
+                    className="close-btn"
+                    onClick={() => setShowDatePicker(false)}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
           
           <div className="filter-dropdowns">
