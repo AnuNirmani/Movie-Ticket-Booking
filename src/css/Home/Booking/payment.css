@@ -203,15 +203,40 @@
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .form-actions .back:hover{
+    background: #fff;
+    border: 1px solid #fff;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.6);
   }
   
   .form-actions .next {
-    background: #6a1b9a;
-    color: #fff;
+    background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
   }
   
   .form-actions .next:hover {
-    background: #8e24aa;
+    background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6);
   }
   
   /* Ticket summary smaller */

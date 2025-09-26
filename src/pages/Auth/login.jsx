@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import logoImage from "../../assets/logo.png";
@@ -11,8 +12,7 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // you can add validation here later
-    navigate("/home"); // go to home page after login
+    navigate("/home"); 
   };
 
   return (
@@ -30,15 +30,11 @@ function Login() {
             <div className="logo-image">
               <img src={logoImage} alt="Movie Express Logo" />
             </div>
-            <div className="logo-text">
-              {/* <span className="logo-movie">MOVIE</span> */}
-              <span className="logo-express">MOVIE EXPRESS</span>
-            </div>
+            <div className="logo-text">MOVIE EXPRESS</div>
           </div>
 
           {/* Form */}
           <form className="login-form" onSubmit={handleLogin}>
-            {/* Email Field */}
             <div className="form-group">
               <label className="form-label">Email</label>
               <input
@@ -49,7 +45,6 @@ function Login() {
               />
             </div>
 
-            {/* Password Field */}
             <div className="form-group">
               <label className="form-label">Password</label>
               <div className="password-input-wrapper">
@@ -68,7 +63,6 @@ function Login() {
               </div>
             </div>
 
-            {/* Options Row */}
             <div className="form-options">
               <label className="checkbox-container">
                 <input type="checkbox" className="checkbox" />
@@ -85,14 +79,9 @@ function Login() {
               >
                 Forget Password?
               </a>
-
-
             </div>
 
-            {/* Login Button */}
-            <button type="submit" className="login-button">
-              Login
-            </button>
+            <button type="submit" className="login-button">Login</button>
           </form>
 
           {/* Divider */}
@@ -100,19 +89,19 @@ function Login() {
             <span className="divider-text">or</span>
           </div>
 
-          {/* Social Login Buttons */}
+          {/* Social */}
           <div className="social-buttons">
             <button className="social-button facebook-button">
-              <FaFacebook className="social-icon facebook-icon" />
+              <FaFacebook className="social-icon" />
               <span>Facebook</span>
             </button>
             <button className="social-button google-button">
-              <FaGoogle className="social-icon google-icon" />
+              <FcGoogle className="social-icon" />
               <span>Google</span>
             </button>
           </div>
 
-          {/* Sign Up Link */}
+          {/* Sign Up */}
           <div className="signup-section">
             <p className="signup-text">
               Don't have an account?{" "}
