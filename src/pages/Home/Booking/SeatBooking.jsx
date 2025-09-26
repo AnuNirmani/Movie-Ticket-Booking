@@ -287,7 +287,7 @@ const SeatBooking = () => {
           <button className="cancel" onClick={() => navigate("/home")}>
             Cancel
           </button>
-          <button className="next" onClick={() => console.log(selectedSeats)}>
+          <button className="next" onClick={() => navigate("/payment")}>
             Next
           </button>
         </div>
