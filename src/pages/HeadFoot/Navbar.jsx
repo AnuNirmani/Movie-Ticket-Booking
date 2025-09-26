@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../css/HeadFoot/navbar.css";
 import backgroundImage from "../../assets/logo.png";
 
@@ -18,8 +19,8 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="navbar-links">
-          <a href="/" className="nav-link">Home</a>
-          <a href="/movies" className="nav-link">Movies</a>
+          <Link to="/home" className="nav-link">Home</Link>
+          <Link to="/movies" className="nav-link">Movies</Link>
           <a href="/theaters" className="nav-link">Theaters</a>
           <a href="/deals" className="nav-link">Deals</a>
         </div>
