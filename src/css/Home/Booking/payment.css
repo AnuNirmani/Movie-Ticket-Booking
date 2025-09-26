@@ -1,0 +1,152 @@
+.billing-banner {
+    background: #e91e63;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .payment-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    background: #1a0f2e;
+    color: #fff;
+  }
+  
+  .payment-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .payment-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .payment-form input[type="text"],
+  .payment-form input[type="email"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .card-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .card-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .card-options .visa {
+    color: #1a3dc1;
+    font-weight: bold;
+  }
+  
+  .card-options .master {
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  
+  .card-options .amex {
+    color: #007bc1;
+    font-weight: bold;
+  }
+  
+  .terms {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .form-actions button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .form-actions .back {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  
+  .form-actions .next {
+    background: #6a1b9a;
+    color: #fff;
+  }
+  
+  .form-actions .next:hover {
+    background: #8e24aa;
+  }
+  
+  .ticket-summary {
+    flex: 1;
+    background: #fff;
+    color: #000;
+    border-radius: 8px;
+    padding: 25px;
+    position: relative;
+  }
+  
+  .ticket-summary::before,
+  .ticket-summary::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #1a0f2e;
+    border-radius: 50%;
+  }
+  
+  .ticket-summary::before {
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .ticket-summary::after {
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .ticket-summary h3 {
+    margin-bottom: 20px;
+  }
+  
+  .ticket-summary hr {
+    margin: 20px 0;
+  }
+  
+  .ticket-summary .note {
+    font-size: 12px;
+    color: #555;
+  }
+  
+  .ticket-summary .amount {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
