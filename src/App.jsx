@@ -27,6 +27,7 @@ function App() {
         <Route path="/send-otp" element={<SendOTP />} />
         <Route path="/new-password" element={<NewPassword />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="/now-showing" element={<NowShowing />} />
       </Routes>
     </BrowserRouter>
   );

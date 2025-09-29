@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../HeadFoot/Navbar";
 import Deals from "../../components/Deals";
 import Footer from "../HeadFoot/Footer";
-import "../../css/Home/NowShowing.css";
+import "../../css/Home/nowshowing.css";
 
 const NowShowing = () => {
   const navigate = useNavigate();

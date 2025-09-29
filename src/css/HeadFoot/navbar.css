@@ -182,6 +182,43 @@
   stroke: #ffffff;
 }
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger-line.active:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-line.active:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.active:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Buy Ticket Button Text */
+.btn-text {
+  display: inline;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .navbar-container {
@@ -213,6 +250,42 @@
     padding: 0 1rem;
   }
   
+  /* Show mobile menu button */
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  /* Mobile menu styles */
+  .navbar-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(145deg, #2a1a3a, #1a0f2e);
+    flex-direction: column;
+    padding: 20px;
+    gap: 1rem;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar-links.mobile-open {
+    transform: translateY(0);
+    display: flex;
+  }
+  
+  .navbar-links .nav-link {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+  
+  .navbar-links .nav-link:last-child {
+    border-bottom: none;
+  }
+  
   .search-container {
     display: none;
   }
@@ -229,11 +302,25 @@
   .logo-sub {
     font-size: 0.8rem;
   }
+  
+  /* Hide button text on mobile */
+  .btn-text {
+    display: none;
+  }
+  
+  .buy-ticket-btn {
+    padding: 0.75rem;
+    min-width: auto;
+  }
 }
 
 @media (max-width: 576px) {
   .navbar {
     height: 60px;
+  }
+  
+  .navbar-links {
+    top: 60px;
   }
   
   .logo-icon {
@@ -254,13 +341,41 @@
   }
   
   .buy-ticket-btn {
-    padding: 0.6rem 1rem;
+    padding: 0.6rem;
     font-size: 0.8rem;
   }
   
   .profile-icon {
     width: 35px;
     height: 35px;
+  }
+  
+  .hamburger-line {
+    width: 22px;
+    height: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 0.5rem;
+  }
+  
+  .logo-main {
+    font-size: 1rem;
+  }
+  
+  .buy-ticket-btn {
+    padding: 0.5rem;
+  }
+  
+  .profile-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .hamburger-line {
+    width: 20px;
   }
 }
 

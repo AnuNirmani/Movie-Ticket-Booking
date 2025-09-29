@@ -345,7 +345,33 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive */
+/* Responsive Design */
+
+/* Tablet and Large Mobile */
+@media (max-width: 1024px) {
+  .deals-section {
+    padding: 60px 0;
+  }
+  
+  .deals-container {
+    padding: 0 30px;
+  }
+  
+  .deals-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+  }
+  
+  .deal-card {
+    height: 450px;
+  }
+  
+  .deal-banner {
+    min-height: 320px;
+  }
+}
+
+/* Mobile Landscape and Small Tablets */
 @media (max-width: 768px) {
   /* Deals Section Mobile */
   .deals-section {
@@ -357,7 +383,6 @@
   }
   
   .deals-title {
-    /* font-size: 1.8rem; */
     margin-bottom: 30px;
     letter-spacing: 2px;
   }
@@ -368,11 +393,11 @@
   }
   
   .deal-card {
-    height: 400px;
+    height: 380px;
   }
   
   .deal-banner {
-    min-height: 280px;
+    min-height: 250px;
     padding: 20px;
   }
   
@@ -465,5 +490,104 @@
     width: 18px;
     height: 18px;
     font-size: 0.7rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .deals-section {
+    padding: 30px 0;
+  }
+  
+  .deals-container {
+    padding: 0 15px;
+  }
+  
+  .deals-title {
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+  }
+  
+  .deals-grid {
+    gap: 15px;
+  }
+  
+  .deal-card {
+    height: 320px;
+  }
+  
+  .deal-banner {
+    min-height: 200px;
+    padding: 15px;
+  }
+  
+  .deal-footer {
+    padding: 12px;
+    min-height: 60px;
+  }
+  
+  .deal-title {
+    font-size: 0.9rem;
+  }
+  
+  .info-text {
+    font-size: 0.75rem;
+  }
+  
+  .info-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 0.65rem;
+  }
+  
+  .deal-info-link {
+    gap: 6px;
+  }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 360px) {
+  .deals-section {
+    padding: 25px 0;
+  }
+  
+  .deals-container {
+    padding: 0 10px;
+  }
+  
+  .deals-title {
+    margin-bottom: 20px;
+  }
+  
+  .deals-grid {
+    gap: 12px;
+  }
+  
+  .deal-card {
+    height: 280px;
+  }
+  
+  .deal-banner {
+    min-height: 180px;
+    padding: 12px;
+  }
+  
+  .deal-footer {
+    padding: 10px;
+    min-height: 50px;
+  }
+  
+  .deal-title {
+    font-size: 0.8rem;
+  }
+  
+  .info-text {
+    font-size: 0.7rem;
+  }
+  
+  .info-icon {
+    width: 14px;
+    height: 14px;
+    font-size: 0.6rem;
   }
 }

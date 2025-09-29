@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../HeadFoot/Navbar";
 import Deals from "../../components/Deals";
 import Footer from "../HeadFoot/Footer";
+import "../../css/Home/comingsoon.css";
 
 const CommingSoon = () => {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ const CommingSoon = () => {
     { 
       id: 1, 
       title: "Final Destination", 
+      subtitle: "13TH JUNE",
       poster: "/src/assets/LandingPageAnimation.png",
       genre: "Horror/Thriller",
       duration: "98 min",
@@ -22,6 +24,7 @@ const CommingSoon = () => {
     { 
       id: 2, 
       title: "New Avengers", 
+      subtitle: "13TH JUNE",
       poster: "/src/assets/LandingPageAnimation.png",
       genre: "Action/Sci-Fi",
       duration: "142 min",
@@ -33,6 +36,7 @@ const CommingSoon = () => {
     { 
       id: 3, 
       title: "Ace (Tamil)", 
+      subtitle: "13TH JUNE",
       poster: "/src/assets/LandingPageAnimation.png",
       genre: "Action/Drama",
       duration: "165 min",
@@ -44,6 +48,7 @@ const CommingSoon = () => {
     { 
       id: 4, 
       title: "Devi Kusumasana", 
+      subtitle: "13TH JUNE",
       poster: "/src/assets/LandingPageAnimation.png",
       genre: "Drama/Family",
       duration: "128 min",
@@ -55,6 +60,7 @@ const CommingSoon = () => {
     { 
       id: 5, 
       title: "Lilo & Stitch", 
+      subtitle: "13TH JUNE",
       poster: "/src/assets/LandingPageAnimation.png",
       genre: "Animation/Family",
       duration: "85 min",
@@ -66,6 +72,7 @@ const CommingSoon = () => {
     { 
       id: 6, 
       title: "Walampoori", 
+      subtitle: "13TH JUNE",
       poster: "/src/assets/LandingPageAnimation.png",
       genre: "Comedy/Drama",
       duration: "112 min",
@@ -77,6 +84,7 @@ const CommingSoon = () => {
     { 
       id: 7, 
       title: "Sinners", 
+      subtitle: "13TH JUNE",
       poster: "/src/assets/LandingPageAnimation.png",
       genre: "Thriller/Crime",
       duration: "135 min",
@@ -88,6 +96,7 @@ const CommingSoon = () => {
     { 
       id: 8, 
       title: "A Minecraft Movie", 
+      subtitle: "13TH JUNE",
       poster: "/src/assets/LandingPageAnimation.png",
       genre: "Adventure/Family",
       duration: "95 min",
@@ -104,7 +113,7 @@ const CommingSoon = () => {
 
       {/* Heading + Filters */}
       <div className="now-showing-header">
-        <h1 className="heading">NOW PLAYING MOVIES</h1>
+        <h1 className="heading">COMING SOON MOVIES</h1>
         <div className="filters-row">
           <div className="filters-left">
             <select>
@@ -120,7 +129,9 @@ const CommingSoon = () => {
               <option>Price Range</option>
             </select>
           </div>
-          <button className="coming-soon">Now Showing</button>
+          <button className="now-showing"
+          onClick={() => navigate("/now-showing")}
+          >Now Showing</button>
         </div>
       </div>
 
@@ -144,10 +155,6 @@ const CommingSoon = () => {
                       <span className="detail-value">{movie.duration}</span>
                     </div>
                     <div className="detail-row">
-                      <span className="detail-label">Rating:</span>
-                      <span className="detail-value rating-badge">{movie.rating}</span>
-                    </div>
-                    <div className="detail-row">
                       <span className="detail-label">Year:</span>
                       <span className="detail-value">{movie.year}</span>
                     </div>
@@ -164,16 +171,9 @@ const CommingSoon = () => {
             </div>
 
             <h3 className="title">{movie.title}</h3>
-
-            <div className="stars">★★★★★</div>
+            <p className="subtitle">{movie.subtitle}</p>
 
             <div className="actions">
-              <button
-                className="buy-btn"
-                onClick={() => navigate("/booking")}
-              >
-                🎟 Buy Ticket
-              </button>
               <button className="trailer-btn">▶ Watch Trailer</button>
             </div>
 

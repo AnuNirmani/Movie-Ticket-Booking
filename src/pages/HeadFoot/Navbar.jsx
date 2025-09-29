@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../css/HeadFoot/navbar.css";
 import backgroundImage from "../../assets/logo.png";
 
 const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -17,12 +23,19 @@ const Navbar = () => {
           </div>
         </div>
 
+        {/* Mobile Menu Button */}
+        <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
+          <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
+          <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
+          <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
+        </button>
+
         {/* Navigation Links */}
-        <div className="navbar-links">
-          <Link to="/home" className="nav-link">Home</Link>
-          <Link to="/movies" className="nav-link">Movies</Link>
-          <a href="/theaters" className="nav-link">Theaters</a>
-          <a href="/deals" className="nav-link">Deals</a>
+        <div className={`navbar-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+          <Link to="/home" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+          <Link to="/movies" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Movies</Link>
+          <a href="/theaters" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Theaters</a>
+          <a href="/deals" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Deals</a>
         </div>
 
         {/* Right Section */}
@@ -39,7 +52,8 @@ const Navbar = () => {
           {/* Buy Ticket Button */}
           <button className="buy-ticket-btn">
             <span className="btn-icon">🎫</span>
-            Buy Ticket</button>
+            <span className="btn-text">Buy Ticket</span>
+          </button>
 
           {/* Profile Icon */}
           <div className="profile-icon">
