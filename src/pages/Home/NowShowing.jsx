@@ -111,8 +111,14 @@ const NowShowing = () => {
           <div className="filters-left">
             <select>
               <option>Genre</option>
+              <option>Genre</option>
+              <option>Genre</option>
+              <option>Genre</option>
             </select>
             <select>
+              <option>Price Range</option>
+              <option>Price Range</option>
+              <option>Price Range</option>
               <option>Price Range</option>
             </select>
           </div>
