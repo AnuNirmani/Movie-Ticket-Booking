@@ -139,7 +139,8 @@ const SeatBooking = () => {
 
            {/* Ticket Price Display */}
         <div className="ticket-price-display">
-          <h6>Ticket Price: {activeFormat === "3D" ? "350" : " ODC Full (LKR 600.00) / ODC Half (Age 3-12) (LKR 450.00)"}</h6>
+          <h6>Ticket Price: {activeFormat === "3D" ? "ODC Full (LKR 600.00) / ODC Half (Age 3-12) (LKR 450.00)" : 
+          " ODC Full (LKR 600.00) / ODC Half (Age 3-12) (LKR 450.00)"}</h6>
         </div>
         
           {/* DIR'S LOUNGE Section */}

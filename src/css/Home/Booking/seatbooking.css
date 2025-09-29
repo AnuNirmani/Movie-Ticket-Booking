@@ -357,7 +357,9 @@
   margin: 30px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
+  width: 100%;
 }
 
 .actions button {
@@ -368,7 +370,8 @@
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  min-width: 120px;
+  width: 150px;
+  align-items: center;
 }
 
 .actions .cancel {
