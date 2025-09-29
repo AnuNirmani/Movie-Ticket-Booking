@@ -10,14 +10,14 @@ const NowShowing = () => {
 
   // Demo movie data
   const movies = [
-    { id: 1, title: "Final Destination", poster: "/src/assets/movies/final.jpg" },
-    { id: 2, title: "New Avengers", poster: "/src/assets/movies/avengers.jpg" },
-    { id: 3, title: "Ace (Tamil)", poster: "/src/assets/movies/ace.jpg" },
-    { id: 4, title: "Devi Kusumasana", poster: "/src/assets/movies/devi.jpg" },
-    { id: 5, title: "Lilo & Stitch", poster: "/src/assets/movies/lilo.jpg" },
-    { id: 6, title: "Walampoori", poster: "/src/assets/movies/walampoori.jpg" },
-    { id: 7, title: "Sinners", poster: "/src/assets/movies/sinners.jpg" },
-    { id: 8, title: "A Minecraft Movie", poster: "/src/assets/movies/minecraft.jpg" },
+    { id: 1, title: "Final Destination", poster: "/src/assets/LandingPageAnimation.png" },
+    { id: 2, title: "New Avengers", poster: "/src/assets/LandingPageAnimation.png" },
+    { id: 3, title: "Ace (Tamil)", poster: "/src/assets/LandingPageAnimation.png" },
+    { id: 4, title: "Devi Kusumasana", poster: "/src/assets/LandingPageAnimation.png" },
+    { id: 5, title: "Lilo & Stitch", poster: "/src/assets/LandingPageAnimation.png" },
+    { id: 6, title: "Walampoori", poster: "/src/assets/LandingPageAnimation.png" },
+    { id: 7, title: "Sinners", poster: "/src/assets/LandingPageAnimation.png" },
+    { id: 8, title: "A Minecraft Movie", poster: "/src/assets/LandingPageAnimation.png" },
   ];
 
   return (
