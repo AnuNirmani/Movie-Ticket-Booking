@@ -3,12 +3,10 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../HeadFoot/Navbar";
 import Deals from "../../components/Deals";
 import Footer from "../HeadFoot/Footer";
-import "../../css/Home/NowShowing.css";
 
-const NowShowing = () => {
+const CommingSoon = () => {
   const navigate = useNavigate();
 
-  // Demo movie data
   const movies = [
     { 
       id: 1, 
@@ -122,9 +120,7 @@ const NowShowing = () => {
               <option>Price Range</option>
             </select>
           </div>
-          <button className="coming-soon"
-          onClick={() => navigate("/coming-soon")}>
-          Coming Soon</button>
+          <button className="coming-soon">Now Showing</button>
         </div>
       </div>
 
@@ -194,4 +190,4 @@ const NowShowing = () => {
   );
 };
 
-export default NowShowing;
+export default CommingSoon;

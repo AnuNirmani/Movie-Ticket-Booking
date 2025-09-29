@@ -4,11 +4,12 @@ import Signup from "./pages/Auth/Signup";
 import Home from "./pages/Home/Home";
 import NowShowing from "./pages/Home/NowShowing";
 import MovieSelecting from "./pages/Home/Booking/MovieSelecting";
-import SeatBooking from "./pages/Home/booking/SeatBooking";
+import SeatBooking from "./pages/Home/Booking/SeatBooking";
 import Payment from "./pages/Home/Booking/Payment";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
 import SendOTP from "./pages/Auth/SendOTP";
 import NewPassword from "./pages/Auth/NewPassword";
+import ComingSoon from "./pages/Home/ComingSoon";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/send-otp" element={<SendOTP />} />
         <Route path="/new-password" element={<NewPassword />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
       </Routes>
     </BrowserRouter>
   );
