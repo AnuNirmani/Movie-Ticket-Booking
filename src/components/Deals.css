@@ -76,7 +76,7 @@
   margin-bottom: 20px;
 }
 
-.deal-main-text {
+/* .deal-main-text {
   font-size: 1.4rem;
   font-weight: bold;
   color: #ffffff;
@@ -88,9 +88,9 @@
 .highlight-text {
   color: #ffff00;
   text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
-}
+} */
 
-.deal-sub-text {
+/* .deal-sub-text {
   font-size: 1rem;
   color: #ffffff;
   margin: 10px 0 0 0;
@@ -136,9 +136,9 @@
 
 .purple-card {
   background: linear-gradient(135deg, #8a2be2, #4b0082);
-}
+} */
 
-.card-info {
+/* .card-info {
   font-size: 0.6rem;
   color: white;
   text-align: left;
@@ -164,10 +164,10 @@
   font-weight: bold;
   color: white;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
+} */
 
 /* Deal Card 2: Student Offer */
-.student-banner {
+/* .student-banner {
   background: linear-gradient(135deg, #8e24aa 0%, #6a1b9a 100%);
   position: relative;
 }
@@ -238,10 +238,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
-}
+} */
 
 /* Deal Card 3: Popcorn Offer */
-.popcorn-banner {
+/* .popcorn-banner {
   background: linear-gradient(135deg, #20b2aa 0%, #008b8b 100%);
   position: relative;
 }
@@ -294,7 +294,7 @@
   right: 20px;
   font-size: 2rem;
   z-index: 3;
-}
+} */
 
 /* Deal Footer */
 .deal-footer {

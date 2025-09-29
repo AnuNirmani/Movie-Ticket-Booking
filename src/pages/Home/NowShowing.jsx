@@ -10,14 +10,94 @@ const NowShowing = () => {
 
   // Demo movie data
   const movies = [
-    { id: 1, title: "Final Destination", poster: "/src/assets/LandingPageAnimation.png" },
-    { id: 2, title: "New Avengers", poster: "/src/assets/LandingPageAnimation.png" },
-    { id: 3, title: "Ace (Tamil)", poster: "/src/assets/LandingPageAnimation.png" },
-    { id: 4, title: "Devi Kusumasana", poster: "/src/assets/LandingPageAnimation.png" },
-    { id: 5, title: "Lilo & Stitch", poster: "/src/assets/LandingPageAnimation.png" },
-    { id: 6, title: "Walampoori", poster: "/src/assets/LandingPageAnimation.png" },
-    { id: 7, title: "Sinners", poster: "/src/assets/LandingPageAnimation.png" },
-    { id: 8, title: "A Minecraft Movie", poster: "/src/assets/LandingPageAnimation.png" },
+    { 
+      id: 1, 
+      title: "Final Destination", 
+      poster: "/src/assets/LandingPageAnimation.png",
+      genre: "Horror/Thriller",
+      duration: "98 min",
+      rating: "R",
+      year: "2024",
+      director: "James Cameron",
+      description: "A group of friends narrowly escape death, but death has other plans for them."
+    },
+    { 
+      id: 2, 
+      title: "New Avengers", 
+      poster: "/src/assets/LandingPageAnimation.png",
+      genre: "Action/Sci-Fi",
+      duration: "142 min",
+      rating: "PG-13",
+      year: "2024",
+      director: "Marvel Studios",
+      description: "The next generation of heroes unite to face an unprecedented threat."
+    },
+    { 
+      id: 3, 
+      title: "Ace (Tamil)", 
+      poster: "/src/assets/LandingPageAnimation.png",
+      genre: "Action/Drama",
+      duration: "165 min",
+      rating: "U/A",
+      year: "2024",
+      director: "Rajesh Selva",
+      description: "A gripping tale of ambition, power, and redemption in the world of politics."
+    },
+    { 
+      id: 4, 
+      title: "Devi Kusumasana", 
+      poster: "/src/assets/LandingPageAnimation.png",
+      genre: "Drama/Family",
+      duration: "128 min",
+      rating: "U",
+      year: "2024",
+      director: "Priya Sharma",
+      description: "A heartwarming story about family bonds and cultural heritage."
+    },
+    { 
+      id: 5, 
+      title: "Lilo & Stitch", 
+      poster: "/src/assets/LandingPageAnimation.png",
+      genre: "Animation/Family",
+      duration: "85 min",
+      rating: "G",
+      year: "2024",
+      director: "Disney Animation",
+      description: "The beloved story returns with new adventures and heartwarming moments."
+    },
+    { 
+      id: 6, 
+      title: "Walampoori", 
+      poster: "/src/assets/LandingPageAnimation.png",
+      genre: "Comedy/Drama",
+      duration: "112 min",
+      rating: "U/A",
+      year: "2024",
+      director: "Suresh Kumar",
+      description: "A hilarious journey through the streets of Mumbai with unexpected twists."
+    },
+    { 
+      id: 7, 
+      title: "Sinners", 
+      poster: "/src/assets/LandingPageAnimation.png",
+      genre: "Thriller/Crime",
+      duration: "135 min",
+      rating: "A",
+      year: "2024",
+      director: "Michael Chen",
+      description: "A dark psychological thriller exploring the depths of human nature."
+    },
+    { 
+      id: 8, 
+      title: "A Minecraft Movie", 
+      poster: "/src/assets/LandingPageAnimation.png",
+      genre: "Adventure/Family",
+      duration: "95 min",
+      rating: "PG",
+      year: "2024",
+      director: "Warner Bros",
+      description: "Step into the blocky world of Minecraft in this epic animated adventure."
+    },
   ];
 
   return (
@@ -44,7 +124,40 @@ const NowShowing = () => {
       <div className="movies-grid">
         {movies.map((movie) => (
           <div className="movie-card" key={movie.id}>
-            <img src={movie.poster} alt={movie.title} className="poster" />
+            <div className="poster-container">
+              <img src={movie.poster} alt={movie.title} className="poster" />
+              
+              {/* Hover Overlay */}
+              <div className="movie-overlay">
+                <div className="overlay-content">
+                  <div className="movie-details">
+                    <div className="detail-row">
+                      <span className="detail-label">Genre:</span>
+                      <span className="detail-value">{movie.genre}</span>
+                    </div>
+                    <div className="detail-row">
+                      <span className="detail-label">Duration:</span>
+                      <span className="detail-value">{movie.duration}</span>
+                    </div>
+                    <div className="detail-row">
+                      <span className="detail-label">Rating:</span>
+                      <span className="detail-value rating-badge">{movie.rating}</span>
+                    </div>
+                    <div className="detail-row">
+                      <span className="detail-label">Year:</span>
+                      <span className="detail-value">{movie.year}</span>
+                    </div>
+                    <div className="detail-row">
+                      <span className="detail-label">Director:</span>
+                      <span className="detail-value">{movie.director}</span>
+                    </div>
+                  </div>
+                  <div className="movie-description">
+                    <p>{movie.description}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <h3 className="title">{movie.title}</h3>
 
@@ -60,7 +173,9 @@ const NowShowing = () => {
               <button className="trailer-btn">▶ Watch Trailer</button>
             </div>
 
-            <button className="info-btn">ℹ More Information</button>
+            <button className="info-btn"> More Information
+            <span className="info-icon">ℹ</span>
+            </button>
           </div>
         ))}
       </div>
