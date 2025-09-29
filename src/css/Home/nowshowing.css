@@ -56,10 +56,12 @@
   /* Movies Grid */
   .movies-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
-    padding: 50px 50px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 60px;
+    padding: 36px 20px;
     background: #120825;
+    max-width: 1600px;
+    margin: 0 auto;
   }
   
   /* Movie Card */
@@ -70,7 +72,9 @@
     text-align: center;
     color: #fff;
     transition: transform 0.3s ease;
-    width: 400px;
+    width: 100%;
+    max-width: 3200px;
+    justify-self: center;
   }
   
   .movie-card:hover {
@@ -79,7 +83,7 @@
   
   .poster {
     width: 100%;
-    height: 380px;
+    height: 512px;
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 12px;
@@ -155,28 +159,34 @@
   }
   
   /* Responsive */
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     .movies-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 50px;
+      padding: 30px 15px;
     }
   }
   
   @media (max-width: 768px) {
     .movies-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+      padding: 24px 10px;
     }
   }
   
   @media (max-width: 480px) {
     .movies-grid {
       grid-template-columns: 1fr;
+      gap: 30px;
+      padding: 20px 8px;
     }
-  
+
     .filters-row {
       flex-direction: column;
       gap: 15px;
     }
-  
+
     .filters-left {
       justify-content: center;
     }
