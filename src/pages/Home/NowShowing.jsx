@@ -176,7 +176,7 @@ const NowShowing = () => {
                 className="buy-btn"
                 onClick={() => navigate("/booking")}
               >
-                🎟 Buy Ticket
+                🎫 Buy Ticket
               </button>
               <button className="trailer-btn">▶ Watch Trailer</button>
             </div>
