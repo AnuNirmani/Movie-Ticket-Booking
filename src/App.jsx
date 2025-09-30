@@ -10,6 +10,7 @@ import ForgotPassword from "./pages/Auth/ForgotPassword";
 import SendOTP from "./pages/Auth/SendOTP";
 import NewPassword from "./pages/Auth/NewPassword";
 import ComingSoon from "./pages/Home/ComingSoon";
+import Theaters from "./pages/Home/Theaters";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/new-password" element={<NewPassword />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/now-showing" element={<NowShowing />} />
+        <Route path="/theaters" element={<Theaters />} />
       </Routes>
     </BrowserRouter>
   );

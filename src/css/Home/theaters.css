@@ -1,0 +1,337 @@
+/* Theaters Page Styles */
+.theaters-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a0f2e 0%, #2a1a3a 50%, #1a0f2e 100%);
+  padding: 2rem 0;
+  color: #ffffff;
+}
+
+.theaters-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+}
+
+.theaters-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.theaters-subtitle {
+  font-size: 1.1rem;
+  color: #cccccc;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.theaters-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.theater-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.theater-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  border-color: rgba(233, 30, 99, 0.3);
+}
+
+.theater-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.theater-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.theater-card:hover .theater-image img {
+  transform: scale(1.05);
+}
+
+.theater-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.theater-card:hover .theater-overlay {
+  opacity: 1;
+}
+
+.theater-facilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.facility-tag {
+  background: rgba(233, 30, 99, 0.8);
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+.theater-info {
+  padding: 1.5rem;
+}
+
+.theater-header {
+  margin-bottom: 1rem;
+}
+
+.theater-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.location-icon {
+  flex-shrink: 0;
+}
+
+.theater-location {
+  color: #e91e63;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.theater-details {
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+.detail-icon {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.view-location-btn {
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.view-location-btn:hover {
+  background: linear-gradient(135deg, #7b1fa2, #e91e63);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.4);
+}
+
+.theaters-footer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.contact-btn.primary {
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  color: #ffffff;
+}
+
+.contact-btn.primary:hover {
+  background: linear-gradient(135deg, #7b1fa2, #e91e63);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.4);
+}
+
+.contact-btn.secondary {
+  background: transparent;
+  color: #e91e63;
+  border: 2px solid #e91e63;
+}
+
+.contact-btn.secondary:hover {
+  background: #e91e63;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .theaters-container {
+    padding: 1rem 0;
+  }
+
+  .theaters-header {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .theaters-title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  .theaters-subtitle {
+    font-size: 1rem;
+  }
+
+  .theaters-grid {
+    padding: 0 1rem;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .theater-info {
+    padding: 1rem;
+  }
+
+  .theater-name {
+    font-size: 1.1rem;
+  }
+
+  .contact-info {
+    padding: 1.5rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.25rem;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-btn {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .theaters-title {
+    font-size: 2rem;
+  }
+
+  .theaters-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .theater-info {
+    padding: 0.75rem;
+  }
+
+  .contact-info {
+    padding: 1rem;
+  }
+}
+
+/* Animation for page load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.theater-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.theater-card:nth-child(1) { animation-delay: 0.1s; }
+.theater-card:nth-child(2) { animation-delay: 0.2s; }
+.theater-card:nth-child(3) { animation-delay: 0.3s; }
+.theater-card:nth-child(4) { animation-delay: 0.4s; }
