@@ -1,4 +1,7 @@
 import React from "react";
+import Navbar from "../HeadFoot/Navbar";
+import Footer from "../HeadFoot/Footer";
+import Deals from "../../components/Deals";
 import "../../css/Home/theaters.css";
 
 const Theaters = () => {
@@ -42,7 +45,9 @@ const Theaters = () => {
   ];
 
   return (
-    <div className="theaters-container">
+    <>
+      <Navbar />
+      <div className="theaters-container">
       <div className="theaters-header">
         <h1 className="theaters-title">THEATERS</h1>
         <p className="theaters-subtitle">Experience the magic of cinema at our premium locations</p>
@@ -119,7 +124,13 @@ const Theaters = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+
+      {/* Deals Section */}
+      <Deals />
+
+      <Footer />
+    </>
   );
 };
 
