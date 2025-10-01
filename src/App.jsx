@@ -13,6 +13,7 @@ import ComingSoon from "./pages/Home/ComingSoon";
 import Theaters from "./pages/Home/Theaters";
 import AboutUs from "./pages/Footer/AboutUs";
 import TermsAndConditions from "./pages/Footer/TermsAndConditions";
+import ContactUs from "./pages/Footer/ContactUs";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/theaters" element={<Theaters />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/terms" element={<TermsAndConditions />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>
   );
