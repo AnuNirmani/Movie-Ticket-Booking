@@ -1,14 +1,13 @@
 /* Terms & Conditions Page Styles */
 .terms-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #2d1b4e 0%, #1a0f2e 100%);
+  background: linear-gradient(135deg, #1a0f2e 0%, #2a1a3a 50%, #1a0f2e 100%);
   color: white;
   font-family: 'Arial', sans-serif;
 }
 
 .terms-container {
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 100%;
   padding: 40px 20px;
 }
 
@@ -18,27 +17,24 @@
 }
 
 .terms-header h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #f5c518;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  letter-spacing: 2px;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .terms-content {
-  background: rgba(255, 255, 255, 0.05);
+  /* background: rgba(255, 255, 255, 0.05); */
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 40px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
 .terms-intro {
   margin-bottom: 40px;
   padding-bottom: 30px;
-  border-bottom: 2px solid rgba(245, 197, 24, 0.3);
+  border-bottom: 2px solid #e91e63;
 }
 
 .terms-intro p {
@@ -54,7 +50,6 @@
   padding: 25px;
   background: rgba(255, 255, 255, 0.03);
   border-radius: 10px;
-  border-left: 4px solid #f5c518;
   transition: all 0.3s ease;
 }
 
@@ -66,7 +61,7 @@
 .terms-section h2 {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #f5c518;
+  color: #ffffff;
   margin: 0 0 15px 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -82,9 +77,8 @@
 .contact-info {
   margin-top: 15px;
   padding: 20px;
-  background: rgba(245, 197, 24, 0.1);
   border-radius: 8px;
-  border: 1px solid rgba(245, 197, 24, 0.3);
+  border: 1px solid #e91e63;
 }
 
 .contact-info p {
@@ -94,16 +88,15 @@
 }
 
 .contact-info strong {
-  color: #f5c518;
+  color: #e91e63;
   font-weight: bold;
 }
 
 .terms-conclusion {
   margin-top: 40px;
   padding: 30px;
-  background: linear-gradient(135deg, rgba(245, 197, 24, 0.1), rgba(245, 197, 24, 0.05));
   border-radius: 10px;
-  border: 2px solid rgba(245, 197, 24, 0.3);
+  border: 2px solid #e91e63;
   text-align: center;
 }
 
