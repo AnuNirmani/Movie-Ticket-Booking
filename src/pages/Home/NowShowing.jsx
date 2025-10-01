@@ -19,7 +19,6 @@ const NowShowing = () => {
       rating: "R",
       year: "2024",
       director: "James Cameron",
-      description: "A group of friends narrowly escape death, but death has other plans for them."
     },
     { 
       id: 2, 
@@ -30,7 +29,6 @@ const NowShowing = () => {
       rating: "PG-13",
       year: "2024",
       director: "Marvel Studios",
-      description: "The next generation of heroes unite to face an unprecedented threat."
     },
     { 
       id: 3, 
@@ -41,7 +39,6 @@ const NowShowing = () => {
       rating: "U/A",
       year: "2024",
       director: "Rajesh Selva",
-      description: "A gripping tale of ambition, power, and redemption in the world of politics."
     },
     { 
       id: 4, 
@@ -52,7 +49,6 @@ const NowShowing = () => {
       rating: "U",
       year: "2024",
       director: "Priya Sharma",
-      description: "A heartwarming story about family bonds and cultural heritage."
     },
     { 
       id: 5, 
@@ -63,7 +59,6 @@ const NowShowing = () => {
       rating: "G",
       year: "2024",
       director: "Disney Animation",
-      description: "The beloved story returns with new adventures and heartwarming moments."
     },
     { 
       id: 6, 
@@ -74,7 +69,6 @@ const NowShowing = () => {
       rating: "U/A",
       year: "2024",
       director: "Suresh Kumar",
-      description: "A hilarious journey through the streets of Mumbai with unexpected twists."
     },
     { 
       id: 7, 
@@ -85,7 +79,6 @@ const NowShowing = () => {
       rating: "A",
       year: "2024",
       director: "Michael Chen",
-      description: "A dark psychological thriller exploring the depths of human nature."
     },
     { 
       id: 8, 
@@ -96,7 +89,6 @@ const NowShowing = () => {
       rating: "PG",
       year: "2024",
       director: "Warner Bros",
-      description: "Step into the blocky world of Minecraft in this epic animated adventure."
     },
   ];
 

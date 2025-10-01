@@ -10,7 +10,7 @@ const Theaters = () => {
       id: 1,
       name: "Movie Express Cinemas",
       location: "Colombo City Center",
-      image: "https://images.unsplash.com/photo-1489599813484-5b0f7b8b8b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/src/assets/LandingPageAnimation.png",
       address: "Colombo City Center, Colombo 03",
       phone: "+94 11 123 4567",
       facilities: ["IMAX", "Dolby Atmos", "Reclining Seats", "Food Court"]
@@ -19,7 +19,7 @@ const Theaters = () => {
       id: 2,
       name: "Movie Express Cinemas",
       location: "Kandy City Center",
-      image: "https://images.unsplash.com/photo-1489599813484-5b0f7b8b8b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/src/assets/LandingPageAnimation.png",
       address: "Kandy City Center, Kandy",
       phone: "+94 81 123 4567",
       facilities: ["4DX", "Dolby Vision", "Premium Seats", "Snack Bar"]
@@ -28,7 +28,7 @@ const Theaters = () => {
       id: 3,
       name: "Movie Express Cinemas",
       location: "Reality Plaza",
-      image: "https://images.unsplash.com/photo-1489599813484-5b0f7b8b8b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/src/assets/LandingPageAnimation.png",
       address: "Reality Plaza, Colombo 04",
       phone: "+94 11 234 5678",
       facilities: ["IMAX", "Dolby Atmos", "VIP Lounge", "Parking"]
@@ -37,7 +37,7 @@ const Theaters = () => {
       id: 4,
       name: "Movie Express Cinemas",
       location: "Liberty Plaza",
-      image: "https://images.unsplash.com/photo-1489599813484-5b0f7b8b8b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/src/assets/LandingPageAnimation.png",
       address: "Liberty Plaza, Colombo 03",
       phone: "+94 11 345 6789",
       facilities: ["4DX", "Dolby Vision", "Premium Seats", "Restaurant"]
