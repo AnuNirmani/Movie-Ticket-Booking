@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Navbar from "../HeadFoot/Navbar";
+import Footer from "../HeadFoot/Footer";
 import "../../css/Footer/contactus.css";
 
 const ContactUs = () => {
@@ -25,8 +27,10 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="contact-us-container">
-      <div className="contact-us-content">
+    <div className="contact-us-page">
+      <Navbar />
+      <div className="contact-us-container">
+        <div className="contact-us-content">
         {/* Contact Form Section */}
         <div className="contact-form-section">
           <form className="contact-form" onSubmit={handleSubmit}>
@@ -133,7 +137,9 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };
