@@ -1,0 +1,342 @@
+/* About Us Page Styles */
+.about-us-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1a0f2e 0%, #2d1b4e 100%);
+}
+
+.about-us-container {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 20px;
+  background: transparent;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.about-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  color: white;
+}
+
+.about-description {
+  background: transparent;
+  padding: 0px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.about-description p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin: 0;
+  text-align: justify;
+}
+
+.vision-mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.vision-section,
+.mission-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-section:hover,
+.mission-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(142, 36, 170, 0.4);
+}
+
+.vision-section h2,
+.mission-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f5c518;
+  margin: 0 0 20px 0;
+}
+
+.vision-section p,
+.mission-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #e0e0e0;
+  margin: 0;
+  text-align: justify;
+}
+
+.team-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 50px 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.team-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #f5c518;
+  text-align: center;
+  margin: 0 0 50px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.team-member {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+  border-color: #8e24aa;
+  box-shadow: 0 8px 30px rgba(142, 36, 170, 0.5);
+}
+
+.member-image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.1);
+}
+
+.member-info {
+  padding: 25px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.member-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin: 0 0 10px 0;
+}
+
+.member-info p {
+  font-size: 14px;
+  color: #f5c518;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .about-header h1 {
+    font-size: 40px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-container {
+    padding: 30px 15px;
+  }
+
+  .about-header {
+    margin-bottom: 40px;
+    padding: 30px 15px;
+  }
+
+  .about-header h1 {
+    font-size: 32px;
+  }
+
+  .about-description {
+    padding: 30px 20px;
+  }
+
+  .about-description p {
+    font-size: 16px;
+  }
+
+  .vision-mission {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .vision-section,
+  .mission-section {
+    padding: 30px 20px;
+  }
+
+  .vision-section h2,
+  .mission-section h2 {
+    font-size: 24px;
+  }
+
+  .team-section {
+    padding: 40px 20px;
+  }
+
+  .team-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .member-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-container {
+    padding: 20px 10px;
+  }
+
+  .about-header {
+    margin-bottom: 30px;
+    padding: 20px 10px;
+  }
+
+  .about-header h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .about-description {
+    padding: 20px 15px;
+  }
+
+  .about-description p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .vision-section,
+  .mission-section {
+    padding: 20px 15px;
+  }
+
+  .vision-section h2,
+  .mission-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .vision-section p,
+  .mission-section p {
+    font-size: 14px;
+  }
+
+  .team-section {
+    padding: 30px 15px;
+  }
+
+  .team-section h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .team-grid {
+    gap: 20px;
+  }
+
+  .member-image {
+    height: 250px;
+  }
+
+  .member-info {
+    padding: 20px 15px;
+  }
+
+  .member-info h3 {
+    font-size: 18px;
+  }
+
+  .member-info p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .about-header h1 {
+    font-size: 20px;
+  }
+
+  .about-description p {
+    font-size: 13px;
+  }
+
+  .vision-section h2,
+  .mission-section h2 {
+    font-size: 18px;
+  }
+
+  .vision-section p,
+  .mission-section p {
+    font-size: 13px;
+  }
+
+  .team-section h2 {
+    font-size: 20px;
+  }
+
+  .member-image {
+    height: 220px;
+  }
+
+  .member-info h3 {
+    font-size: 16px;
+  }
+
+  .member-info p {
+    font-size: 12px;
+  }
+}
+

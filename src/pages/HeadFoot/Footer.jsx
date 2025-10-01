@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../css/HeadFoot/footer.css";
 
 const Footer = () => {
@@ -23,10 +24,10 @@ const Footer = () => {
         <div className="footer-nav">
           {/* <h4>Navigation</h4> */}
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/movies">Movies</a></li>
-            <li><a href="/theaters">Theaters</a></li>
-            <li><a href="/deals">Deals</a></li>
+            <li><Link to="/home">Home</Link></li>
+            <li><Link to="/movies">Movies</Link></li>
+            <li><Link to="/theaters">Theaters</Link></li>
+            <li><Link to="/deals">Deals</Link></li>
           </ul>
           
           {/* App Download Section */}
@@ -65,10 +66,10 @@ const Footer = () => {
         <div className="footer-company">
           {/* <h4>Company</h4> */}
           <ul>
-            <li><a href="/advertisements">Advertisements</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/terms">Terms & Conditions</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><Link to="/advertisements">Advertisements</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/terms">Terms & Conditions</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
 
