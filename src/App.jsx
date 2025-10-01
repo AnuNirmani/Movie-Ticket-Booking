@@ -12,6 +12,7 @@ import NewPassword from "./pages/Auth/NewPassword";
 import ComingSoon from "./pages/Home/ComingSoon";
 import Theaters from "./pages/Home/Theaters";
 import AboutUs from "./pages/Footer/AboutUs";
+import TermsAndConditions from "./pages/Footer/TermsAndConditions";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/now-showing" element={<NowShowing />} />
         <Route path="/theaters" element={<Theaters />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/terms" element={<TermsAndConditions />} />
       </Routes>
     </BrowserRouter>
   );
