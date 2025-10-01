@@ -1,7 +1,7 @@
 /* Terms & Conditions Page Styles */
 .terms-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #1a0f2e 0%, #2a1a3a 50%, #1a0f2e 100%);
+  background: #1a0f2e;
   color: white;
   font-family: 'Arial', sans-serif;
 }

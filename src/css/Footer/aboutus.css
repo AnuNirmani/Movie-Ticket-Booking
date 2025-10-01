@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #1a0f2e 0%, #2a1a3a 50%, #1a0f2e 100%);
+  background: #1a0f2e;
 }
 
 .about-us-container {

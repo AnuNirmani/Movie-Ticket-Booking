@@ -1,7 +1,7 @@
 /* Theaters Page Styles */
 .theaters-container {
   min-height: calc(100vh - 140px); /* Account for navbar and footer */
-  background: linear-gradient(135deg, #1a0f2e 0%, #2a1a3a 50%, #1a0f2e 100%);
+  background: #1a0f2e;
   padding: 2rem 0;
   color: #ffffff;
 }
