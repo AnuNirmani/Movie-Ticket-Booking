@@ -94,6 +94,7 @@
   border-radius: 15px;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin-bottom: 60px;
 }
 
 .team-section h2 {
@@ -148,6 +149,16 @@
   padding: 25px 20px;
   text-align: center;
   background: rgba(0, 0, 0, 0.3);
+}
+
+.team-section h4 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 50px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .member-info h3 {
@@ -215,6 +226,7 @@
 
   .team-section {
     padding: 40px 20px;
+    margin-bottom: 40px;
   }
 
   .team-section h2 {
@@ -274,6 +286,7 @@
 
   .team-section {
     padding: 30px 15px;
+    margin-bottom: 30px;
   }
 
   .team-section h2 {

@@ -40,7 +40,7 @@ const AboutUs = () => {
           </div>
 
           <div className="team-section">
-            <h2>Our Team</h2>
+            <h4>Our Team</h4>
             <div className="team-grid">
               <div className="team-member">
                 <div className="member-image">
