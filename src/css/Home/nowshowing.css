@@ -21,15 +21,10 @@
     margin: 0 auto;
   }
   
-  .filters-left {
-    display: flex;
-    gap: 12px;
-  }
+
   
   .filters-left select {
-    padding: 8px 12px;
-    border-radius: 4px;
-    border: none;
+    border: 1px solid rgba(233, 30, 99, 0.8);
     font-size: 13px;
     background: #fff;
     color: #333;
@@ -39,29 +34,25 @@
 
   .filters-left select:hover {
     background: #f8f9fa;
-    transform: translateY(-2px) scale(1.02);
+    color: #333;
+    transform: translateY(-3px) scale(1.02);
     box-shadow: 0 6px 20px rgba(233, 30, 99, 0.8);
     border: 1px rgba(233, 30, 99, 0.8);
   }
   
   .coming-soon {
-    padding: 8px 14px;
-    border-radius: 4px;
-    border: 1px solid #fff;
-    font-size: 13px;
-    font-weight: 600;
     background: transparent;
-    color: #fff;
+    color: #ffffff;
+    border: 1px solid #ffffff;
     cursor: pointer;
     transition: all 0.3s ease;
   }
   
   .coming-soon:hover {
-    background: #fff;
-    border: 1px solid #ffffff;
-    color: #1a0f2e;
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.8);
+    background: #e91e63;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
   }
   
   /* Movies Grid */

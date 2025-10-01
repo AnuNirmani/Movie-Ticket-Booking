@@ -229,8 +229,10 @@
 
 .contact-btn.secondary {
   background: transparent;
-  color: #e91e63;
-  border: 2px solid #e91e63;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .contact-btn.secondary:hover {
