@@ -30,6 +30,9 @@ const ContactUs = () => {
     <div className="contact-us-page">
       <Navbar />
       <div className="contact-us-container">
+        <div className="contact-header">
+          <h1>CONTACT US</h1>
+        </div>
         <div className="contact-us-content">
         {/* Contact Form Section */}
         <div className="contact-form-section">
@@ -91,7 +94,7 @@ const ContactUs = () => {
 
         {/* Hot Line Section */}
         <div className="hotline-section">
-          <h2 className="hotline-title">Hot Line</h2>
+          <h6 className="hotline-title">Hot Line</h6>
           
           <div className="contact-cards">
             <div className="contact-card">

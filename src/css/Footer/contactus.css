@@ -10,8 +10,24 @@
   background: #1a0f2e;
   padding: 2rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 40px 20px;
+  background: transparent;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.contact-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .contact-us-content {
@@ -76,23 +92,22 @@
 }
 
 .send-button {
-  background: linear-gradient(135deg, #4A2C8A 0%, #3B1F6B 100%);
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
   color: #ffffff;
   border: none;
-  border-radius: 8px;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 1rem;
-  align-self: flex-start;
+  white-space: nowrap;
 }
 
 .send-button:hover {
-  background: linear-gradient(135deg, #5A3C9A 0%, #4B2F7B 100%);
+  background: linear-gradient(135deg, #7b1fa2, #e91e63);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6);
 }
 
 .send-button:active {
@@ -109,7 +124,7 @@
 .hotline-title {
   color: #ffffff;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -174,6 +189,15 @@
     padding: 1rem;
   }
   
+  .contact-header {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+  
   .contact-us-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -199,6 +223,15 @@
 @media (max-width: 480px) {
   .contact-us-container {
     padding: 0.5rem;
+  }
+  
+  .contact-header {
+    margin-bottom: 1rem;
+    padding: 1rem 0.5rem;
+  }
+  
+  .contact-header h1 {
+    font-size: 1.5rem;
   }
   
   .contact-form-section {
