@@ -8,7 +8,7 @@
 
 .about-us-container {
   flex: 1;
-  padding: 40px 20px;
+  /* padding: 40px 20px; */
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
@@ -16,7 +16,7 @@
 
 .about-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   padding: 40px 20px;
   background: transparent;
   border-radius: 15px;
@@ -35,7 +35,6 @@
 
 .about-description {
   background: transparent;
-  padding: 0px;
   border-radius: 15px;
   margin-bottom: 40px;
   backdrop-filter: blur(10px);
@@ -43,7 +42,7 @@
 
 .about-description p {
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 2;
   color: #e0e0e0;
   margin: 0;
   text-align: justify;
@@ -69,14 +68,14 @@
 .vision-section:hover,
 .mission-section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(142, 36, 170, 0.4);
+  border: 2px solid rgba(233, 30, 99, 0.3);
 }
 
 .vision-section h2,
 .mission-section h2 {
   font-size: 28px;
   font-weight: bold;
-  color: #f5c518;
+  color: #ffffff;
   margin: 0 0 20px 0;
 }
 
@@ -100,7 +99,7 @@
 .team-section h2 {
   font-size: 36px;
   font-weight: bold;
-  color: #f5c518;
+  color: #ffffff;
   text-align: center;
   margin: 0 0 50px 0;
   text-transform: uppercase;
@@ -124,8 +123,7 @@
 
 .team-member:hover {
   transform: translateY(-8px);
-  border-color: #8e24aa;
-  box-shadow: 0 8px 30px rgba(142, 36, 170, 0.5);
+  border: 2px solid rgba(233, 30, 99, 0.3);
 }
 
 .member-image {
@@ -161,7 +159,7 @@
 
 .member-info p {
   font-size: 14px;
-  color: #f5c518;
+  color: #00bfff;
   margin: 0;
   font-weight: 500;
 }
