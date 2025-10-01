@@ -12,8 +12,7 @@ const Theaters = () => {
       location: "Colombo City Center",
       image: "/src/assets/LandingPageAnimation.png",
       address: "Colombo City Center, Colombo 03",
-      phone: "+94 11 123 4567",
-      facilities: ["IMAX", "Dolby Atmos", "Reclining Seats", "Food Court"]
+      phone: "+94 11 123 4567"
     },
     {
       id: 2,
@@ -21,8 +20,7 @@ const Theaters = () => {
       location: "Kandy City Center",
       image: "/src/assets/LandingPageAnimation.png",
       address: "Kandy City Center, Kandy",
-      phone: "+94 81 123 4567",
-      facilities: ["4DX", "Dolby Vision", "Premium Seats", "Snack Bar"]
+      phone: "+94 81 123 4567"
     },
     {
       id: 3,
@@ -30,8 +28,7 @@ const Theaters = () => {
       location: "Reality Plaza",
       image: "/src/assets/LandingPageAnimation.png",
       address: "Reality Plaza, Colombo 04",
-      phone: "+94 11 234 5678",
-      facilities: ["IMAX", "Dolby Atmos", "VIP Lounge", "Parking"]
+      phone: "+94 11 234 5678"
     },
     {
       id: 4,
@@ -39,8 +36,7 @@ const Theaters = () => {
       location: "Liberty Plaza",
       image: "/src/assets/LandingPageAnimation.png",
       address: "Liberty Plaza, Colombo 03",
-      phone: "+94 11 345 6789",
-      facilities: ["4DX", "Dolby Vision", "Premium Seats", "Restaurant"]
+      phone: "+94 11 345 6789"
     }
   ];
 
@@ -58,15 +54,6 @@ const Theaters = () => {
           <div key={theater.id} className="theater-card">
             <div className="theater-image">
               <img src={theater.image} alt={theater.location} />
-              <div className="theater-overlay">
-                <div className="theater-facilities">
-                  {theater.facilities.map((facility, index) => (
-                    <span key={index} className="facility-tag">
-                      {facility}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </div>
             
             <div className="theater-info">
@@ -74,7 +61,7 @@ const Theaters = () => {
                 <h3 className="theater-name">{theater.name}</h3>
                 <div className="location-info">
                   <svg className="location-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#e91e63"/>
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#ffffff"/>
                   </svg>
                   <span className="theater-location">{theater.location}</span>
                 </div>
