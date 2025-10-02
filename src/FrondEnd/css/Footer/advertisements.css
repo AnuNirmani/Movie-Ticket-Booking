@@ -16,7 +16,7 @@
 
 .advertisements-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   padding: 40px 20px;
   background: transparent;
   border-radius: 15px;
@@ -24,13 +24,9 @@
 }
 
 .advertisements-header h1 {
-  font-size: 48px;
+  font-size: 34px;
   font-weight: 700;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 
 .advertisements-content {
@@ -55,6 +51,7 @@
 .advertisement-section:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(233, 30, 99, 0.3);
 }
 
 .advertisement-image {
@@ -65,119 +62,21 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.cinema-image {
+.cinema-ad-image {
   width: 100%;
   height: 100%;
-  position: relative;
-  background: #1a1a1a;
+  object-fit: cover;
   border-radius: 15px;
-  overflow: hidden;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border: 2px solid rgba(233, 30, 99, 0.3);
 }
 
-/* Colombo Cinema Styling */
-.colombo-cinema {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+.cinema-ad-image:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  border: 2px solid rgba(233, 30, 99, 0.3);
 }
 
-.blue-seats {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 200px;
-  background: repeating-linear-gradient(
-    0deg,
-    #1e3a8a 0px,
-    #1e3a8a 8px,
-    #1e40af 8px,
-    #1e40af 16px
-  );
-  border-radius: 8px;
-  box-shadow: inset 0 0 20px rgba(30, 64, 175, 0.3);
-}
-
-/* Kandy Cinema Styling */
-.kandy-cinema {
-  background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
-}
-
-.red-seats {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 200px;
-  background: repeating-linear-gradient(
-    0deg,
-    #dc2626 0px,
-    #dc2626 8px,
-    #ef4444 8px,
-    #ef4444 16px
-  );
-  border-radius: 8px;
-  box-shadow: inset 0 0 20px rgba(239, 68, 68, 0.3);
-}
-
-.cinema-screen {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 120px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-}
-
-/* Neon Lighting for Colombo */
-.pink-neon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background: 
-    linear-gradient(90deg, transparent 0%, rgba(236, 72, 153, 0.3) 20%, transparent 40%),
-    linear-gradient(90deg, transparent 60%, rgba(236, 72, 153, 0.3) 80%, transparent 100%);
-  animation: neonGlow 3s ease-in-out infinite alternate;
-}
-
-@keyframes neonGlow {
-  0% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 0.7;
-  }
-}
-
-/* Grid Lighting for Kandy */
-.grid-lighting {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background-image: 
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.4) 2px, transparent 2px),
-    radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.3) 1.5px, transparent 1.5px),
-    radial-gradient(circle at 60% 60%, rgba(255, 255, 255, 0.4) 2px, transparent 2px),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.3) 1.5px, transparent 1.5px);
-  background-size: 60px 60px, 40px 40px, 60px 60px, 40px 40px;
-  animation: gridFlicker 4s ease-in-out infinite;
-}
-
-@keyframes gridFlicker {
-  0%, 100% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-}
 
 .advertisement-text {
   display: flex;
@@ -187,16 +86,14 @@
 }
 
 .text-content {
-  background: #1e3a8a;
+  background: transparent;
   padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .text-content:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.4);
 }
 
 .text-content h2 {
@@ -231,6 +128,10 @@
   .advertisement-image {
     height: 350px;
   }
+  
+  .cinema-ad-image {
+    height: 350px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -261,6 +162,10 @@
   .advertisement-image {
     height: 300px;
     order: 1;
+  }
+  
+  .cinema-ad-image {
+    height: 300px;
   }
   
   .advertisement-text {
@@ -308,6 +213,10 @@
     height: 250px;
   }
   
+  .cinema-ad-image {
+    height: 250px;
+  }
+  
   .text-content {
     padding: 25px 20px;
   }
@@ -329,6 +238,10 @@
   }
   
   .advertisement-image {
+    height: 220px;
+  }
+  
+  .cinema-ad-image {
     height: 220px;
   }
   

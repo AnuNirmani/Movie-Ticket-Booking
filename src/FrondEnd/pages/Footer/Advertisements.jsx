@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../HeadFoot/Navbar";
 import Footer from "../HeadFoot/Footer";
+import Deals from "../../components/Deals";
 import "../../css/Footer/advertisements.css";
 
 const Advertisements = () => {
@@ -14,15 +15,15 @@ const Advertisements = () => {
         </div>
 
         <div className="advertisements-content">
-          {/* First Advertisement - Colombo City Center */}
-          <div className="advertisement-section">
-            <div className="advertisement-image">
-              <div className="cinema-image colombo-cinema">
-                <div className="cinema-seats blue-seats"></div>
-                <div className="cinema-screen"></div>
-                <div className="neon-lighting pink-neon"></div>
-              </div>
-            </div>
+           {/* First Advertisement - Colombo City Center */}
+           <div className="advertisement-section">
+             <div className="advertisement-image">
+               <img 
+                 src="/src/assets/LandingPageAnimation.png" 
+                 alt="Movie Express Cinemas - Colombo City Center" 
+                 className="cinema-ad-image"
+               />
+             </div>
             <div className="advertisement-text">
               <div className="text-content">
                 <h2>Movie Express Cinemas - Colombo City Center</h2>
@@ -36,15 +37,15 @@ const Advertisements = () => {
             </div>
           </div>
 
-          {/* Second Advertisement - Kandy City Center */}
-          <div className="advertisement-section">
-            <div className="advertisement-image">
-              <div className="cinema-image kandy-cinema">
-                <div className="cinema-seats red-seats"></div>
-                <div className="cinema-screen"></div>
-                <div className="grid-lighting"></div>
-              </div>
-            </div>
+           {/* Second Advertisement - Kandy City Center */}
+           <div className="advertisement-section">
+             <div className="advertisement-image">
+               <img 
+                 src="/src/assets/LandingPageAnimation.png" 
+                 alt="Movie Express Cinemas - Kandy City Center" 
+                 className="cinema-ad-image"
+               />
+             </div>
             <div className="advertisement-text">
               <div className="text-content">
                 <h2>Movie Express Cinemas - Kandy City Center</h2>
@@ -59,6 +60,9 @@ const Advertisements = () => {
           </div>
         </div>
       </div>
+
+      {/* Deals Section */}
+      <Deals />
 
       <Footer />
     </div>
