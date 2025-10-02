@@ -1,0 +1,346 @@
+/* Advertisements Page Styles */
+.advertisements-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #1a0f2e;
+}
+
+.advertisements-container {
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.advertisements-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 20px;
+  background: transparent;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.advertisements-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.advertisements-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.advertisement-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advertisement-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.advertisement-image {
+  position: relative;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cinema-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Colombo Cinema Styling */
+.colombo-cinema {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.blue-seats {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 200px;
+  background: repeating-linear-gradient(
+    0deg,
+    #1e3a8a 0px,
+    #1e3a8a 8px,
+    #1e40af 8px,
+    #1e40af 16px
+  );
+  border-radius: 8px;
+  box-shadow: inset 0 0 20px rgba(30, 64, 175, 0.3);
+}
+
+/* Kandy Cinema Styling */
+.kandy-cinema {
+  background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+}
+
+.red-seats {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 200px;
+  background: repeating-linear-gradient(
+    0deg,
+    #dc2626 0px,
+    #dc2626 8px,
+    #ef4444 8px,
+    #ef4444 16px
+  );
+  border-radius: 8px;
+  box-shadow: inset 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+.cinema-screen {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 120px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Neon Lighting for Colombo */
+.pink-neon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(236, 72, 153, 0.3) 20%, transparent 40%),
+    linear-gradient(90deg, transparent 60%, rgba(236, 72, 153, 0.3) 80%, transparent 100%);
+  animation: neonGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+/* Grid Lighting for Kandy */
+.grid-lighting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.4) 2px, transparent 2px),
+    radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.3) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 60% 60%, rgba(255, 255, 255, 0.4) 2px, transparent 2px),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.3) 1.5px, transparent 1.5px);
+  background-size: 60px 60px, 40px 40px, 60px 60px, 40px 40px;
+  animation: gridFlicker 4s ease-in-out infinite;
+}
+
+@keyframes gridFlicker {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.advertisement-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.text-content {
+  background: #1e3a8a;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.4);
+}
+
+.text-content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin: 0 0 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .advertisements-header h1 {
+    font-size: 42px;
+  }
+  
+  .advertisement-section {
+    gap: 30px;
+    padding: 30px;
+  }
+  
+  .advertisement-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .advertisements-container {
+    padding: 30px 15px;
+  }
+  
+  .advertisements-header {
+    margin-bottom: 40px;
+    padding: 30px 15px;
+  }
+  
+  .advertisements-header h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+  
+  .advertisements-content {
+    gap: 40px;
+  }
+  
+  .advertisement-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 25px;
+  }
+  
+  .advertisement-image {
+    height: 300px;
+    order: 1;
+  }
+  
+  .advertisement-text {
+    order: 2;
+    padding: 15px;
+  }
+  
+  .text-content {
+    padding: 30px 25px;
+  }
+  
+  .text-content h2 {
+    font-size: 24px;
+  }
+  
+  .text-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .advertisements-container {
+    padding: 20px 10px;
+  }
+  
+  .advertisements-header {
+    margin-bottom: 30px;
+    padding: 20px 10px;
+  }
+  
+  .advertisements-header h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+  
+  .advertisements-content {
+    gap: 30px;
+  }
+  
+  .advertisement-section {
+    padding: 20px;
+  }
+  
+  .advertisement-image {
+    height: 250px;
+  }
+  
+  .text-content {
+    padding: 25px 20px;
+  }
+  
+  .text-content h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .text-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 360px) {
+  .advertisements-header h1 {
+    font-size: 24px;
+  }
+  
+  .advertisement-image {
+    height: 220px;
+  }
+  
+  .text-content {
+    padding: 20px 15px;
+  }
+  
+  .text-content h2 {
+    font-size: 18px;
+  }
+  
+  .text-content p {
+    font-size: 13px;
+  }
+}

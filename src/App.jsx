@@ -14,6 +14,7 @@ import Theaters from "./FrondEnd/pages/Home/Theaters";
 import AboutUs from "./FrondEnd/pages/Footer/AboutUs";
 import TermsAndConditions from "./FrondEnd/pages/Footer/TermsAndConditions";
 import ContactUs from "./FrondEnd/pages/Footer/ContactUs";
+import Advertisements from "./FrondEnd/pages/Footer/Advertisements";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/terms" element={<TermsAndConditions />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/advertisements" element={<Advertisements />} />
       </Routes>
     </BrowserRouter>
   );
