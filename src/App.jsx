@@ -1,19 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Auth/login";
-import Signup from "./pages/Auth/Signup";
-import Home from "./pages/Home/Home";
-import NowShowing from "./pages/Home/NowShowing";
-import MovieSelecting from "./pages/Home/Booking/MovieSelecting";
-import SeatBooking from "./pages/Home/Booking/SeatBooking";
-import Payment from "./pages/Home/Booking/Payment";
-import ForgotPassword from "./pages/Auth/ForgotPassword";
-import SendOTP from "./pages/Auth/SendOTP";
-import NewPassword from "./pages/Auth/NewPassword";
-import ComingSoon from "./pages/Home/ComingSoon";
-import Theaters from "./pages/Home/Theaters";
-import AboutUs from "./pages/Footer/AboutUs";
-import TermsAndConditions from "./pages/Footer/TermsAndConditions";
-import ContactUs from "./pages/Footer/ContactUs";
+import Login from "./FrondEnd/pages/Auth/login";
+import Signup from "./FrondEnd/pages/Auth/Signup";
+import Home from "./FrondEnd/pages/Home/Home";
+import NowShowing from "./FrondEnd/pages/Home/NowShowing";
+import MovieSelecting from "./FrondEnd/pages/Home/Booking/MovieSelecting";
+import SeatBooking from "./FrondEnd/pages/Home/Booking/SeatBooking";
+import Payment from "./FrondEnd/pages/Home/Booking/Payment";
+import ForgotPassword from "./FrondEnd/pages/Auth/ForgotPassword";
+import SendOTP from "./FrondEnd/pages/Auth/SendOTP";
+import NewPassword from "./FrondEnd/pages/Auth/NewPassword";
+import ComingSoon from "./FrondEnd/pages/Home/ComingSoon";
+import Theaters from "./FrondEnd/pages/Home/Theaters";
+import AboutUs from "./FrondEnd/pages/Footer/AboutUs";
+import TermsAndConditions from "./FrondEnd/pages/Footer/TermsAndConditions";
+import ContactUs from "./FrondEnd/pages/Footer/ContactUs";
 
 function App() {
   return (

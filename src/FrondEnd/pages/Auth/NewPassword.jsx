@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import logoImage from "../../assets/logo.png";
+import logoImage from "../../../assets/logo.png";
 import "../../css/Auth/newpassword.css";
 
 function NewPassword() {

@@ -3,7 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import logoImage from "../../assets/logo.png";
+import logoImage from "../../../assets/logo.png";
 import "../../css/Auth/login.css";
 
 function Login() {
