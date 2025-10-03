@@ -9,11 +9,104 @@ function Signup() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false); // to show message box
   const [showSuccessModal, setShowSuccessModal] = useState(false); // to show success message box
+  
+  // Form state
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  
+  // Error state
+  const [firstNameError, setFirstNameError] = useState("");
+  const [lastNameError, setLastNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [confirmPasswordError, setConfirmPasswordError] = useState("");
+  
   const navigate = useNavigate();
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^\+[0-9]{10}$/;
+    return phoneRegex.test(phone);
+  };
+
+  const validatePassword = (password) => {
+    return password.length >= 6;
+  };
 
   const handleSignup = (e) => {
     e.preventDefault();
-    setShowConfirmModal(true);
+    
+    // Reset all errors
+    setFirstNameError("");
+    setLastNameError("");
+    setEmailError("");
+    setPhoneError("");
+    setPasswordError("");
+    setConfirmPasswordError("");
+    
+    let hasErrors = false;
+    
+    // Validate First Name
+    if (!firstName.trim()) {
+      setFirstNameError("First Name is required");
+      hasErrors = true;
+    }
+    
+    // Validate Last Name
+    if (!lastName.trim()) {
+      setLastNameError("Last Name is required");
+      hasErrors = true;
+    }
+    
+    // Validate Email
+    if (!email.trim()) {
+      setEmailError("Email is required");
+      hasErrors = true;
+    } else if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address");
+      hasErrors = true;
+    }
+    
+    // Validate Phone
+    if (!phone.trim()) {
+      setPhoneError("Phone number is required");
+      hasErrors = true;
+    } else if (!validatePhone(phone)) {
+      setPhoneError("Phone number must start with + and have 11 digits total");
+      hasErrors = true;
+    }
+    
+    // Validate Password
+    if (!password.trim()) {
+      setPasswordError("Password is required");
+      hasErrors = true;
+    } else if (!validatePassword(password)) {
+      setPasswordError("Password must be at least 6 characters long");
+      hasErrors = true;
+    }
+    
+    // Validate Confirm Password
+    if (!confirmPassword.trim()) {
+      setConfirmPasswordError("Confirm Password is required");
+      hasErrors = true;
+    } else if (password !== confirmPassword) {
+      setConfirmPasswordError("Passwords do not match");
+      hasErrors = true;
+    }
+    
+    // If no errors, proceed with signup
+    if (!hasErrors) {
+      setShowConfirmModal(true);
+    }
   };
 
   const handleConfirmAccount = () => {
@@ -59,11 +152,12 @@ function Signup() {
               <label className="form-label">First Name <span className="required">*</span></label>
               <input 
                 type="text" 
-                className="form-input" 
+                className={`form-input ${firstNameError ? 'error' : ''}`}
                 placeholder="Jone"
-                defaultValue="Jone"
-                required 
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
               />
+              {firstNameError && <div className="error-message">{firstNameError}</div>}
             </div>
 
             {/* Last Name */}
@@ -71,11 +165,12 @@ function Signup() {
               <label className="form-label">Last Name <span className="required">*</span></label>
               <input 
                 type="text" 
-                className="form-input" 
+                className={`form-input ${lastNameError ? 'error' : ''}`}
                 placeholder="Fernando"
-                defaultValue="Fernando"
-                required 
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
               />
+              {lastNameError && <div className="error-message">{lastNameError}</div>}
             </div>
 
             {/* Email */}
@@ -83,11 +178,12 @@ function Signup() {
               <label className="form-label">Email <span className="required">*</span></label>
               <input 
                 type="email" 
-                className="form-input" 
+                className={`form-input ${emailError ? 'error' : ''}`}
                 placeholder="jone@gmail.com"
-                defaultValue="jone@gmail.com"
-                required 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
+              {emailError && <div className="error-message">{emailError}</div>}
             </div>
 
             {/* Phone */}
@@ -95,11 +191,12 @@ function Signup() {
               <label className="form-label">Phone No <span className="required">*</span></label>
               <input 
                 type="tel" 
-                className="form-input" 
+                className={`form-input ${phoneError ? 'error' : ''}`}
                 placeholder="+94"
-                defaultValue="+94"
-                required 
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
               />
+              {phoneError && <div className="error-message">{phoneError}</div>}
             </div>
 
             {/* Password */}
@@ -108,9 +205,10 @@ function Signup() {
               <div className="password-input-wrapper">
                 <input
                   type={showPassword ? "text" : "password"}
-                  className="form-input password-input"
+                  className={`form-input password-input ${passwordError ? 'error' : ''}`}
                   placeholder="******"
-                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <button
                   type="button"
@@ -120,6 +218,7 @@ function Signup() {
                   {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
                 </button>
               </div>
+              {passwordError && <div className="error-message">{passwordError}</div>}
             </div>
 
             {/* Confirm Password */}
@@ -128,9 +227,10 @@ function Signup() {
               <div className="password-input-wrapper">
                 <input
                   type={showConfirmPassword ? "text" : "password"}
-                  className="form-input password-input"
+                  className={`form-input password-input ${confirmPasswordError ? 'error' : ''}`}
                   placeholder="******"
-                  required
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                 />
                 <button
                   type="button"
@@ -140,6 +240,7 @@ function Signup() {
                   {showConfirmPassword ? <FaRegEyeSlash /> : <FaRegEye />}
                 </button>
               </div>
+              {confirmPasswordError && <div className="error-message">{confirmPasswordError}</div>}
             </div>
 
             {/* Sign Up Button */}

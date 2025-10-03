@@ -8,11 +8,52 @@ import "../../css/Auth/login.css";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePassword = (password) => {
+    return password.length >= 6;
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
-    navigate("/home"); 
+    
+    // Reset errors
+    setEmailError("");
+    setPasswordError("");
+    
+    let hasErrors = false;
+    
+    // Validate email
+    if (!email.trim()) {
+      setEmailError("Email is required");
+      hasErrors = true;
+    } else if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address");
+      hasErrors = true;
+    }
+    
+    // Validate password
+    if (!password.trim()) {
+      setPasswordError("Password is required");
+      hasErrors = true;
+    } else if (!validatePassword(password)) {
+      setPasswordError("Password must be at least 6 characters long");
+      hasErrors = true;
+    }
+    
+    // If no errors, proceed with login
+    if (!hasErrors) {
+      navigate("/home");
+    }
   };
 
   return (
@@ -39,10 +80,12 @@ function Login() {
               <label className="form-label">Email</label>
               <input
                 type="email"
-                className="form-input"
+                className={`form-input ${emailError ? 'error' : ''}`}
                 placeholder="jone@gmail.com"
-                defaultValue="jone@gmail.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
+              {emailError && <div className="error-message">{emailError}</div>}
             </div>
 
             <div className="form-group">
@@ -50,8 +93,10 @@ function Login() {
               <div className="password-input-wrapper">
                 <input
                   type={showPassword ? "text" : "password"}
-                  className="form-input password-input"
+                  className={`form-input password-input ${passwordError ? 'error' : ''}`}
                   placeholder="******"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <button
                   type="button"
@@ -61,6 +106,7 @@ function Login() {
                   {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
                 </button>
               </div>
+              {passwordError && <div className="error-message">{passwordError}</div>}
             </div>
 
             <div className="form-options">

@@ -115,6 +115,26 @@
   box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.2);
 }
 
+/* Error states */
+.form-input.error {
+  border-color: #f44336;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.2);
+}
+
+.form-input.error:focus {
+  border-color: #f44336;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.3);
+}
+
+/* Error message */
+.error-message {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: left;
+  font-weight: 500;
+}
+
 /* Password input */
 .password-input-wrapper {
   position: relative;
