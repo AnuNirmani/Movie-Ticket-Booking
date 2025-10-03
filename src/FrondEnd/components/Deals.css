@@ -297,7 +297,7 @@
 } */
 
 /* Deal Footer */
-.deal-footer {
+.deals-section .deal-footer {
   background: #1a0f2e;
   padding: 20px;
   display: flex;
@@ -306,7 +306,7 @@
   min-height: 80px;
 }
 
-.deal-title {
+.deals-section .deal-title {
   font-size: 1.1rem;
   font-weight: bold;
   color: #ffffff;
@@ -314,12 +314,13 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.deal-info-link {
+.deals-section .deal-info-link {
   display: flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-left: auto;
 }
 
 .deal-info-link:hover {

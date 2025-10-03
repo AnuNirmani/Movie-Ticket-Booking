@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Deals.css";
 
 const Deals = () => {
+  const navigate = useNavigate();
+
+  const handleMoreInfoClick = () => {
+    navigate("/deals");
+  };
+
   return (
     <div className="deals-section">
       <div className="deals-container">
@@ -22,7 +29,7 @@ const Deals = () => {
             </div>
             <div className="deal-footer">
               <h3 className="deal-title">50% Cash Back Offer</h3>
-              <div className="deal-info-link">
+              <div className="deal-info-link" onClick={handleMoreInfoClick}>
                 <span className="info-icon">ℹ</span>
                 <span className="info-text">More Information</span>
               </div>
@@ -40,7 +47,7 @@ const Deals = () => {
             </div>
             <div className="deal-footer">
               <h3 className="deal-title">Student Offer</h3>
-              <div className="deal-info-link">
+              <div className="deal-info-link" onClick={handleMoreInfoClick}>
                 <span className="info-icon">ℹ</span>
                 <span className="info-text">More Information</span>
               </div>
@@ -59,7 +66,7 @@ const Deals = () => {
             </div>
             <div className="deal-footer">
               <h3 className="deal-title">Buy One & Get Free PopCorn</h3>
-              <div className="deal-info-link">
+              <div className="deal-info-link" onClick={handleMoreInfoClick}>
                 <span className="info-icon">ℹ</span>
                 <span className="info-text">More Information</span>
               </div>
