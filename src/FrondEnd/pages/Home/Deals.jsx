@@ -14,7 +14,7 @@ const Deals = () => {
           <div className="deals-grid">
             {/* Deal Card 1: Buy One Get One Free Offer */}
               <div className="deal-card">
-                <div className="deal-banner najm-banner" style={{
+                <div className="deal-banner" style={{
                   backgroundImage: "url('/src/assets/LandingPageAnimation.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",

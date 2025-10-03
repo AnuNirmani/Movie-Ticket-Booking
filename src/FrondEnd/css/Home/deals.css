@@ -6,7 +6,6 @@
   background: #1a0f2e;
 }
 
-
 .deals-container {
   flex: 1;
   max-width: 1400px;
@@ -18,16 +17,17 @@
 .deals-header {
   text-align: center;
   margin-bottom: 20px;
-  padding: 40px 20px;
+  padding: 20px 20px;
   background: transparent;
   border-radius: 15px;
   backdrop-filter: blur(10px);
 }
 
 .deals-header h1 {
-  font-size: 34px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #ffffff;
 }
 
 .deals-grid {
@@ -57,6 +57,18 @@
   border: 2px solid rgba(233, 30, 99, 0.3);
 }
 
+.deal-banner {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  min-height: 350px;
+}
 
 .deal-banner-content {
   width: 100%;
@@ -69,28 +81,6 @@
   z-index: 2;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 20px 20px 0 0;
-}
-
-.deal-text-overlay {
-  z-index: 2;
-  margin-bottom: 20px;
-}
-
-.deal-main-text {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #ffffff;
-  line-height: 1.4;
-  margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-
-.deal-sub-text {
-  font-size: 1rem;
-  color: #ffffff;
-  margin: 10px 0 0 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 /* Deal Footer */
@@ -155,36 +145,36 @@
 }
 
 .get-deal-btn {
-  background: linear-gradient(135deg, #e91e63, #c2185b);
-  color: white;
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  color: #ffffff;
   border: none;
-  padding: 15px 30px;
-  border-radius: 25px;
-  font-size: 1rem;
-  font-weight: bold;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+  white-space: nowrap;
 }
 
 .get-deal-btn:hover {
+  background: linear-gradient(135deg, #7b1fa2, #e91e63);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
-  background: linear-gradient(135deg, #f06292, #e91e63);
+  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6);
 }
 
-
+/* Responsive Design */
 
 /* Tablet and Large Mobile */
-@media (max-width: 1024px) {
-  .deals-section {
-    padding: 60px 0;
+@media (max-width: 1200px) {
+  .deals-header h1 {
+    font-size: 16px;
   }
-  
+}
+
+@media (max-width: 1024px) {
   .deals-container {
-    padding: 0 30px;
+    padding: 30px 15px;
   }
   
   .deals-grid {
@@ -197,26 +187,21 @@
   .deal-card {
     height: 450px;
   }
-  
-  .deal-banner {
-    min-height: 320px;
-  }
 }
 
 /* Mobile Landscape and Small Tablets */
 @media (max-width: 768px) {
-  .deals-section {
-    padding: 40px 0;
-  }
-  
   .deals-container {
-    padding: 0 20px;
+    padding: 30px 15px;
   }
   
-  .deals-title {
-    font-size: 2rem;
+  .deals-header {
     margin-bottom: 30px;
-    letter-spacing: 2px;
+    padding: 15px 15px;
+  }
+
+  .deals-header h1 {
+    font-size: 15px;
   }
   
   .deals-grid {
@@ -235,15 +220,6 @@
     padding: 20px;
   }
   
-  .deal-main-text {
-    font-size: 1.1rem;
-    line-height: 1.3;
-  }
-  
-  .deal-sub-text {
-    font-size: 0.9rem;
-  }
-    
   .deal-footer {
     padding: 15px;
     min-height: 70px;
@@ -251,16 +227,6 @@
   
   .deal-title {
     font-size: 1rem;
-  }
-  
-  .info-text {
-    font-size: 0.8rem;
-  }
-  
-  .info-icon {
-    width: 18px;
-    height: 18px;
-    font-size: 0.7rem;
   }
   
   .deal-details {
@@ -278,18 +244,18 @@
 
 /* Small Mobile Devices */
 @media (max-width: 480px) {
-  .deals-section {
-    padding: 30px 0;
-  }
-  
   .deals-container {
-    padding: 0 15px;
+    padding: 20px 10px;
   }
   
-  .deals-title {
-    font-size: 1.8rem;
+  .deals-header {
     margin-bottom: 25px;
-    letter-spacing: 1px;
+    padding: 15px 10px;
+  }
+
+  .deals-header h1 {
+    font-size: 14px;
+    letter-spacing: 0.5px;
   }
   
   .deals-grid {
@@ -314,20 +280,6 @@
     font-size: 0.9rem;
   }
   
-  .info-text {
-    font-size: 0.75rem;
-  }
-  
-  .info-icon {
-    width: 16px;
-    height: 16px;
-    font-size: 0.65rem;
-  }
-  
-  .deal-info-link {
-    gap: 6px;
-  }
-  
   .deal-details {
     padding: 20px;
   }
@@ -348,17 +300,17 @@
 
 /* Extra Small Mobile Devices */
 @media (max-width: 360px) {
-  .deals-section {
-    padding: 25px 0;
-  }
-  
   .deals-container {
-    padding: 0 10px;
+    padding: 15px 8px;
   }
   
-  .deals-title {
-    font-size: 1.6rem;
+  .deals-header {
     margin-bottom: 20px;
+    padding: 12px 8px;
+  }
+
+  .deals-header h1 {
+    font-size: 13px;
   }
   
   .deals-grid {
@@ -381,16 +333,6 @@
   
   .deal-title {
     font-size: 0.8rem;
-  }
-  
-  .info-text {
-    font-size: 0.7rem;
-  }
-  
-  .info-icon {
-    width: 14px;
-    height: 14px;
-    font-size: 0.6rem;
   }
   
   .deal-details {
