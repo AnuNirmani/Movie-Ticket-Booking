@@ -1,13 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../css/HeadFoot/navbar.css";
 import backgroundImage from "../../../assets/logo.png";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleBuyTicketClick = () => {
+    navigate("/movie-selecting");
   };
 
   return (
@@ -49,7 +54,7 @@ const Navbar = () => {
           </div>
 
           {/* Buy Ticket Button */}
-          <button className="buy-ticket-btn">
+          <button className="buy-ticket-btn" onClick={handleBuyTicketClick}>
             <span className="btn-icon">🎫</span>
             <span className="btn-text">Buy Ticket</span>
           </button>
