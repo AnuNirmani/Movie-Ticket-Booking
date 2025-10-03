@@ -159,6 +159,14 @@
   font-weight: 500;
 }
 
+/* Inline error message */
+.error-message-inline {
+  color: #f44336;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
 /* Password input wrapper */
 .password-input-wrapper {
   position: relative;
@@ -199,6 +207,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(142, 36, 170, 0.4);
+  margin-top: 20px;
 }
 
 .signup-button:hover {

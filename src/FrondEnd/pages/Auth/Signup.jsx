@@ -149,7 +149,10 @@ function Signup() {
           <form className="signup-form" onSubmit={handleSignup}>
             {/* First Name */}
             <div className="form-group">
-              <label className="form-label">First Name <span className="required">*</span></label>
+              <label className="form-label">
+                First Name <span className="required">*</span>
+                {firstNameError && <span className="error-message-inline">{firstNameError}</span>}
+              </label>
               <input 
                 type="text" 
                 className={`form-input ${firstNameError ? 'error' : ''}`}
@@ -157,12 +160,14 @@ function Signup() {
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
-              {firstNameError && <div className="error-message">{firstNameError}</div>}
             </div>
 
             {/* Last Name */}
             <div className="form-group">
-              <label className="form-label">Last Name <span className="required">*</span></label>
+              <label className="form-label">
+                Last Name <span className="required">*</span>
+                {lastNameError && <span className="error-message-inline">{lastNameError}</span>}
+              </label>
               <input 
                 type="text" 
                 className={`form-input ${lastNameError ? 'error' : ''}`}
@@ -170,12 +175,14 @@ function Signup() {
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
-              {lastNameError && <div className="error-message">{lastNameError}</div>}
             </div>
 
             {/* Email */}
             <div className="form-group">
-              <label className="form-label">Email <span className="required">*</span></label>
+              <label className="form-label">
+                Email <span className="required">*</span>
+                {emailError && <span className="error-message-inline">{emailError}</span>}
+              </label>
               <input 
                 type="email" 
                 className={`form-input ${emailError ? 'error' : ''}`}
@@ -183,12 +190,14 @@ function Signup() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              {emailError && <div className="error-message">{emailError}</div>}
             </div>
 
             {/* Phone */}
             <div className="form-group">
-              <label className="form-label">Phone No <span className="required">*</span></label>
+              <label className="form-label">
+                Phone No <span className="required">*</span>
+                {phoneError && <span className="error-message-inline">{phoneError}</span>}
+              </label>
               <input 
                 type="tel" 
                 className={`form-input ${phoneError ? 'error' : ''}`}
@@ -196,12 +205,14 @@ function Signup() {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
-              {phoneError && <div className="error-message">{phoneError}</div>}
             </div>
 
             {/* Password */}
             <div className="form-group">
-              <label className="form-label">Password <span className="required">*</span></label>
+              <label className="form-label">
+                Password <span className="required">*</span>
+                {passwordError && <span className="error-message-inline">{passwordError}</span>}
+              </label>
               <div className="password-input-wrapper">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -218,12 +229,14 @@ function Signup() {
                   {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
                 </button>
               </div>
-              {passwordError && <div className="error-message">{passwordError}</div>}
             </div>
 
             {/* Confirm Password */}
             <div className="form-group">
-              <label className="form-label">Confirm Password <span className="required">*</span></label>
+              <label className="form-label">
+                Confirm Password <span className="required">*</span>
+                {confirmPasswordError && <span className="error-message-inline">{confirmPasswordError}</span>}
+              </label>
               <div className="password-input-wrapper">
                 <input
                   type={showConfirmPassword ? "text" : "password"}
@@ -240,7 +253,6 @@ function Signup() {
                   {showConfirmPassword ? <FaRegEyeSlash /> : <FaRegEye />}
                 </button>
               </div>
-              {confirmPasswordError && <div className="error-message">{confirmPasswordError}</div>}
             </div>
 
             {/* Sign Up Button */}
