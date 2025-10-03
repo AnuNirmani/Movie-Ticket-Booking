@@ -7,21 +7,19 @@ const Deals = () => {
   return (
     <div className="deals-page">
       <Navbar />
-      
 
         <div className="deals-container">
-          <h1 className="deals-header">DEALS</h1>
+
+          <div className="deals-header">
+          <h1>DEALS</h1>
+          </div>
           <div className="deals-grid">
+
             {/* Deal Card 1: Buy One Get One Free Offer */}
               <div className="deal-card">
                 <div className="deal-banner" style={{
                   backgroundImage: "url('/src/assets/LandingPageAnimation.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat"
                 }}>
-                 <div className="deal-banner-content">                           
-                 </div>
                 </div>
               <div className="deal-footer">
                 <h3 className="deal-title">Buy One Get One Free</h3>
