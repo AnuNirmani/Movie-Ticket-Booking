@@ -12,7 +12,9 @@ const Theaters = () => {
       location: "Colombo City Center",
       image: "/src/assets/LandingPageAnimation.png",
       address: "Colombo City Center, Colombo 03",
-      phone: "+94 11 123 4567"
+      phone: "+94 11 123 4567",
+      facilities: ["IMAX", "Dolby Atmos", "Premium Seating", "Food Court"],
+      showtimes: "10:00 AM - 11:00 PM"
     },
     {
       id: 2,
@@ -20,7 +22,9 @@ const Theaters = () => {
       location: "Kandy City Center",
       image: "/src/assets/LandingPageAnimation.png",
       address: "Kandy City Center, Kandy",
-      phone: "+94 81 123 4567"
+      phone: "+94 81 123 4567",
+      facilities: ["4DX", "3D", "Premium Seating", "Parking"],
+      showtimes: "9:30 AM - 10:30 PM"
     },
     {
       id: 3,
@@ -28,7 +32,9 @@ const Theaters = () => {
       location: "Reality Plaza",
       image: "/src/assets/LandingPageAnimation.png",
       address: "Reality Plaza, Colombo 04",
-      phone: "+94 11 234 5678"
+      phone: "+94 11 234 5678",
+      facilities: ["IMAX", "Dolby Vision", "VIP Lounge", "Restaurant"],
+      showtimes: "10:00 AM - 11:30 PM"
     },
     {
       id: 4,
@@ -36,7 +42,9 @@ const Theaters = () => {
       location: "Liberty Plaza",
       image: "/src/assets/LandingPageAnimation.png",
       address: "Liberty Plaza, Colombo 03",
-      phone: "+94 11 345 6789"
+      phone: "+94 11 345 6789",
+      facilities: ["4DX", "3D", "Premium Seating", "Food Court"],
+      showtimes: "9:00 AM - 11:00 PM"
     }
   ];
 
@@ -80,6 +88,24 @@ const Theaters = () => {
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#999"/>
                   </svg>
                   <span>{theater.phone}</span>
+                </div>
+
+                <div className="detail-item">
+                  <svg className="detail-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="#999"/>
+                  </svg>
+                  <span>Showtimes: {theater.showtimes}</span>
+                </div>
+              </div>
+
+              <div className="theater-facilities">
+                <h4 className="facilities-title">Facilities</h4>
+                <div className="facilities-list">
+                  {theater.facilities.map((facility, index) => (
+                    <span key={index} className="facility-tag">
+                      {facility}
+                    </span>
+                  ))}
                 </div>
               </div>
               
