@@ -15,6 +15,7 @@ import AboutUs from "./FrondEnd/pages/Footer/AboutUs";
 import TermsAndConditions from "./FrondEnd/pages/Footer/TermsAndConditions";
 import ContactUs from "./FrondEnd/pages/Footer/ContactUs";
 import Advertisements from "./FrondEnd/pages/Footer/Advertisements";
+import Deals from "./FrondEnd/pages/Home/Deals";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/terms" element={<TermsAndConditions />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/advertisements" element={<Advertisements />} />
+        <Route path="/deals" element={<Deals />} />
       </Routes>
     </BrowserRouter>
   );
