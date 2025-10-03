@@ -77,7 +77,10 @@ function Login() {
           {/* Form */}
           <form className="login-form" onSubmit={handleLogin}>
             <div className="form-group">
-              <label className="form-label">Email</label>
+              <label className="form-label">
+                Email
+                {emailError && <span className="error-message-inline">{emailError}</span>}
+              </label>
               <input
                 type="email"
                 className={`form-input ${emailError ? 'error' : ''}`}
@@ -85,11 +88,13 @@ function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              {emailError && <div className="error-message">{emailError}</div>}
             </div>
 
             <div className="form-group">
-              <label className="form-label">Password</label>
+              <label className="form-label">
+                Password
+                {passwordError && <span className="error-message-inline">{passwordError}</span>}
+              </label>
               <div className="password-input-wrapper">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -106,7 +111,6 @@ function Login() {
                   {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
                 </button>
               </div>
-              {passwordError && <div className="error-message">{passwordError}</div>}
             </div>
 
             <div className="form-options">

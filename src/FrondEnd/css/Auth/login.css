@@ -135,6 +135,14 @@
   font-weight: 500;
 }
 
+/* Inline error message */
+.error-message-inline {
+  color: #f44336;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
 /* Password input */
 .password-input-wrapper {
   position: relative;
