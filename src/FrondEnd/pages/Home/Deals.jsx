@@ -8,16 +8,21 @@ const Deals = () => {
     <div className="deals-page">
       <Navbar />
       
-      <div className="deals-section">
+
         <div className="deals-container">
-          <h3 className="deals-title">DEALS</h3>
+          <h1 className="deals-header">DEALS</h1>
           <div className="deals-grid">
             {/* Deal Card 1: Buy One Get One Free Offer */}
-            <div className="deal-card">
-              <div className="deal-banner najm-banner">
-                <div className="deal-banner-content">                           
+              <div className="deal-card">
+                <div className="deal-banner najm-banner" style={{
+                  backgroundImage: "url('/src/assets/LandingPageAnimation.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat"
+                }}>
+                 <div className="deal-banner-content">                           
+                 </div>
                 </div>
-              </div>
               <div className="deal-footer">
                 <h3 className="deal-title">Buy One Get One Free</h3>
               </div>
@@ -47,7 +52,7 @@ const Deals = () => {
             </div>
           </div>
         </div>
-      </div>
+
       
       <Footer />
     </div>
