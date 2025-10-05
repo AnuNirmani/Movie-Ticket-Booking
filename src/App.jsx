@@ -16,7 +16,7 @@ import TermsAndConditions from "./FrondEnd/pages/Footer/TermsAndConditions";
 import ContactUs from "./FrondEnd/pages/Footer/ContactUs";
 import Advertisements from "./FrondEnd/pages/Footer/Advertisements";
 import Deals from "./FrondEnd/pages/Home/Deals";
-import MovieInfo from "./FrondEnd/pages/Home/MovieInfo";
+import MovieInfo from "./FrondEnd/components/MovieInfo";
 
 function App() {
   return (

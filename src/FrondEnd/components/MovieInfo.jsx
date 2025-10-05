@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Navbar from "../HeadFoot/Navbar";
-import Footer from "../HeadFoot/Footer";
-import "../../css/Home/movieinfo.css";
+import Navbar from "../pages/HeadFoot/Navbar";
+import Footer from "../pages/HeadFoot/Footer";
+import "./movieinfo.css";
 
 const MovieInfo = () => {
   const navigate = useNavigate();
