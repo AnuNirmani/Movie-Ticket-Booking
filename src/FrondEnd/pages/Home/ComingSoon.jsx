@@ -169,8 +169,12 @@ const CommingSoon = () => {
               <button className="trailer-btn">▶ Watch Trailer</button>
             </div>
 
-            <button className="info-btn"> More Information
-            <span className="info-icon">ℹ</span>
+            <button 
+              className="info-btn"
+              onClick={() => navigate("/movie-info", { state: { movie } })}
+            > 
+              More Information
+              <span className="info-icon">ℹ</span>
             </button>
           </div>
         ))}
