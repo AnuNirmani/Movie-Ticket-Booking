@@ -39,7 +39,7 @@ const MovieInfo = () => {
             <p className="movie-rating">{movie.rating}</p>
             <div className="banner-buttons">
               <button className="buy-btn" onClick={handleBookNowClick}>
-                🎟 Buy Ticket
+              🎫 Buy Ticket
               </button>
               <button className="trailer-btn">▶ Watch Trailer</button>
             </div>
@@ -62,16 +62,16 @@ const MovieInfo = () => {
             <p><strong>Produced by:</strong> Toby Emmerich</p>
             <p><strong>Written by:</strong> Jeffrey Reddick</p>
             <p><strong>Music by:</strong> Shirley Walker</p>
-            <button className="buy-btn">🎟 Buy Ticket</button>
+            <button className="buy-btn">🎫 Buy Ticket</button>
           </div>
 
           {/* Now Showing Section */}
           <div className="showing-section">
             <h3>Now Showing At</h3>
             <div className="cinema-logos">
-              <img src="/src/assets/cinemas/kcc.png" alt="KCC" />
-              <img src="/src/assets/cinemas/ccc.png" alt="CCC" />
-              <img src="/src/assets/cinemas/liberty.png" alt="Liberty" />
+              <img src="/src/assets/LandingPageAnimation.png" alt="KCC" />
+              <img src="/src/assets/LandingPageAnimation.png" alt="CCC" />
+              <img src="/src/assets/LandingPageAnimation.png" alt="Liberty" />
             </div>
           </div>
 
