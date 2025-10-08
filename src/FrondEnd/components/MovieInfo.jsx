@@ -9,16 +9,28 @@ const MovieInfo = () => {
   const location = useLocation();
 
   const movie = location.state?.movie || {
-    title: "Final Destination Bloodline",
-    duration: "2 HR 30 MIN",
-    language: "ENGLISH",
     rating: "★★★★★",
-    description:
-      "Plagued by a recurring violent nightmare, a college student returns home to find the one person who can break the cycle and save her family from the horrific fate that inevitably awaits them.",
-    storyLine:
-      "Plagued by a recurring violent nightmare, a college student returns home to find the one person who can break the cycle and save her family from the horrific fate that inevitably awaits them.",
-    poster: "/src/assets/movies/final.jpg",
-  };
+     };
+
+
+  if(!movie.title){
+    movie.title = "Final Destination Bloodline";
+  }
+  
+  // Always use your preferred duration format
+  movie.duration = "2 HR 30 MIN";
+  
+  // Always use your preferred star rating format
+  movie.rating = "★★★★★";
+  // Add description if it doesn't exist in the passed movie data
+  if (!movie.description) {
+    movie.description = "Plagued by a recurring violent nightmare, a college student returns home to find the one person who can break the cycle and save her family from the horrific fate that inevitably awaits them.";
+  }
+
+  // Add language if it doesn't exist in the passed movie data
+  if (!movie.language) {
+    movie.language = "ENGLISH";
+  }
 
   const handleBookNowClick = () => {
     navigate("/movie-selecting", { state: { movie } });
@@ -30,13 +42,14 @@ const MovieInfo = () => {
 
       {/* Movie Banner */}
       <div className="movie-banner" style={{ backgroundImage: `url(${movie.poster})` }}>
-        <div className="banner-overlay">
+        {/* <div className="banner-overlay"> */}
           <div className="banner-content">
             <h1 className="movie-title">{movie.title.toUpperCase()}</h1>
             <p className="movie-details">
               {movie.duration} &nbsp;&nbsp; {movie.language}
             </p>
             <p className="movie-rating">{movie.rating}</p>
+            <p className="movie-description">{movie.description}</p>
             <div className="banner-buttons">
               <button className="buy-btn" onClick={handleBookNowClick}>
               🎫 Buy Ticket
@@ -44,7 +57,7 @@ const MovieInfo = () => {
               <button className="trailer-btn">▶ Watch Trailer</button>
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
 
       {/* Storyline & Details */}
