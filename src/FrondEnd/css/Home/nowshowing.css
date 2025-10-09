@@ -284,6 +284,7 @@
     transition: all 0.3s ease;
     background: transparent;
     border: none;
+    outline: none;
     color: #fff;
     font-size: 0.9rem;
     padding: 8px 0;
@@ -293,6 +294,8 @@
   
   .info-btn:hover {
     transform: translateX(8px) scale(1.05);
+    border: none;
+    outline: none;
     /* color: #8e24aa; */
     /* text-shadow: 0 0 10px rgba(142, 36, 170, 0.5); */
   }

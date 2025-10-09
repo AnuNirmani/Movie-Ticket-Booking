@@ -209,7 +209,7 @@
     width: auto !important;
   }
   
-  .payment-form .form-actions .cancel {
+  .payment-form .form-actions .back {
     background: transparent !important;
     border: 1px solid #fff !important;
     color: #fff !important;
@@ -222,10 +222,8 @@
     white-space: nowrap;
   }
 
-  .form-actions .cancel:hover{
-    background: #fff;
-    border: 1px solid #fff;
-    color: #000000;
+  .form-actions .back:hover{
+    background: linear-gradient(135deg, #000000, #7b1fa2);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.6);
   }

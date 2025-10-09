@@ -17,10 +17,12 @@ import ContactUs from "./FrondEnd/pages/Footer/ContactUs";
 import Advertisements from "./FrondEnd/pages/Footer/Advertisements";
 import Deals from "./FrondEnd/pages/Home/Deals";
 import MovieInfo from "./FrondEnd/components/MovieInfo";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
