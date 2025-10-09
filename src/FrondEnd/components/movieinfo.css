@@ -145,8 +145,6 @@
     gap: 40px;
   }
   
-  .team-section h3,
-  .showing-section h3,
   .cast-section h3 {
     margin-bottom: 15px;
     color: #fff;
@@ -154,16 +152,12 @@
     font-weight: 700;
   }
   
-  .team-section p,
   .cast-section p {
     font-size: 14px;
     color: #ccc;
     margin: 3px 0;
   }
   
-  .team-section .buy-btn {
-    margin-top: 15px;
-  }
   
   .cinema-logos {
     display: flex;

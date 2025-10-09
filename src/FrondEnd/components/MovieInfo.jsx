@@ -94,23 +94,12 @@ When Quinn arrives, the TBDs are already on stage, and she enters halfway throug
 
         <div className="info-grid">
           {/* Team Section */}
-          <div className="team-section">
+          <div className="cast-section">
             <h3>Team</h3>
             <p><strong>Directed by:</strong> Zach Lipovsky, Adam B. Stein</p>
             <p><strong>Produced by:</strong> Toby Emmerich</p>
             <p><strong>Written by:</strong> Jeffrey Reddick</p>
             <p><strong>Music by:</strong> Shirley Walker</p>
-            <button className="buy-btn">🎫 Buy Ticket</button>
-          </div>
-
-          {/* Now Showing Section */}
-          <div className="showing-section">
-            <h3>Now Showing At</h3>
-            <div className="cinema-logos">
-              <img src="/src/assets/LandingPageAnimation.png" alt="KCC" />
-              <img src="/src/assets/LandingPageAnimation.png" alt="CCC" />
-              <img src="/src/assets/LandingPageAnimation.png" alt="Liberty" />
-            </div>
           </div>
 
           {/* Cast Section */}
@@ -131,8 +120,24 @@ When Quinn arrives, the TBDs are already on stage, and she enters halfway throug
               </div>
             </div>
           </div>
+
+          {/* Team Section */}
+          <div className="cast-section">
+            <h3>GENRES</h3>
+            <p><strong>Drama</strong></p>
+            <p><strong>Comedy</strong></p>
+          </div>
+          
+        </div>
+        
+        
+        <div className="banner-buttons" style={{ marginTop: "50px" }}>
+              <button className="buy-btn" onClick={handleBookNowClick}>
+              🎫 Buy Ticket
+              </button>
         </div>
       </div>
+      
 
       <Footer />
     </div>
