@@ -158,6 +158,11 @@
   box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6);
 }
 
+/* Profile Container */
+.profile-container {
+  position: relative;
+}
+
 /* Profile Icon */
 .profile-icon {
   display: flex;
@@ -180,6 +185,131 @@
 
 .profile-icon:hover svg {
   stroke: #ffffff;
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: linear-gradient(145deg, #2a1a3a, #1a0f2e);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  min-width: 280px;
+  overflow: hidden;
+  z-index: 1001;
+  animation: dropdownFadeIn 0.3s ease-out;
+  border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dropdown Header */
+.dropdown-header {
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(233, 30, 99, 0.1), rgba(142, 36, 170, 0.1));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(233, 30, 99, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.user-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.user-name {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-email {
+  color: #b0b0b0;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 0.95rem;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-item svg {
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(233, 30, 99, 0.1);
+  border-left-color: #e91e63;
+  padding-left: 24px;
+}
+
+.dropdown-item:hover svg {
+  color: #e91e63;
+  transform: scale(1.1);
+}
+
+.dropdown-item span {
+  flex: 1;
+}
+
+/* Logout Item */
+.logout-item {
+  color: #ff6b6b;
+}
+
+.logout-item:hover {
+  background: rgba(255, 107, 107, 0.1);
+  border-left-color: #ff6b6b;
+}
+
+.logout-item:hover svg {
+  color: #ff6b6b;
+}
+
+/* Dropdown Divider */
+.dropdown-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 8px 0;
 }
 
 /* Mobile Menu Button */
@@ -312,6 +442,37 @@
     padding: 0.75rem;
     min-width: auto;
   }
+
+  /* Profile dropdown on mobile */
+  .profile-dropdown {
+    min-width: 260px;
+  }
+
+  .dropdown-header {
+    padding: 16px;
+  }
+
+  .user-avatar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .user-name {
+    font-size: 0.95rem;
+  }
+
+  .user-email {
+    font-size: 0.8rem;
+  }
+
+  .dropdown-item {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-item:hover {
+    padding-left: 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -354,6 +515,34 @@
     width: 22px;
     height: 2px;
   }
+
+  /* Profile dropdown on small mobile */
+  .profile-dropdown {
+    min-width: 240px;
+    right: -10px;
+  }
+
+  .dropdown-header {
+    padding: 14px;
+  }
+
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .user-name {
+    font-size: 0.9rem;
+  }
+
+  .user-email {
+    font-size: 0.75rem;
+  }
+
+  .dropdown-item {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -376,6 +565,41 @@
   
   .hamburger-line {
     width: 20px;
+  }
+
+  /* Profile dropdown on extra small mobile */
+  .profile-dropdown {
+    min-width: 220px;
+    right: -15px;
+  }
+
+  .dropdown-header {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .user-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .user-name {
+    font-size: 0.85rem;
+  }
+
+  .user-email {
+    font-size: 0.7rem;
+  }
+
+  .dropdown-item {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    gap: 10px;
+  }
+
+  .dropdown-item svg {
+    width: 16px;
+    height: 16px;
   }
 }
 

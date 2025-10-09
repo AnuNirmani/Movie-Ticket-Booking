@@ -17,6 +17,7 @@ import ContactUs from "./FrondEnd/pages/Footer/ContactUs";
 import Advertisements from "./FrondEnd/pages/Footer/Advertisements";
 import Deals from "./FrondEnd/pages/Home/Deals";
 import MovieInfo from "./FrondEnd/components/MovieInfo";
+import Profile from "./FrondEnd/pages/Profile/profile";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/advertisements" element={<Advertisements />} />
         <Route path="/deals" element={<Deals />} />
         <Route path="/movie-info" element={<MovieInfo />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
