@@ -153,9 +153,10 @@
   }
   
   .cast-section p {
-    font-size: 14px;
+    font-size: 20px;
     color: #ccc;
-    margin: 3px 0;
+    margin: 8px 0;
+    font-weight: 500;
   }
   
   

@@ -64,7 +64,7 @@ const MovieInfo = () => {
       <div className="movie-info-content">
         <div className="storyline-section">
           <h2>Story Line</h2>
-          <p style={{ fontSize: "20px" }}>
+          <p style={{ fontSize: "18px" }}>
           Quinn Ackerman, a quirky and intelligent high school senior, works as a technical director for the Thunderbirds, her high school's elite dance team, which is well known around the state as the reigning champions of the Work It dance competition. When Quinn sets something on fire by accident, the ruthless leader of the Thunderbirds, Julliard Pembroke, fires her from the position.
 
 Quinn's dream to attend Duke University, her late father's alma mater, is soured when the admissions counselor, Veronica Ramirez, informs that her chances of standing out to the admission's team are not good. Quinn misleads Ramirez into thinking that she is a dancer on the Thunderbirds, even though she only worked the lighting. Ramirez is instantly impressed, and vows to see her perform live at the Work It dance competition.
