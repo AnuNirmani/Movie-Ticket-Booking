@@ -140,7 +140,7 @@ function Login() {
           </div>
 
           {/* Social */}
-          <div className="social-buttons">
+          {/* <div className="social-buttons">
             <button className="social-button facebook-button">
               <FaFacebook className="social-icon" />
               <span>Facebook</span>
@@ -149,7 +149,7 @@ function Login() {
               <FcGoogle className="social-icon" />
               <span>Google</span>
             </button>
-          </div>
+          </div> */}
 
           {/* Sign Up */}
           <div className="signup-section">

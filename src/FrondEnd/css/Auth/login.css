@@ -75,7 +75,7 @@
 .logo-text {
   font-size: 18px;
   font-weight: 700;
-  color: #ffffff;
+  color: #e91e63 !important;
   margin-top: 8px;
   letter-spacing: 2px;
 }
@@ -219,34 +219,32 @@
 }
 
 /* Divider */
-.divider {
-  margin: 25px 0;
-  position: relative;
-  text-align: center;
+.login-box .divider {
+  margin: 25px 0 !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  min-height: auto !important;
 }
 
-.divider-text {
-  background: linear-gradient(145deg, #2a1a3a, #1a0f2e);
+.login-box .divider-text {
   color: #fff;
-  padding: 0 20px;
+  padding: 8px 20px;
   font-size: 14px;
-  position: relative;
-  z-index: 2;
-}
-
-.divider::before {
-  content: "";
   position: absolute;
+  left: 50%;
   top: 50%;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #555, transparent);
-  z-index: 1;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  border-radius: 15px;
 }
 
 /* Social buttons */
-.social-buttons {
+/* .social-buttons {
   display: flex;
   gap: 12px;
   margin-bottom: 25px;
@@ -317,7 +315,7 @@
 
 .social-button:hover .social-icon {
   transform: scale(1.1);
-}
+} */
 
 /* Sign up */
 .signup-text {
