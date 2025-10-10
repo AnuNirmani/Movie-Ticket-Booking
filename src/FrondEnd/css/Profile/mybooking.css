@@ -1,8 +1,12 @@
-.mybooking-container {
+.mybooking-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #2d1b69 0%, #11052c 100%);
-  padding: 2rem;
   font-family: 'Arial', sans-serif;
+}
+
+.mybooking-container {
+  padding: 2rem;
+  min-height: calc(100vh - 140px); /* Adjust for navbar and footer height */
 }
 
 .mybooking-header {
