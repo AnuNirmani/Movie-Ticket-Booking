@@ -210,11 +210,21 @@
     min-height: 36px;
   }
   
-  /* Stars */
-  .stars {
-    color: gold;
-    font-size: 20px;
+  /* Star Rating */
+  .star-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
     margin-bottom: 10px;
+  }
+  
+  .star-rating .star {
+    transition: transform 0.2s ease;
+  }
+  
+  .star-rating .star:hover {
+    transform: scale(1.1);
   }
   
   /* Actions */
