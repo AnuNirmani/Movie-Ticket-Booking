@@ -90,12 +90,12 @@
 }
 
 .logo-movie {
-  color: #ffc107;
+  color: #e91e63 !important;
   margin-bottom: 2px;
 }
 
 .logo-express {
-  color: #ffc107;
+  color: #e91e63 !important;
 }
 
 /* Form styles */

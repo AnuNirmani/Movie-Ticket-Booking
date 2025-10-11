@@ -8,8 +8,18 @@
 
 .theaters-header {
   text-align: center;
-  margin-bottom: 3rem;
-  padding: 0 2rem;
+  margin-bottom: 20px;
+  padding: 40px 20px;
+  background: transparent;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.theaters-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
 }
 
 .theaters-title {
