@@ -19,6 +19,7 @@ import Deals from "./FrondEnd/pages/Home/Deals";
 import MovieInfo from "./FrondEnd/components/MovieInfo";
 import Profile from "./FrondEnd/pages/Profile/profile";
 import MyBooking from "./FrondEnd/pages/Profile/mybooking";
+import Favorites from "./FrondEnd/pages/Profile/favorites";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
         <Route path="/movie-info" element={<MovieInfo />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/bookings" element={<MyBooking />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </BrowserRouter>
   );

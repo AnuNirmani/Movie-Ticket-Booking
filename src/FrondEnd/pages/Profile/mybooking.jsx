@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../HeadFoot/Navbar";
 import Footer from "../HeadFoot/Footer";
 import "../../css/Profile/mybooking.css";
+import LandingPageAnimation from "../../../assets/LandingPageAnimation.png";
 
 const MyBooking = () => {
   // Sample booking data - in a real app, this would come from an API
@@ -9,7 +10,7 @@ const MyBooking = () => {
     {
       id: 1,
       movieName: "OPPENHEIMER",
-      moviePoster: "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+      moviePoster: LandingPageAnimation,
       bookedDate: "15th May 2025",
       movieDate: "15th May 2025",
       movieTime: "4.30 pm",
@@ -21,7 +22,7 @@ const MyBooking = () => {
     {
       id: 2,
       movieName: "BATMAN",
-      moviePoster: "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+      moviePoster: LandingPageAnimation,
       bookedDate: "16th May 2025",
       movieDate: "15th May 2025",
       movieTime: "4.30 pm",
@@ -37,7 +38,7 @@ const MyBooking = () => {
       <Navbar />
       <div className="mybooking-container">
         <div className="mybooking-header">
-          <h1>MyBookings</h1>
+          <h1>My Bookings</h1>
         </div>
         
         <div className="bookings-list">
