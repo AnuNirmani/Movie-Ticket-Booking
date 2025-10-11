@@ -130,7 +130,7 @@
 .theater-name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #ffffff !important;
   margin-bottom: 0.75rem;
 }
 

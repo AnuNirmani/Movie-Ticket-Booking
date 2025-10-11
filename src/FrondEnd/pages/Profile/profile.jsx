@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../HeadFoot/Navbar";
 import Footer from "../HeadFoot/Footer";
 import "../../css/Profile/profile.css";
 
 const Profile = () => {
+  const navigate = useNavigate();
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "Jone",
@@ -32,8 +34,7 @@ const Profile = () => {
   };
 
   const handleChangePassword = () => {
-    // Handle password change logic
-    console.log("Change password clicked");
+    navigate("/change-password");
   };
 
   const handleDeleteCard = () => {

@@ -24,7 +24,7 @@ const Home = () => {
             <img src="/src/assets/LandingPageAnimation.png" alt="Elio Movie Poster" className="movie-poster" />
             <div className="movie-overlay">
               <div className="movie-info">
-                <h3 className="movie-title">ELIO</h3>
+                {/* <h3 className="movie-title">ELIO</h3> */}
                   <p className="movie-subtitle">Now Showing</p>
                 <button className="watch-trailer-btn">
                   <span className="play-icon">▶</span>

@@ -18,6 +18,7 @@ import Advertisements from "./FrondEnd/pages/Footer/Advertisements";
 import Deals from "./FrondEnd/pages/Home/Deals";
 import MovieInfo from "./FrondEnd/components/MovieInfo";
 import Profile from "./FrondEnd/pages/Profile/profile";
+import ChangePassword from "./FrondEnd/pages/Profile/ChangePassword";
 import MyBooking from "./FrondEnd/pages/Profile/mybooking";
 import Favorites from "./FrondEnd/pages/Profile/favorites";
 import ScrollToTop from "./components/ScrollToTop";
@@ -48,6 +49,7 @@ function App() {
         <Route path="/deals" element={<Deals />} />
         <Route path="/movie-info" element={<MovieInfo />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/change-password" element={<ChangePassword />} />
         <Route path="/bookings" element={<MyBooking />} />
         <Route path="/favorites" element={<Favorites />} />
       </Routes>
