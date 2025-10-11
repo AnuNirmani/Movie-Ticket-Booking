@@ -83,7 +83,7 @@
 .movie-title h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #e91e63;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -172,32 +172,18 @@
   margin-top: 1rem;
 }
 
-.book-now-btn,
 .more-info-btn {
+  background: transparent;
+  border: 1px solid #ffffff !important;
+  color: #ffffff;
   padding: 0.75rem 2rem;
-  border: none;
   border-radius: 8px;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-}
-
-.book-now-btn {
-  background: linear-gradient(135deg, #e91e63, #d81b60);
-  color: white;
-}
-
-.book-now-btn:hover {
-  background: linear-gradient(135deg, #d81b60, #c2185b);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.4);
-}
-
-.more-info-btn {
-  background: transparent;
-  border: 2px solid #e91e63;
-  color: #e91e63;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .more-info-btn:hover {
@@ -205,6 +191,21 @@
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(233, 30, 99, 0.4);
+}
+
+.more-info-btn:focus {
+  outline: none !important;
+  border: 1px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
+.more-info-btn:active {
+  outline: none !important;
+  border: 1px solid #e91e63 !important;
+}
+
+.more-info-btn:focus-visible {
+  outline: none !important;
 }
 
 /* Responsive Design */

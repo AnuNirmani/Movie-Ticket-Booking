@@ -182,9 +182,9 @@
 }
 
 .view-location-btn:hover {
-  background: linear-gradient(135deg, #7b1fa2, #e91e63);
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(142, 36, 170, 0.7);
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6);
 }
 
 .theaters-footer {
@@ -241,9 +241,9 @@
 }
 
 .contact-btn.primary:hover {
-  background: linear-gradient(135deg, #7b1fa2, #e91e63);
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.4);
+  box-shadow: 0 6px 20px rgba(142, 36, 170, 0.6);
 }
 
 .contact-btn.secondary {

@@ -133,7 +133,6 @@ const Favorites = () => {
                   </div>
                   
                   <div className="action-buttons">
-                    <button className="book-now-btn">Book Now</button>
                     <button className="more-info-btn">More Info</button>
                   </div>
                 </div>
