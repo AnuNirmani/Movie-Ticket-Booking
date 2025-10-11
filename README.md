@@ -1,10 +1,8 @@
 # 🎬 Movie Ticket Booking System
 
-A modern, full-featured movie ticket booking web application built with React and Vite. This application provides a seamless experience for users to browse movies, book tickets, manage their bookings, and explore theaters.
+A modern, full-featured movie ticket booking **frontend application** built with React and Vite. This project showcases a complete user interface for a movie ticket booking system, providing a seamless experience for users to browse movies, book tickets, manage their bookings, and explore theaters.
 
-![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=flat&logo=react&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF?style=flat&logo=vite&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-7.9.1-CA4245?style=flat&logo=react-router&logoColor=white)
+> **Note:** This is a frontend-only application. Backend API integration and database functionality are planned for future development.
 
 ## ✨ Features
 
@@ -70,27 +68,20 @@ A modern, full-featured movie ticket booking web application built with React an
    Navigate to http://localhost:5173
    ```
 
-## 📦 Available Scripts
-
-| Script | Description |
-|--------|-------------|
-| `npm run dev` | Start the development server with hot reload |
-| `npm run build` | Build the production-ready application |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint to check code quality |
-
 ## 🛠️ Tech Stack
 
-### Core Technologies
-- **React 19.1.1** - Frontend framework
+### Frontend Technologies
+- **React 19.1.1** - UI framework
 - **Vite 7.1.7** - Build tool and development server
 - **React Router DOM 7.9.1** - Client-side routing
 - **React Icons 5.5.0** - Icon library
+- **CSS3** - Styling
 
 ### Development Tools
 - **ESLint** - Code linting
 - **@vitejs/plugin-react** - React Fast Refresh support
-- **PostCSS** - CSS processing
+
+> **Backend:** Not included in this repository. This is a frontend-only implementation.
 
 ## 📁 Project Structure
 
@@ -200,15 +191,6 @@ Code quality is maintained through ESLint. Rules are defined in `eslint.config.j
 - Safari (latest)
 - Edge (latest)
 
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📄 License
 
@@ -216,30 +198,26 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Authors
 
-- Your Name - *Initial work*
-
-## 🙏 Acknowledgments
-
-- React team for the amazing framework
-- Vite team for the blazing-fast build tool
-- All contributors who have helped with this project
-
-## 📞 Support
-
-For support, email support@movieticketbooking.com or join our Slack channel.
+- Anuttara Nirmani - *Initial work*
 
 ## 🚧 Future Enhancements
 
-- [ ] Backend API integration
-- [ ] Real-time seat availability
-- [ ] Multiple payment gateway support
-- [ ] Email notifications
+### Backend Development (Priority)
+- [ ] Backend API development with Node.js/Express or similar
+- [ ] Database integration (MongoDB/PostgreSQL)
+- [ ] User authentication & authorization
+- [ ] Real-time seat availability tracking
+- [ ] Payment gateway integration
+
+### Additional Features
+- [ ] Email and SMS notifications
 - [ ] Mobile app version
 - [ ] Social media integration
-- [ ] Movie reviews and ratings
-- [ ] Loyalty points system
+- [ ] Movie reviews and ratings system
+- [ ] Loyalty points and rewards program
 - [ ] Multi-language support
 - [ ] Dark mode theme
+- [ ] Admin dashboard for theater management
 
 ---
 
