@@ -109,7 +109,11 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="footer-copyright">
-        <p>©2025 Movie Express All Right Reserved.</p>
+        <p>Copyright 2025 © Movie Express All Right Reserved.</p>
+
+<p> The content and images used on this site are copyright protected and copyrights vests with the respective owners. </p>
+<p>Developed by Anuttara Nirmani. </p>
+
       </div>
     </footer>
   );
