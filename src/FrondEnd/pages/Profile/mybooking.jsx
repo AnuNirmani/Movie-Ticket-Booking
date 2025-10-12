@@ -50,38 +50,52 @@ const MyBooking = () => {
                 </div>
                 
                 <div className="booking-details">
-                  <div className="detail-row">
+                  {/* Row 1: Movie Name - Single row */}
+                  <div className="detail-row single-row">
                     <span className="detail-label">Movie Name :</span>
                     <span className="detail-value">{booking.movieName}</span>
                   </div>
                   
-                  <div className="detail-row">
+                  {/* Row 2: Booked Date - Single row */}
+                  <div className="detail-row single-row">
                     <span className="detail-label">Booked Date :</span>
                     <span className="detail-value">{booking.bookedDate}</span>
                   </div>
                   
-                  <div className="detail-row">
+                  {/* Row 3: Location - Single row */}
+                  <div className="detail-row single-row">
                     <span className="detail-label">Location :</span>
                     <span className="detail-value">{booking.location}</span>
                   </div>
                   
-                  <div className="detail-row">
+                  {/* Row 4: Price - Single row */}
+                  <div className="detail-row single-row">
                     <span className="detail-label">Price :</span>
                     <span className="detail-value">{booking.price}</span>
                   </div>
                   
-                  <div className="detail-row">
-                    <span className="detail-label">No of Ticket(s) :</span>
-                    <span className="detail-value">{booking.noOfTickets}</span>
-                    <span className="detail-label movie-time-label">Movie Time :</span>
-                    <span className="detail-value">{booking.movieTime}</span>
+                  {/* Row 5: Tickets and Movie Time - Side by side */}
+                  <div className="detail-row double-row">
+                    <div className="detail-item">
+                      <span className="detail-label">No of Ticket(s) :</span>
+                      <span className="detail-value">{booking.noOfTickets}</span>
+                    </div>
+                    <div className="detail-item">
+                      <span className="detail-label">Movie Time :</span>
+                      <span className="detail-value">{booking.movieTime}</span>
+                    </div>
                   </div>
                   
-                  <div className="detail-row">
-                    <span className="detail-label">Seat No(s) :</span>
-                    <span className="detail-value">{booking.seatNumbers}</span>
-                    <span className="detail-label movie-date-label">Movie Date :</span>
-                    <span className="detail-value">{booking.movieDate}</span>
+                  {/* Row 6: Seat Numbers and Movie Date - Side by side */}
+                  <div className="detail-row double-row">
+                    <div className="detail-item">
+                      <span className="detail-label">Seat No(s) :</span>
+                      <span className="detail-value">{booking.seatNumbers}</span>
+                    </div>
+                    <div className="detail-item">
+                      <span className="detail-label">Movie Date :</span>
+                      <span className="detail-value">{booking.movieDate}</span>
+                    </div>
                   </div>
                 </div>
               </div>
