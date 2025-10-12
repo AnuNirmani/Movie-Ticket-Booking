@@ -13,8 +13,10 @@ const MovieInfo = () => {
      };
 
 
-  if(!movie.title){
+  if(!movie.title && !movie.movieName){
     movie.title = "Final Destination Bloodline";
+  } else if(movie.movieName && !movie.title) {
+    movie.title = movie.movieName;
   }
   
   // Always use your preferred duration format
@@ -41,7 +43,7 @@ const MovieInfo = () => {
       <Navbar />
 
       {/* Movie Banner */}
-      <div className="movie-banner" style={{ backgroundImage: `url(${movie.poster})` }}>
+      <div className="movie-banner" style={{ backgroundImage: `url(${movie.moviePoster || movie.poster})` }}>
         {/* <div className="banner-overlay"> */}
           <div className="banner-content">
             <h1 className="movie-title">{movie.title.toUpperCase()}</h1>

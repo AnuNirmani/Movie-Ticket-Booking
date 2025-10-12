@@ -73,18 +73,27 @@
   color: white;
 }
 
-.movie-title {
+.movie-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
 }
 
-.movie-title h2 {
+.movie-header h2 {
   font-size: 1.8rem;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
+}
+
+.movie-info-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .remove-favorite-btn {
@@ -113,20 +122,40 @@
 .detail-row {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+  min-height: 60px;
+}
+
+/* Single row layout - full width */
+.detail-row.single-row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Double row layout - side by side */
+.detail-row.double-row {
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  flex: 1;
 }
 
 .detail-label {
   font-weight: 600;
   color: #ffffff;
-  min-width: 120px;
+  white-space: nowrap;
 }
 
 .detail-value {
   color: #ffffff;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .detail-value.rating {
@@ -156,122 +185,231 @@
 }
 
 .movie-description {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  margin: 0;
 }
 
 .movie-description p {
   color: #cccccc;
   line-height: 1.6;
   font-size: 0.95rem;
+  margin: 0;
 }
 
 .action-buttons {
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  margin: 0;
 }
 
-.more-info-btn {
-  background: transparent;
-  border: 1px solid #ffffff !important;
-  color: #ffffff;
-  padding: 0.75rem 2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
+.info-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  outline: none !important;
-  box-shadow: none !important;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0;
 }
 
-.more-info-btn:hover {
-  background: #e91e63;
+.info-btn:hover {
+  transform: translateX(8px) scale(1.05);
+  border: none;
+  outline: none;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  /* background: linear-gradient(135deg, #8e24aa, #6a1b9a); */
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
   color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.4);
 }
 
-.more-info-btn:focus {
-  outline: none !important;
-  border: 1px solid #ffffff !important;
-  box-shadow: none !important;
+.info-btn:hover .info-icon {
+  transform: scale(1.1);
 }
 
-.more-info-btn:active {
-  outline: none !important;
-  border: 1px solid #e91e63 !important;
-}
-
-.more-info-btn:focus-visible {
-  outline: none !important;
-}
-
-/* Responsive Design */
+/* Mobile Responsive Design */
 @media (max-width: 768px) {
   .favorites-container {
     padding: 1rem;
   }
   
+  .favorites-header {
+    padding: 20px 10px;
+  }
+  
   .favorites-header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .favorite-content {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   
-  .movie-poster img {
-    width: 150px;
-    height: 225px;
-    margin: 0 auto;
+  .movie-poster {
     display: block;
-  }
-  
-  .movie-title {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  
-  .detail-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
-  }
-  
-  .detail-label {
-    min-width: auto;
-  }
-  
-  .action-buttons {
-    flex-direction: column;
-  }
-  
-  .book-now-btn,
-  .more-info-btn {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .favorites-header h1 {
-    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
   }
   
   .movie-poster img {
     width: 120px;
     height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   }
   
-  .favorite-card {
+  .movie-details {
+    width: 100%;
+  }
+  
+  .movie-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .movie-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .movie-info-rows {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  .detail-row {
+    padding: 0.75rem 1rem;
+    min-height: 50px;
+  }
+  
+  /* Single rows remain full width */
+  .detail-row.single-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .detail-row.single-row .detail-value {
+    text-align: right;
+    white-space: normal;
+  }
+  
+  /* Double rows stack vertically on mobile */
+  .detail-row.double-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
     padding: 1rem;
   }
   
-  .movie-title h2 {
-    font-size: 1.4rem;
+  .detail-item {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .detail-label {
+    font-size: 0.9rem;
+  }
+  
+  .detail-value {
+    font-size: 0.9rem;
+  }
+  
+  .movie-description {
+    padding: 0.75rem 1rem;
+  }
+  
+  .movie-description p {
+    font-size: 0.9rem;
+  }
+  
+  .action-buttons {
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .info-btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-container {
+    padding: 0.5rem;
+  }
+  
+  .favorites-header {
+    padding: 15px 5px;
+  }
+  
+  .favorites-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .favorite-card {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+  }
+  
+  .movie-poster img {
+    width: 100px;
+    height: 150px;
+  }
+  
+  .movie-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .detail-row {
+    padding: 0.6rem 0.75rem;
+    min-height: 45px;
+  }
+  
+  .detail-row.double-row {
+    padding: 0.75rem;
+  }
+  
+  .detail-label {
+    font-size: 0.85rem;
+  }
+  
+  .detail-value {
+    font-size: 0.85rem;
+  }
+  
+  .movie-description {
+    padding: 0.6rem 0.75rem;
+  }
+  
+  .movie-description p {
+    font-size: 0.85rem;
+  }
+  
+  .action-buttons {
+    padding: 0.75rem;
+    justify-content: center;
+  }
+  
+  .info-btn {
+    font-size: 0.85rem;
   }
 }
 

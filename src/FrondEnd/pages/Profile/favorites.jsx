@@ -1,10 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../HeadFoot/Navbar";
 import Footer from "../HeadFoot/Footer";
 import "../../css/Profile/favorites.css";
 import LandingPageAnimation from "../../../assets/LandingPageAnimation.png";
 
 const Favorites = () => {
+  const navigate = useNavigate();
+
   // Sample favorites data - in a real app, this would come from an API
   const favorites = [
     {
@@ -95,7 +98,7 @@ const Favorites = () => {
                 </div>
                 
                 <div className="movie-details">
-                  <div className="movie-title">
+                  <div className="movie-header">
                     <h2>{movie.movieName}</h2>
                     <button 
                       className="remove-favorite-btn"
@@ -107,33 +110,47 @@ const Favorites = () => {
                       </svg>
                     </button>
                   </div>
-                  
-                  <div className="detail-row">
-                    <span className="detail-label">Genre :</span>
-                    <span className="detail-value">{movie.genre}</span>
-                  </div>
-                  
-                  <div className="detail-row">
-                    <span className="detail-label">Duration :</span>
-                    <span className="detail-value">{movie.duration}</span>
-                  </div>
-                  
-                  <div className="detail-row">
-                    <span className="detail-label">Rating :</span>
-                    <StarRating rating={movie.rating} />
-                  </div>
-                  
-                  <div className="detail-row">
-                    <span className="detail-label">Release Date :</span>
-                    <span className="detail-value">{movie.releaseDate}</span>
-                  </div>
-                  
-                  <div className="movie-description">
-                    <p>{movie.description}</p>
-                  </div>
-                  
-                  <div className="action-buttons">
-                    <button className="more-info-btn">More Info</button>
+
+                  <div className="movie-info-rows">
+                    {/* Row 1: Genre - Single row */}
+                    <div className="detail-row single-row">
+                      <span className="detail-label">Genre :</span>
+                      <span className="detail-value">{movie.genre}</span>
+                    </div>
+                    
+                    {/* Row 2: Duration and Rating - Side by side */}
+                    <div className="detail-row double-row">
+                      <div className="detail-item">
+                        <span className="detail-label">Duration :</span>
+                        <span className="detail-value">{movie.duration}</span>
+                      </div>
+                      <div className="detail-item">
+                        <span className="detail-label">Rating :</span>
+                        <StarRating rating={movie.rating} />
+                      </div>
+                    </div>
+                    
+                    {/* Row 3: Release Date - Single row */}
+                    <div className="detail-row single-row">
+                      <span className="detail-label">Release Date :</span>
+                      <span className="detail-value">{movie.releaseDate}</span>
+                    </div>
+                    
+                    {/* Description section - Full width */}
+                    <div className="movie-description">
+                      <p>{movie.description}</p>
+                    </div>
+                    
+                    {/* Action button */}
+                    <div className="action-buttons">
+                      <button 
+                        className="info-btn"
+                        onClick={() => navigate("/movie-info", { state: { movie } })}
+                      >
+                        More Information
+                        <span className="info-icon">ℹ</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
