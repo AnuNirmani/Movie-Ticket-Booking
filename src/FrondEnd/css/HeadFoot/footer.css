@@ -3,8 +3,8 @@
   /* background: linear-gradient(135deg, #2d1b4e 0%, #1a0f2e 100%); */
   background: linear-gradient(145deg, #2a1a3a, #1a0f2e);
   color: white;
-  padding: 40px 20px 20px;
-  margin-top: auto;
+  padding: 20px 20px 20px;
+  margin-top: 0;
   font-family: 'Arial', sans-serif;
 }
 
@@ -299,7 +299,7 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 30px 15px 15px;
+    padding: 20px 15px 15px;
   }
   
   .footer-container {
@@ -369,7 +369,7 @@
 
 @media (max-width: 480px) {
   .footer {
-    padding: 20px 10px 10px;
+    padding: 15px 10px 10px;
   }
   
   .footer-container {
