@@ -291,4 +291,313 @@
     font-size: 16px;
     font-weight: bold;
   }
+
+  /* Mobile Responsiveness */
+  
+  /* Tablets and smaller (max-width: 1024px) */
+  @media screen and (max-width: 1024px) {
+    .payment-container {
+      gap: 30px;
+      padding: 30px 20px;
+    }
+  }
+  
+  /* Mobile devices (max-width: 768px) */
+  @media screen and (max-width: 768px) {
+    .billing-banner {
+      font-size: 12px;
+      padding: 8px;
+      line-height: 1.4;
+    }
+  
+    .payment-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px 15px;
+    }
+  
+    .payment-form {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .card-options {
+      gap: 15px;
+    }
+  
+    .card-label {
+      padding: 10px;
+      gap: 8px;
+    }
+  
+    .card-logo {
+      min-width: 50px;
+      height: 35px;
+      font-size: 10px;
+    }
+  
+    .frimi-logo {
+      min-width: 70px;
+      height: 45px;
+      padding: 6px;
+    }
+  
+    .frimi-text {
+      font-size: 12px;
+    }
+  
+    .frimi-subtitle {
+      font-size: 7px;
+    }
+  
+    .frimi-tagline {
+      font-size: 6px;
+    }
+  
+    .mastercard-logo {
+      min-width: 50px;
+      height: 45px;
+      padding: 6px;
+    }
+  
+    .mastercard-circles {
+      width: 25px;
+      height: 18px;
+    }
+  
+    .circle {
+      width: 18px;
+      height: 18px;
+    }
+  
+    .visa-logo,
+    .amex-logo {
+      font-size: 14px;
+    }
+  
+    .card-name {
+      font-size: 13px;
+    }
+  
+    .payment-form .form-actions {
+      margin-top: 15px;
+      gap: 10px;
+    }
+  
+    .payment-form .form-actions .back,
+    .payment-form .form-actions .next {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+    }
+  
+    .ticket-summary {
+      width: 100%;
+      max-width: 100%;
+      padding: 20px;
+    }
+  
+    .ticket-summary::before,
+    .ticket-summary::after {
+      width: 25px;
+      height: 25px;
+    }
+  
+    .ticket-summary::before {
+      left: -12.5px;
+    }
+  
+    .ticket-summary::after {
+      right: -12.5px;
+    }
+  
+    .ticket-summary h3 {
+      font-size: 18px;
+    }
+  
+    .ticket-summary p {
+      font-size: 14px;
+    }
+  
+    .ticket-summary .note {
+      font-size: 11px;
+    }
+  
+    .ticket-summary .amount {
+      font-size: 15px;
+    }
+  }
+  
+  /* Small mobile devices (max-width: 480px) */
+  @media screen and (max-width: 480px) {
+    .billing-banner {
+      font-size: 11px;
+      padding: 8px 5px;
+    }
+  
+    .payment-container {
+      padding: 15px 10px;
+      gap: 20px;
+    }
+  
+    .payment-form {
+      gap: 12px;
+    }
+  
+    .payment-form label {
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+  
+    .payment-form input[type="text"],
+    .payment-form input[type="email"] {
+      padding: 8px;
+      font-size: 13px;
+    }
+  
+    .card-options {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  
+    .card-label {
+      padding: 12px;
+      gap: 10px;
+    }
+  
+    .card-logo {
+      min-width: 60px;
+      height: 40px;
+      font-size: 11px;
+    }
+  
+    .frimi-logo {
+      min-width: 80px;
+      height: 50px;
+      padding: 8px;
+    }
+  
+    .frimi-text {
+      font-size: 13px;
+    }
+  
+    .frimi-subtitle {
+      font-size: 8px;
+    }
+  
+    .mastercard-logo {
+      min-width: 60px;
+      height: 50px;
+      padding: 8px;
+    }
+  
+    .mastercard-circles {
+      width: 28px;
+      height: 20px;
+    }
+  
+    .circle {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .card-name {
+      font-size: 14px;
+    }
+  
+    .terms {
+      font-size: 13px;
+    }
+  
+    .payment-form .form-actions {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .payment-form .form-actions button {
+      width: 100% !important;
+    }
+  
+    .payment-form .form-actions .back,
+    .payment-form .form-actions .next {
+      padding: 0.65rem 1.2rem;
+      font-size: 0.85rem;
+    }
+  
+    .ticket-summary {
+      padding: 15px;
+    }
+  
+    .ticket-summary::before,
+    .ticket-summary::after {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .ticket-summary::before {
+      left: -10px;
+    }
+  
+    .ticket-summary::after {
+      right: -10px;
+    }
+  
+    .ticket-summary h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  
+    .ticket-summary p {
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+  
+    .ticket-summary hr {
+      margin: 15px 0;
+    }
+  
+    .ticket-summary .note {
+      font-size: 10px;
+      line-height: 1.4;
+    }
+  
+    .ticket-summary .amount {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+  }
+  
+  /* Very small devices (max-width: 360px) */
+  @media screen and (max-width: 360px) {
+    .billing-banner {
+      font-size: 10px;
+      padding: 6px 5px;
+    }
+  
+    .payment-container {
+      padding: 12px 8px;
+    }
+  
+    .payment-form input[type="text"],
+    .payment-form input[type="email"] {
+      padding: 7px;
+      font-size: 12px;
+    }
+  
+    .ticket-summary {
+      padding: 12px;
+    }
+  
+    .ticket-summary h3 {
+      font-size: 15px;
+    }
+  
+    .ticket-summary p {
+      font-size: 12px;
+    }
+  
+    .ticket-summary .amount {
+      font-size: 13px;
+    }
+  }
   
