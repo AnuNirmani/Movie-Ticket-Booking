@@ -57,19 +57,19 @@ function Signup() {
     
     // Validate First Name
     if (!firstName.trim()) {
-      setFirstNameError("First Name is required");
+      setFirstNameError("required");
       hasErrors = true;
     }
     
     // Validate Last Name
     if (!lastName.trim()) {
-      setLastNameError("Last Name is required");
+      setLastNameError("required");
       hasErrors = true;
     }
     
     // Validate Email
     if (!email.trim()) {
-      setEmailError("Email is required");
+      setEmailError("required");
       hasErrors = true;
     } else if (!validateEmail(email)) {
       setEmailError("Please enter a valid email address");
@@ -78,7 +78,7 @@ function Signup() {
     
     // Validate Phone
     if (!phone.trim()) {
-      setPhoneError("Phone number is required");
+      setPhoneError("required");
       hasErrors = true;
     } else if (!validatePhone(phone)) {
       setPhoneError("Phone number must start with + and have 11 digits total");
@@ -87,7 +87,7 @@ function Signup() {
     
     // Validate Password
     if (!password.trim()) {
-      setPasswordError("Password is required");
+      setPasswordError("required");
       hasErrors = true;
     } else if (!validatePassword(password)) {
       setPasswordError("Password must be at least 6 characters long");
@@ -96,7 +96,7 @@ function Signup() {
     
     // Validate Confirm Password
     if (!confirmPassword.trim()) {
-      setConfirmPasswordError("Confirm Password is required");
+      setConfirmPasswordError("required");
       hasErrors = true;
     } else if (password !== confirmPassword) {
       setConfirmPasswordError("Passwords do not match");

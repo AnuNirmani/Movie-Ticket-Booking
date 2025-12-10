@@ -34,7 +34,7 @@ function Login() {
     
     // Validate email
     if (!email.trim()) {
-      setEmailError("Email is required");
+      setEmailError("required");
       hasErrors = true;
     } else if (!validateEmail(email)) {
       setEmailError("Please enter a valid email address");
@@ -43,10 +43,10 @@ function Login() {
     
     // Validate password
     if (!password.trim()) {
-      setPasswordError("Password is required");
+      setPasswordError("required");
       hasErrors = true;
     } else if (!validatePassword(password)) {
-      setPasswordError("Password must be at least 6 characters long");
+      setPasswordError("Password is wrong");
       hasErrors = true;
     }
     
