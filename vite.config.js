@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true, // Listen on all addresses including LAN
-    port: 5173, // Default Vite port
+    port: 5176, // Custom Vite port
   }
 })

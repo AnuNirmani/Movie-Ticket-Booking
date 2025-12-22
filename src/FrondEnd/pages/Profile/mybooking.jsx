@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../HeadFoot/Navbar";
 import Footer from "../HeadFoot/Footer";
 import "../../css/Profile/mybooking.css";
-import LandingPageAnimation from "../../../assets/LandingPageAnimation.png";
+const LandingPageAnimation = "/assets/LandingPageAnimation.png";
 
 const MyBooking = () => {
   // Sample booking data - in a real app, this would come from an API

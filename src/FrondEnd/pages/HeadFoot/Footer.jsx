@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-logo">
           <div className="logo-container">
             <img 
-              src="/src/assets/logo.png" 
+              src="/assets/logo.png" 
               alt="Movie Express Logo" 
               className="footer-logo-img"
             />

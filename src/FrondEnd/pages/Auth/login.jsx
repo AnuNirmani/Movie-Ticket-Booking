@@ -3,8 +3,9 @@ import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import logoImage from "../../../assets/logo.png";
 import "../../css/Auth/login.css";
+
+const logoImage = "/assets/logo.png";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);

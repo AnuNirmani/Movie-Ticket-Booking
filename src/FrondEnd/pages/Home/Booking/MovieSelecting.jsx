@@ -108,7 +108,7 @@ const MovieSelecting = () => {
     {
       id: 1,
       title: "LILO & STITCH (English)",
-      poster: "/src/assets/LandingPageAnimation.png", // Placeholder - replace with actual poster
+      poster: "/assets/LandingPageAnimation.png", // Placeholder - replace with actual poster
       theaters: [
         {
           name: "Movie Express Cinemas - CCC Cinemas",
@@ -129,7 +129,7 @@ const MovieSelecting = () => {
     {
       id: 2,
       title: "KARATE KID: LEGENDS (English)",
-      poster: "/src/assets/LandingPageAnimation.png", // Placeholder - replace with actual poster
+      poster: "/assets/LandingPageAnimation.png", // Placeholder - replace with actual poster
       theaters: [
         {
           name: "Movie Express Cinemas - Reality Plaza",

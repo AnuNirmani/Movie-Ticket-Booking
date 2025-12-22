@@ -19,7 +19,7 @@ const Advertisements = () => {
            <div className="advertisement-section">
              <div className="advertisement-image">
                <img 
-                 src="/src/assets/LandingPageAnimation.png" 
+                 src="/assets/LandingPageAnimation.png" 
                  alt="Movie Express Cinemas - Colombo City Center" 
                  className="cinema-ad-image"
                />
@@ -41,7 +41,7 @@ const Advertisements = () => {
            <div className="advertisement-section">
              <div className="advertisement-image">
                <img 
-                 src="/src/assets/LandingPageAnimation.png" 
+                 src="/assets/LandingPageAnimation.png" 
                  alt="Movie Express Cinemas - Kandy City Center" 
                  className="cinema-ad-image"
                />

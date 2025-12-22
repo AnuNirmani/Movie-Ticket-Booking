@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../HeadFoot/Navbar";
 import Footer from "../HeadFoot/Footer";
 import "../../css/Profile/favorites.css";
-import LandingPageAnimation from "../../../assets/LandingPageAnimation.png";
+const LandingPageAnimation = "/assets/LandingPageAnimation.png";
 
 const Favorites = () => {
   const navigate = useNavigate();

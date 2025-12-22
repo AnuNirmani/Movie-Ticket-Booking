@@ -17,7 +17,7 @@ const Deals = () => {
           {/* Deal Card 1: 50% Cash Back Offer */}
           <div className="deal-card">
             <div className="deal-banner" style={{
-              backgroundImage: "url('/src/assets/LandingPageAnimation.png')",
+              backgroundImage: "url('/assets/LandingPageAnimation.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat"
@@ -39,7 +39,7 @@ const Deals = () => {
           {/* Deal Card 2: Student Offer */}
           <div className="deal-card">
             <div className="deal-banner student-banner" style={{
-              backgroundImage: "url('/src/assets/LandingPageAnimation.png')",
+              backgroundImage: "url('/assets/LandingPageAnimation.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat"
@@ -57,7 +57,7 @@ const Deals = () => {
           {/* Deal Card 3: Buy One & Get Free PopCorn */}
           <div className="deal-card">
             <div className="deal-banner popcorn-banner" style={{
-              backgroundImage: "url('/src/assets/LandingPageAnimation.png')",
+              backgroundImage: "url('/assets/LandingPageAnimation.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat"

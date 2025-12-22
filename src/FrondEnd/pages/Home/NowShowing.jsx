@@ -57,7 +57,7 @@ const NowShowing = () => {
     { 
       id: 1, 
       title: "Final Destination", 
-      poster: "/src/assets/LandingPageAnimation.png",
+      poster: "/assets/LandingPageAnimation.png",
       genre: "Horror/Thriller",
       duration: "98 min",
       rating: 7.5,
@@ -68,7 +68,7 @@ const NowShowing = () => {
     { 
       id: 2, 
       title: "New Avengers", 
-      poster: "/src/assets/LandingPageAnimation.png",
+      poster: "/assets/LandingPageAnimation.png",
       genre: "Action/Sci-Fi",
       duration: "142 min",
       rating: 8.8,
@@ -79,7 +79,7 @@ const NowShowing = () => {
     { 
       id: 3, 
       title: "Ace (Tamil)", 
-      poster: "/src/assets/LandingPageAnimation.png",
+      poster: "/assets/LandingPageAnimation.png",
       genre: "Action/Drama",
       duration: "165 min",
       rating: 8.2,
@@ -90,7 +90,7 @@ const NowShowing = () => {
     { 
       id: 4, 
       title: "Devi Kusumasana", 
-      poster: "/src/assets/LandingPageAnimation.png",
+      poster: "/assets/LandingPageAnimation.png",
       genre: "Drama/Family",
       duration: "128 min",
       rating: 7.8,
@@ -101,7 +101,7 @@ const NowShowing = () => {
     { 
       id: 5, 
       title: "Lilo & Stitch", 
-      poster: "/src/assets/LandingPageAnimation.png",
+      poster: "/assets/LandingPageAnimation.png",
       genre: "Animation/Family",
       duration: "85 min",
       rating: 8.5,
@@ -112,7 +112,7 @@ const NowShowing = () => {
     { 
       id: 6, 
       title: "Walampoori", 
-      poster: "/src/assets/LandingPageAnimation.png",
+      poster: "/assets/LandingPageAnimation.png",
       genre: "Comedy/Drama",
       duration: "112 min",
       rating: 7.0,
@@ -123,7 +123,7 @@ const NowShowing = () => {
     { 
       id: 7, 
       title: "Sinners", 
-      poster: "/src/assets/LandingPageAnimation.png",
+      poster: "/assets/LandingPageAnimation.png",
       genre: "Thriller/Crime",
       duration: "135 min",
       rating: 8.0,
@@ -134,7 +134,7 @@ const NowShowing = () => {
     { 
       id: 8, 
       title: "A Minecraft Movie", 
-      poster: "/src/assets/LandingPageAnimation.png",
+      poster: "/assets/LandingPageAnimation.png",
       genre: "Adventure/Family",
       duration: "95 min",
       rating: 7.3,

@@ -18,7 +18,7 @@ const Deals = () => {
             {/* Deal Card 1: Buy One Get One Free Offer */}
               <div className="deal-card">
                 <div className="deal-banner" style={{
-                  backgroundImage: "url('/src/assets/LandingPageAnimation.png')",
+                  backgroundImage: "url('/assets/LandingPageAnimation.png')",
                 }}>
                 </div>
               <div className="deal-footer">

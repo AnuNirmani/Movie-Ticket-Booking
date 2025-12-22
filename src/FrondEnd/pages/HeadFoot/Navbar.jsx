@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../../css/HeadFoot/navbar.css";
-import backgroundImage from "../../../assets/logo.png";
+// Use the asset from the public directory
+const backgroundImage = "/assets/logo.png";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
