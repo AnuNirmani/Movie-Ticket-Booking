@@ -135,7 +135,13 @@ When Quinn arrives, the TBDs are already on stage, and she enters halfway throug
         
         <div className="banner-buttons" style={{ marginTop: "50px" }}>
               <button className="buy-btn" onClick={handleBookNowClick}>
-              🎫 Buy Ticket
+                🎫 Buy Ticket
+              </button>
+              <button
+                className="favourite-btn"
+                onClick={() => alert("Added to favourites!")}
+              >
+                ❤️ Add to Favourites
               </button>
         </div>
       </div>
